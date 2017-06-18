@@ -11,7 +11,16 @@ var materialApp = angular
     'tabsCtrl',
     'tabsService'
 ]).config(function($mdThemingProvider) {
-  $mdThemingProvider.theme('default')
-    .primaryPalette('blue')
-    .accentPalette('pink');
+   var podsharkOrange;
+
+   podsharkOrange = $mdThemingProvider.extendPalette('orange', {
+      '600': '#253b80',
+      'contrastDefaultColor': 'light'
+   });
+
+   $mdThemingProvider.definePalette('podsharkOrange', podsharkOrange);
+
+   $mdThemingProvider.theme('default').primaryPalette('podsharkOrange', {
+      'default': '600'
+   });
 });

@@ -10,7 +10,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/',
             templateUrl: 'home.html',
             params: {
-                title: "Material Starter"
+               title: "Welcome"
             }
         })
         .state('cards', {
@@ -44,3 +44,4 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     //$locationProvider.html5Mode(true);
 
 });
+angular.module('tabsDemoDynamicHeight', ['ngMaterial']);

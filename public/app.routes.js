@@ -13,15 +13,14 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
                title: "Welcome To"
             }
         })
-        .state('cards', {
-            url: '/cards',
-            templateUrl: '/modules/cards/views/cards.html',
-            controller: 'cardsCtrl',
-            controllerAs: 'Cards',
-            params: {
-                title: "Cards"
-            }
-        })
+       .state('news', {
+          url: '/news',
+          templateUrl: 'news.html',
+          params: {
+             title: "FCC News"
+          }
+       })
+        
         .state('list', {
             url: '/list',
             templateUrl: '/modules/list/views/list.html',

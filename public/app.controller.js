@@ -1,7 +1,16 @@
 angular.module('appCtrl', [])
 .controller('appCtrl', function($mdSidenav, $stateParams, $rootScope) {
    var originatorEv;
-
+   this.todos = [];
+   var imagePath = 'img/60.jpeg';
+   for (var i = 0; i < 15; i++) {
+      this.todos.push({
+         face: imagePath,
+         what: "Brunch this weekend?",
+         who: "Min Li Chan",
+         notes: "I'll be in your neighborhood doing errands."
+      });
+   }
    this.openMenu = function ($mdMenu, ev) {
       originatorEv = ev;
       $mdMenu.open(ev);

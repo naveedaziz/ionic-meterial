@@ -10,7 +10,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             url: '/',
             templateUrl: 'home.html',
             params: {
-               title: "Welcome"
+               title: "Welcome To"
             }
         })
         .state('cards', {

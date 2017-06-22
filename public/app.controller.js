@@ -1,11 +1,9 @@
 angular.module('appCtrl', [])
 .controller('appCtrl', function($mdSidenav, $stateParams, $rootScope) {
    this.selectedIndex = 0;
-   this.changeTab = function (tab_) {
-      console.log(tab_)
-      this.selectedIndex = tab_;
-   }
+   
    this.onSwipeRight = function (tab_num) {
+      console.log(tab_num)
       if (tab_num < 0) {
          return;
       }
@@ -13,7 +11,8 @@ angular.module('appCtrl', [])
    }
 
    this.onSwipeLeft = function (tab_num) {
-      if (tab_num > l) {
+      console.log(tab_num)
+      if (tab_num > 4) {
          //l is number of tabs I have
          return;
       }

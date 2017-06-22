@@ -2,6 +2,7 @@ angular.module('appCtrl', [])
 .controller('appCtrl', function($mdSidenav, $stateParams, $rootScope) {
    this.selectedIndex = 0;
    this.changeTab = function (tab_) {
+      console.log(tab_)
       this.selectedIndex = tab_;
    }
    var originatorEv;

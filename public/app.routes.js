@@ -20,6 +20,13 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "FCC News"
           }
        })
+       .state('login', {
+          url: '/login',
+          templateUrl: 'login.html',
+          params: {
+             title: "FCC Login"
+          }
+       })
         
         .state('list', {
             url: '/list',

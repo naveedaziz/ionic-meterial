@@ -1,6 +1,39 @@
 angular.module('appCtrl', [])
-.controller('appCtrl', function($mdSidenav, $stateParams, $rootScope) {
-  
+   .controller('DialogController', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
+
+   this.hide = function () {
+      $mdDialog.hide();
+   };
+
+   this.cancel = function () {
+      $mdDialog.cancel();
+   };
+   this.close = function () {
+      $mdDialog.cancel();
+   };
+
+   this.answer = function (answer) {
+      $mdDialog.hide(answer);
+   };
+})
+   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
+      
+     this.showAdvanced = function (ev) {
+        console.log(ev);
+         $mdDialog.show({
+            controller: 'DialogController',
+            templateUrl: 'login.html',
+            parent: angular.element(document.body),
+            targetEvent: ev,
+            clickOutsideToClose: true
+         })
+            .then(function (answer) {
+               this.status = 'You said the information was "' + answer + '".';
+            }, function () {
+               this.status = 'You cancelled the dialog.';
+            });
+      };
+     
    var originatorEv;
    this.todos = [];
    var imagePath = 'img/60.jpeg';

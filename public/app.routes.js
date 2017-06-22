@@ -40,7 +40,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         });
 
-    //$locationProvider.html5Mode(true);
+    $locationProvider.html5Mode(true);
 
 });
 angular.module('tabsDemoDynamicHeight', ['ngMaterial']);

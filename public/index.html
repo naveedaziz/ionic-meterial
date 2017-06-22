@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+   <base href="/">
   <title>Material Starter</title>
 
   <meta charset="utf-8">
@@ -138,7 +139,7 @@ position: fixed;
      
    </md-menu-item>
    <md-divider></md-divider>
-        <md-list-item layout="row" ng-click="app.toggleLeft()" href="/tabs">
+        <md-list-item layout="row" ng-click="app.toggleLeft()" href="/#!/news">
             <span>News</span>
         </md-list-item>
 <md-divider></md-divider>
@@ -286,6 +287,22 @@ position: fixed;
             </md-button>
 
         </md-toolbar>
+      <md-list-item layout="row" ng-click="app.toggleLeft()" href="/">
+         <span>Login</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleLeft()" href="/">
+         <span>Signup</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleLeft()" href="/">
+         <span>My Account</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleLeft()" href="/">
+         <span>Chat</span>
+      </md-list-item>
+      <md-divider></md-divider>
 
     </md-sidenav>
 

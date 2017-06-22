@@ -1,5 +1,9 @@
 angular.module('appCtrl', [])
 .controller('appCtrl', function($mdSidenav, $stateParams, $rootScope) {
+   this.selectedIndex = 0;
+   this.changeTab = function (tab_) {
+      this.selectedIndex = tab_;
+   }
    var originatorEv;
    this.todos = [];
    var imagePath = 'img/60.jpeg';

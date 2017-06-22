@@ -5,6 +5,20 @@ angular.module('appCtrl', [])
       console.log(tab_)
       this.selectedIndex = tab_;
    }
+   this.onSwipeRight = function (tab_num) {
+      if (tab_num < 0) {
+         return;
+      }
+      this.selectedIndex = tab_num;
+   }
+
+   this.onSwipeLeft = function (tab_num) {
+      if (tab_num > l) {
+         //l is number of tabs I have
+         return;
+      }
+      this.selectedIndex = tab_num;
+   }
    var originatorEv;
    this.todos = [];
    var imagePath = 'img/60.jpeg';

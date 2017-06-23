@@ -1,15 +1,15 @@
 <div ng-cloak class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome">
    <md-content>
       
-      <md-tabs  md-dynamic-height style="border:1px solid red;">
+      <md-tabs  md-dynamic-height>
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
             <md-content class="md-padding" layout-xs="column" layout="column">
                <div layout="column">
                    
                      <md-grid-list md-cols="1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
-                           <md-grid-tile ng-repeat="grid in app.grids" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
+                           <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
 
-                              <img ng-src="img/university/{{grid.img}}.svg" width="50%">
+                              <img ng-src="img/university/{{grid.img}}.svg" width="65%">
                               <md-grid-tile-footer>
                                  <h3 class="pull-left">{{grid.name}}</h3>
                                  <md-menu class="pull-right">

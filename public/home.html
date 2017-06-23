@@ -2,11 +2,10 @@
    <md-content>
       
       <md-tabs  md-dynamic-height>
-         <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
-            <md-content class="md-padding" layout-xs="column" layout="column">
-               <div layout="column">
-                   
-                     <md-grid-list md-cols="1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+         <md-tab label="{{items.name}}" ng-repeat="items in app.grids" style="border:1px solid green;">
+            <md-content class="md-padding"  layout="column" style="border:1px solid red;">
+              
+                     <md-grid-list md-cols="1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px" style="border:1px solid yellow;">
                            <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
 
                               <img ng-src="img/university/{{grid.img}}.svg" width="65%">
@@ -42,9 +41,6 @@
                               </md-grid-tile-footer>
                            </md-grid-tile>
                      </md-grid-list>
-                    
-               </div>
-           
             </md-content>
          </md-tab>
       </md-tabs>

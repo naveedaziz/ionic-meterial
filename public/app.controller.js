@@ -40,6 +40,8 @@ angular.module('appCtrl', [])
                      { img: 'boss', name: 'Society' },
                      { img: 'support', name: 'Support FCCU' },
                      { img: 'photo-camera', name: 'Photos' }, 
+                     { img: 'network', name: 'Social' }, 
+                     { img: 'contact', name: 'Contact' }, 
                   ]
      
      this.showAdvanced = function (ev) {

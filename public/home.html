@@ -5,10 +5,10 @@
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
             <md-content class="md-padding"  layout="column">
               <div flex>
-                     <md-grid-list md-cols="2" md-rows="1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+                     <md-grid-list md-cols="1" md-rows="1" md-row-height="2:1" md-gutter="8px" md-gutter-gt-sm="4px">
                            <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
 
-                              <img ng-src="img/university/{{grid.img}}.svg" width="65%">
+                              <img ng-src="img/university/{{grid.img}}.svg" width="38%" style="margin-top: -34px;">
                               <md-grid-tile-footer>
                                  <h3 class="pull-left">{{grid.name}}</h3>
                                  <md-menu class="pull-right">

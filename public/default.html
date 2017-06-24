@@ -3,9 +3,9 @@
       md-gutter-gt-sm="4px">
 
       <md-grid-tile ng-repeat="grid in app.grids" md-rowspan="1" md-colspan="1" md-colspan-sm="1"
-         md-colspan-xs="1" ng-class="'darkBlue'">
+         md-colspan-xs="1" ng-class="'darkBlue'" ui-sref="home">
         
-         <img ng-src="img/university/{{grid.img}}.svg" width="50%">
+         <img ng-src="img/university/{{grid.img}}.svg" width="50%" style="margin-top: -8px;">
          <md-grid-tile-footer>
             <h3>{{grid.name}}</h3>
          </md-grid-tile-footer>

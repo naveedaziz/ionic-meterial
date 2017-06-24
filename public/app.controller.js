@@ -31,15 +31,15 @@ angular.module('appCtrl', [])
                                  { name: 'Communications Office', img: 'phone-receiver', menu: [] },
                              ]
                      },
-                     // {img:'news-report',name:'News'},
-                     // { img: 'school', name: 'Admission' },
-                     // { img: 'calendar', name: 'Event' },
-                     // { img: 'team', name: 'Campus Services' },
-                     // { img: 'blackboard', name: 'Courses' },
-                     // { img: 'professor', name: 'Jobs' },
-                     // { img: 'boss', name: 'Society' },
-                     // { img: 'support', name: 'Support FCCU' },
-                     // { img: 'photo-camera', name: 'Photos' }, 
+                     {img:'news-report',name:'News'},
+                     { img: 'school', name: 'Admission' },
+                     { img: 'calendar', name: 'Event' },
+                     { img: 'team', name: 'Campus Services' },
+                     { img: 'blackboard', name: 'Courses' },
+                     { img: 'professor', name: 'Jobs' },
+                     { img: 'boss', name: 'Society' },
+                     { img: 'support', name: 'Support FCCU' },
+                     { img: 'photo-camera', name: 'Photos' }, 
                   ]
      
      this.showAdvanced = function (ev) {

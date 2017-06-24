@@ -1,12 +1,11 @@
 <div ng-cloak class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome">
    <md-content>
       
-      <md-tabs  md-dynamic-height layout-fill flex>
-         <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
+      
             <md-content class="md-padding"  layout="column">
               
                      <md-grid-list md-cols="1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
-                           <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
+                           <md-grid-tile ng-repeat="grid in app.grids[0].list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
 
                               <img ng-src="img/university/{{grid.img}}.svg" width="65%">
                               <md-grid-tile-footer>
@@ -38,35 +37,11 @@
                                     </md-menu-content>
                                  </md-menu>
                                  <div class="clearfix"></div>
-                                 <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
-                                    from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney
-                                    College in Virginia, looked up one of the more obscure Latin words, consectetur, from
-                                    a Lorem Ipsum passage, and going through the cites of the word in classical literature,
-                                    discovered the undoubtable source. Lorem Ipsum comes from sections 1.10.32 and 1.10.33
-                                    of "de Finibus Bonorum et Malorum" (The Extremes of Good and Evil) by Cicero, written
-                                    in 45 BC. This book is a treatise on the theory of ethics, very popular during the Renaissance.
-                                    The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section
-                                    1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for
-                                    those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by
-                                    Cicero are also reproduced in their exact original form, accompanied by English versions
-                                    from the 1914 translation by H. Rackham.</p>
                               </md-grid-tile-footer>
                            </md-grid-tile>
                      </md-grid-list>
                      <div class="clearfix"></div>
-                     <p>Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature
-                     from 45 BC, making it over 2000 years old. Richard McClintock, a Latin professor at Hampden-Sydney College
-                     in Virginia, looked up one of the more obscure Latin words, consectetur, from a Lorem Ipsum passage,
-                     and going through the cites of the word in classical literature, discovered the undoubtable source.
-                     Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum" (The Extremes
-                     of Good and Evil) by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very
-                     popular during the Renaissance. The first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes
-                     from a line in section 1.10.32. The standard chunk of Lorem Ipsum used since the 1500s is reproduced
-                     below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero
-                     are also reproduced in their exact original form, accompanied by English versions from the 1914 translation
-                     by H. Rackham.</p>
             </md-content>
-         </md-tab>
-      </md-tabs>
+        
    </md-content>
 </div>

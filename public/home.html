@@ -1,7 +1,7 @@
 <div ng-cloak class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome">
    <md-content>
       
-      <md-tabs  md-dynamic-height md-border-bottom md-stretch-tabs md-no-pagination>
+      <md-tabs  md-dynamic-height>
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
             <md-content class="md-padding"  layout="column">
               <div flex>
@@ -10,8 +10,8 @@
 
                               <img ng-src="img/university/{{grid.img}}.svg" width="65%">
                               <md-grid-tile-footer>
-                                 <h3 class="pull-left">{{grid.name}}</h3>
-                                 <md-menu class="pull-right">
+                                 <h3>{{grid.name}}</h3>
+                                 <md-menu>
                                     <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
                                        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
                                     </md-button>

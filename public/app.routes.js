@@ -6,14 +6,20 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     // UI Router States
     // Inserting Page title as State Param
     $stateProvider
+        .state('default', {
+           url: '/default',
+            templateUrl: 'default.html',
+            params: {
+               title: "Welcome To"
+            }
+        })
        .state('home', {
-          url: '/',
+          url: '/home',
           templateUrl: 'home.html',
           params: {
              title: "Welcome To"
           }
        })
-       
        .state('news', {
           url: '/news',
           templateUrl: 'news.html',

@@ -7,7 +7,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
     // Inserting Page title as State Param
     $stateProvider
         .state('default', {
-           url: '/default',
+           url: '/',
             templateUrl: 'default.html',
             params: {
                title: "Welcome To"

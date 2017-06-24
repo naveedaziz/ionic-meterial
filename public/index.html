@@ -126,11 +126,299 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
 
 <body ng-app="materialApp" layout="row" flex ng-controller="appCtrl as app">
 
+    <md-sidenav md-disable-scroll-target class="md-sidenav-left md-whiteframe-4dp ng-cloak" md-component-id="left">
+
+        <md-toolbar class="md-toolbar-tools" layout="row" layout-align="center-center">
+
+            <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Close User Menu">
+              <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
+            </md-button>
+
+            <h3 class="md-toolbar-tools">FCC</h3>
+        
+        </md-toolbar>
+
+        <md-list-item layout="row" ng-click="app.toggleLeft()" ui-sref="home">
+            <span>Home</span>
+        </md-list-item>
+        <md-divider></md-divider>
     
-   <div ui-view flex="100" layout="column"></div>
+      <md-menu-item>
+         <md-menu>
+            <md-list-item layout="row">
+               <span flex="90">People</span>
+               <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+            </md-list-item>
+            <md-menu-content>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Document', $event)">Admissions</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Accounts</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Academics</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Form', $event)">Empower Troubleshooting</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Drawing', $event)">University Counseling Center</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Mercy Health Center</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Drawing', $event)">Communications Office</md-button>
+               </md-menu-item>
+            </md-menu-content>
+         </md-menu>
+      </md-menu-item>
+        <md-divider></md-divider>
+    
+      <md-menu-item>
+         <md-menu>
+            <md-list-item layout="row">
+               <span flex="90">Admissions</span>
+               <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+            </md-list-item>
+            <md-menu-content>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Document', $event)">Admission Links</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Financial Aid</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Tuition Fee</md-button>
+               </md-menu-item>
+               <md-menu-item>
+                  <md-button ng-click="ctrl.sampleAction('New Form', $event)">Residential Life</md-button>
+               </md-menu-item>
+            </md-menu-content>
+         </md-menu>
+      </md-menu-item>
+        <md-divider></md-divider>
+   <md-menu-item>
+      <md-menu>
+         <md-list-item layout="row">
+            <span flex="90">Events</span>
+            <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+         </md-list-item>
+         <md-menu-content>
+            <md-menu-item>
+               <md-button ng-click="ctrl.sampleAction('New Document', $event)">Events Calendar</md-button>
+            </md-menu-item>
+            <md-menu-item>
+               <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Academic Calendar</md-button>
+            </md-menu-item>
+            <md-menu-item>
+               <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Today’s Events</md-button>
+            </md-menu-item>
+            
+         </md-menu-content>
+      </md-menu>
+     
+   </md-menu-item>
+   <md-divider></md-divider>
+        <md-list-item layout="row" ng-click="app.toggleLeft()" ui-sref="news">
+            <span>News</span>
+        </md-list-item>
+<md-divider></md-divider>
+<md-menu-item>
+   <md-menu>
+      <md-list-item layout="row">
+         <span flex="90">CAMPUS SERVICES</span>
+         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+      </md-list-item>
+      <md-menu-content>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Document', $event)"> Academic Office</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Accounts Office </md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Admissions Office</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Communications Office</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Cafeteria</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Campus Security</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Career</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Services</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Financial Aid</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Information Commons</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Information Technology Services</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">International Education Library</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Mercy Health Center</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Quality Enhancement Cell</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Residential Life</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Sports Student Affairs</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">University Counseling Center</md-button>
+         </md-menu-item> 
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Writing Center</md-button>
+         </md-menu-item>
+           
 
+      </md-menu-content>
+   </md-menu>
+</md-menu-item>
+<md-divider></md-divider>
+<md-menu-item>
+   <md-menu>
+      <md-list-item layout="row">
+         <span flex="90">COURSES</span>
+         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+      </md-list-item>
+      <md-menu-content>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Document', $event)">Academic Faculties</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Academic Departments</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Courses</md-button>
+         </md-menu-item>
+      </md-menu-content>
+   </md-menu>
+</md-menu-item>
+<md-divider></md-divider>
+<md-list-item layout="row" ng-click="app.toggleLeft()" href="/tabs">
+   <span>JOBS</span>
+</md-list-item>
+<md-divider></md-divider>
+<md-list-item layout="row" ng-click="app.toggleLeft()" href="/tabs">
+   <span>SOCIETIES</span>
+</md-list-item>
+<md-divider></md-divider>
+<md-list-item layout="row" ng-click="app.toggleLeft()" href="/tabs">
+   <span>SUPPORT FCCU</span>
+</md-list-item>
+<md-divider></md-divider>
+<md-menu-item>
+   <md-menu>
+      <md-list-item layout="row">
+         <span flex="90">SOCIAL</span>
+         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+      </md-list-item>
+      <md-menu-content>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Document', $event)">Facebook</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Spreadsheet', $event)">Twitter</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Instagram</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">LinkedIn</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">YouTube</md-button>
+         </md-menu-item>
+         <md-menu-item>
+            <md-button ng-click="ctrl.sampleAction('New Presentation', $event)">Contact Us</md-button>
+         </md-menu-item>
+      </md-menu-content>
+   </md-menu>
+</md-menu-item>
+<md-divider></md-divider>
+<md-list-item layout="row" ng-click="app.toggleLeft()" href="/tabs">
+   <span>PHOTOS</span>
+</md-list-item>
+<md-divider></md-divider>
+    </md-sidenav>
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-4dp ng-cloak" md-component-id="right">
+
+        <md-toolbar class="md-toolbar-tools" layout="row" layout-align="space-between-center">
+            <h3 class="md-toolbar-tools">User Menu</h3>
+            
+            <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="Close User Menu">
+              <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            </md-button>
+
+        </md-toolbar>
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+         <span>Login</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
+         <span>Signup</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
+         <span>My Account</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
+         <span>Chat</span>
+      </md-list-item>
+      <md-divider></md-divider>
+
+    </md-sidenav>
+
+
+
+
+<div style="width:100%" class="ng-cloak">
    
+    <md-toolbar class="toolbar">
+        <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
 
+            <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Main Menu">
+              <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
+            </md-button>
+
+            <span flex layout-align="center center" class="text-center">{{title}}</span>
+
+            <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
+              <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            </md-button>
+
+        </div>
+      
+
+      <md-card class="no-bg-color header-bg" flex="100"  flex-gt-sm="33" layout-align="center center" layout="column">
+         <img src="img/fc2.jpg" flex="100" class="md-card-image" alt="Washed Out">
+      </md-card>
+ 
+    </md-toolbar>
+  
+
+    <div ui-view></div>
+
+</div>
 <script src="scripts/angular/angular.min.js"></script>
 <script src="scripts/angular-animate/angular-animate.min.js"></script>
 <script src="scripts/angular-aria/angular-aria.min.js"></script>

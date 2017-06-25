@@ -1,10 +1,9 @@
 <div ng-cloak class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome">
    <md-content>
       
-      <md-tabs  md-dynamic-height>
+      <md-tabs md-dynamic-height md-border-bottom md-center-tabs  md-swipe-content>
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
-            <md-content class="md-padding"  layout="column">
-              <div flex>
+            <md-content  layout="column">
                      <md-grid-list md-cols="1" md-rows="1" md-row-height="2:1" md-gutter="8px" md-gutter-gt-sm="4px">
                            <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
 
@@ -41,8 +40,6 @@
                               </md-grid-tile-footer>
                            </md-grid-tile>
                      </md-grid-list>
-                     <div class="clearfix"></div>
-              </div>
             </md-content>
          </md-tab>
       </md-tabs>

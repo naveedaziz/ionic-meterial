@@ -7,40 +7,44 @@
                
                     <div layout="column" style="min-width: 200px;" flex="80"  ng-repeat="grid in items.list">
                      
-                     <md-card flex="80">
+                     <md-card flex="100">
+                        <md-menu style="    position: relative;
+    right: -132px;
+    width: 51px;
+    top: 0;
+    height: 15px;
+    z-index: 9999;">
+                           <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
+                              <md-icon md-svg-icon="img/icons/menu.svg" style="    color: #296490;"></md-icon>
+                           </md-button>
+                           <md-menu-content width="4">
+                              <md-menu-item>
+                                 <md-button ng-click="app.redial($event)">
+                                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                    Quick Link 1
+                                 </md-button>
+                              </md-menu-item>
+                              <md-menu-item>
+                                 <md-button ng-click="app.redial($event)">
+                                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                    Quick Link 2
+                                 </md-button>
+                              </md-menu-item>
+                              <md-menu-divider></md-menu-divider>
+                              <md-menu-item>
+                                 <md-button ng-click="app.redial($event)">
+                                    <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                    Quick Link 3
+                                 </md-button>
+                              </md-menu-item>
+                           </md-menu-content>
+                        </md-menu>
+
                         <img ng-src="img/university/{{grid.img}}.svg" class="md-card-image" style="padding:10%;" alt="Washed Out">
                         <md-card-actions  layout-align="center center">
-                           <h4 style="text-align:center;">{{grid.name}}</h4>
-                           <md-menu style="position: relative;
-    top: -265px;
-    right: -127px;
-    color: grey;">
-                              <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
-                                 <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                              </md-button>
-                              <md-menu-content width="4">
-                                 <md-menu-item>
-                                    <md-button ng-click="app.redial($event)">
-                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                       Quick Link 1
-                                    </md-button>
-                                 </md-menu-item>
-                                 <md-menu-item>
-                                    <md-button ng-click="app.redial($event)">
-                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                       Quick Link 2
-                                    </md-button>
-                                 </md-menu-item>
-                                 <md-menu-divider></md-menu-divider>
-                                 <md-menu-item>
-                                    <md-button ng-click="app.redial($event)">
-                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                       Quick Link 3
-                                    </md-button>
-                                 </md-menu-item>
-                              </md-menu-content>
-                           </md-menu>
-
+                          
+                           <h4 style="text-align:center; margin-top:0; margin-bottom:0;">{{grid.name}}</h4>
+                         
                         </md-card-actions>
                      </md-card>
                     </div>

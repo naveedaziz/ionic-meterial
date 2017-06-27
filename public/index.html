@@ -123,12 +123,17 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
 }
 .md-button.md-default-theme.md-warn.md-fab, .md-button.md-warn.md-fab, .md-button.md-default-theme.md-warn.md-raised, .md-button.md-warn.md-raised {
     color: rgb(255,255,255);
-    background-color: rgb(100, 145, 179);
+    background-color: rgb(49, 191, 100);
 }
 .gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
     background: #fff;
     height: 36px;
     color: rgba(0,0,0,0.87);
+}
+md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
+    height: auto;
+    min-height: 88px;
+    background: #fff;
 }
      </style>
 </head>
@@ -379,19 +384,14 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
 
         </md-toolbar>
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
-         <span>Login</span>
+         <span>Calender</span>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
-         <span>Signup</span>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
-         <span>My Account</span>
-      </md-list-item>
-      <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.toggleRight()" href="/">
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
          <span>Chat</span>
+      </md-list-item>
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+         <span>Logout</span>
       </md-list-item>
       <md-divider></md-divider>
 
@@ -426,7 +426,7 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
   
 
     <div ui-view></div>
-   <!--<footer flex="100">
+   <footer  style="position:fixed; left:0; bottom:0; width:100%;">
       <md-toolbar class="md-scroll-shrink">
          <div flex="100" align="center">
          <md-button class="md-raised md-warn" aria-label="User Menu" style="width:31%; float:left;margin:1%;">
@@ -445,7 +445,7 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
          </md-button>
          </div>
       </md-toolbar>
-   </footer>-->
+   </footer>
 
 </div>
 <script src="scripts/angular/angular.min.js"></script>

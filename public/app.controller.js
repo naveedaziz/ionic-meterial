@@ -31,7 +31,16 @@ angular.module('appCtrl', [])
                                  { name: 'Communications Office', img: 'phone-receiver', menu: [] },
                              ]
                      },
-                     {img:'news-report',name:'News'},
+                     {
+                        img: 'news-report', name: 'News', list: [
+                           { name: 'Admissions', img: 'id-card', menu: [] },
+                           { name: 'Accounts', img: 'check', menu: [] },
+                           { name: 'Academics', img: 'books', menu: [] },
+                           { name: 'Empower Troubleshooting', img: 'bell', menu: [] },
+                           { name: 'University Counseling Center', img: 'glasses', menu: [] },
+                           { name: 'Mercy Health Center', img: 'heart', menu: [] },
+                           { name: 'Communications Office', img: 'phone-receiver', menu: [] },
+                        ]},
                      { img: 'school', name: 'Admission' },
                      { img: 'calendar', name: 'Event' },
                      { img: 'team', name: 'Campus Services' },

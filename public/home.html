@@ -3,43 +3,80 @@
       
       <md-tabs md-dynamic-height>
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
-            <md-content class="md-padding"  layout="column">
-                     <md-grid-list md-cols="1" md-rows="1" md-row-height="2:1" md-gutter="8px" md-gutter-gt-sm="4px">
-                           <md-grid-tile ng-repeat="grid in items.list" md-rowspan="1" md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="'darkBlue'">
-
-                              <img ng-src="img/university/{{grid.img}}.svg" width="38%" style="margin-top: -34px;">
-                              <md-grid-tile-footer>
-                                 <h3 class="pull-left">{{grid.name}}</h3>
-                                 <md-menu class="pull-right">
-                                    <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
+            <md-content class="md-padding"  layout="row" flex="100">
+               
+                    <div layout="column" style="min-width: 200px;" flex="80"  ng-repeat="grid in items.list">
+                     
+                     <md-card flex="80">
+                        <img ng-src="img/university/{{grid.img}}.svg" class="md-card-image" style="padding:10%;" alt="Washed Out">
+                        <md-card-actions  layout-align="center center">
+                           <h4 style="text-align:center;">{{grid.name}}</h4>
+                           <md-menu style="position: relative;
+    top: -265px;
+    right: -127px;
+    color: grey;">
+                              <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
+                                 <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                              </md-button>
+                              <md-menu-content width="4">
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
                                        <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 1
                                     </md-button>
-                                    <md-menu-content width="4">
-                                       <md-menu-item>
-                                          <md-button ng-click="app.redial($event)">
-                                             <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                             Quick Link 1
-                                          </md-button>
-                                       </md-menu-item>
-                                       <md-menu-item>
-                                          <md-button ng-click="app.redial($event)">
-                                             <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                             Quick Link 2
-                                          </md-button>
-                                       </md-menu-item>
-                                       <md-menu-divider></md-menu-divider>
-                                       <md-menu-item>
-                                          <md-button ng-click="app.redial($event)">
-                                             <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
-                                             Quick Link 3
-                                          </md-button>
-                                       </md-menu-item>
-                                    </md-menu-content>
-                                 </md-menu>
-                                 <div class="clearfix"></div>
-                              </md-grid-tile-footer>
-                           </md-grid-tile>
-                     </md-grid-list>
+                                 </md-menu-item>
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
+                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 2
+                                    </md-button>
+                                 </md-menu-item>
+                                 <md-menu-divider></md-menu-divider>
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
+                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 3
+                                    </md-button>
+                                 </md-menu-item>
+                              </md-menu-content>
+                           </md-menu>
+
+                        </md-card-actions>
+                     </md-card>
+                    </div>
+                     <!--<md-card ng-repeat="grid in items.list">
+                        <img ng-src="img/university/{{grid.img}}.svg" class="md-card-image" style="padding:10%;" alt="Washed Out">
+                        <md-card-actions layout="row" flex="100"  layout-align="center center">
+                           <h4>People at FCCU</h4>
+                           <md-menu>
+                              <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
+                                 <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                              </md-button>
+                              <md-menu-content width="4">
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
+                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 1
+                                    </md-button>
+                                 </md-menu-item>
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
+                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 2
+                                    </md-button>
+                                 </md-menu-item>
+                                 <md-menu-divider></md-menu-divider>
+                                 <md-menu-item>
+                                    <md-button ng-click="app.redial($event)">
+                                       <md-icon md-svg-icon="img/icons/menu.svg"></md-icon>
+                                       Quick Link 3
+                                    </md-button>
+                                 </md-menu-item>
+                              </md-menu-content>
+                           </md-menu>
+                          
+                        </md-card-actions>
+                     </md-card>-->
             </md-content>
          </md-tab>
       </md-tabs>

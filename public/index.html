@@ -11,6 +11,7 @@
   <link rel="stylesheet" href="css/font-awesome.min.css">
 
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
      .no-bg-color{
@@ -145,7 +146,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
         <md-toolbar class="md-toolbar-tools" layout="row" layout-align="center-center">
 
             <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Close User Menu">
-              <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
             <h3 class="md-toolbar-tools">FCC</h3>
@@ -379,7 +380,8 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
             <h3 class="md-toolbar-tools">User Menu</h3>
             
             <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="Close User Menu">
-              <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">
+               account_box</md-icon>
             </md-button>
 
         </md-toolbar>
@@ -406,13 +408,16 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
         <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
 
             <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Main Menu">
-              <md-icon md-font-icon="fa-bars" class="md-menu-text-color fa s24"></md-icon>
+             
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
             <span flex layout-align="center center" class="text-center">{{title}}</span>
 
             <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
-              <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">
+               account_box</md-icon>
             </md-button>
 
         </div>
@@ -430,16 +435,17 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
      
          <div  align="center">
          <md-button class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
-            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">business</md-icon>
              FCCU
          </md-button>
          <md-button class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
-            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">website</md-icon>
              Site
 
          </md-button>
          <md-button class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
-            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+            <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
+               role="img" >chat</md-icon>
              Chat
 
          </md-button>

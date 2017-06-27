@@ -65,7 +65,7 @@ position: fixed;
 
 
 .gridListdemoDynamicTiles .darkBlue {
-  background: #eeeeee; }
+  background: #fff; }
 
 
 .gridListdemoDynamicTiles md-grid-tile {
@@ -121,7 +121,15 @@ md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
 md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
     color: rgb(238, 238, 238);
 }
-
+.md-button.md-default-theme.md-warn.md-fab, .md-button.md-warn.md-fab, .md-button.md-default-theme.md-warn.md-raised, .md-button.md-warn.md-raised {
+    color: rgb(255,255,255);
+    background-color: rgb(100, 145, 179);
+}
+.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
+    background: #fff;
+    height: 36px;
+    color: rgba(0,0,0,0.87);
+}
      </style>
 </head>
 
@@ -418,6 +426,26 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
   
 
     <div ui-view></div>
+   <!--<footer flex="100">
+      <md-toolbar class="md-scroll-shrink">
+         <div flex="100" align="center">
+         <md-button class="md-raised md-warn" aria-label="User Menu" style="width:31%; float:left;margin:1%;">
+            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+             FCCU
+         </md-button>
+         <md-button class="md-raised md-warn" aria-label="User Menu" style="width:31%; float:left;margin:1%;">
+            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+             Site
+
+         </md-button>
+         <md-button class="md-raised md-warn"aria-label="User Menu" style="width:31%; float:left;margin:1%;">
+            <md-icon md-font-icon="fa-user" class="md-menu-text-color fa s24"></md-icon>
+             Chat
+
+         </md-button>
+         </div>
+      </md-toolbar>
+   </footer>-->
 
 </div>
 <script src="scripts/angular/angular.min.js"></script>

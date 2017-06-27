@@ -32,25 +32,84 @@ angular.module('appCtrl', [])
                              ]
                      },
                      {
-                        img: 'news-report', name: 'News', list: [
-                           { name: 'Admissions', img: 'id-card', menu: [] },
-                           { name: 'Accounts', img: 'check', menu: [] },
-                           { name: 'Academics', img: 'books', menu: [] },
-                           { name: 'Empower Troubleshooting', img: 'bell', menu: [] },
-                           { name: 'University Counseling Center', img: 'glasses', menu: [] },
-                           { name: 'Mercy Health Center', img: 'heart', menu: [] },
-                           { name: 'Communications Office', img: 'phone-receiver', menu: [] },
-                        ]},
-                     { img: 'school', name: 'Admission' },
-                     { img: 'calendar', name: 'Event' },
-                     { img: 'team', name: 'Campus Services' },
-                     { img: 'blackboard', name: 'Courses' },
-                     { img: 'professor', name: 'Jobs' },
-                     { img: 'boss', name: 'Society' },
-                     { img: 'support', name: 'Support FCCU' },
-                     { img: 'photo-camera', name: 'Photos' }, 
-                     { img: 'network', name: 'Social' }, 
-                     { img: 'contact', name: 'Contact' }, 
+                        img: 'news-report', name: 'News', 
+                        list: [
+                           { name: 'Latest News 1', img: 'id-card', menu: [] },
+                           { name: 'Latest News 1', img: 'check', menu: [] },
+                           { name: 'Latest News 1', img: 'books', menu: [] },
+                        ]
+                     },
+                     {
+                        img: 'school', name: 'Admission',
+                        list: [
+                           { name: 'Admission Links', img: 'id-card', menu: [] },
+                           { name: 'Financial Aid', img: 'check', menu: [] },
+                           { name: 'Tuition Fee', img: 'books', menu: [] },
+                           { name: 'Residential Life', img: 'books', menu: [] },
+                        ] },
+                     {
+                        img: 'calendar', name: 'Event',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]  },
+                     {
+                        img: 'team', name: 'Campus Services',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   },
+                     {
+                        img: 'blackboard', name: 'Courses',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   },
+                     {
+                        img: 'professor', name: 'Jobs',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   },
+                     {
+                        img: 'boss', name: 'Society',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   },
+                     {
+                        img: 'support', name: 'Support FCCU',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   },
+                     {
+                        img: 'photo-camera', name: 'Photos',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   }, 
+                     {
+                        img: 'network', name: 'Social',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   }, 
+                     {
+                        img: 'contact', name: 'Contact',
+                        list: [
+                           { name: 'Events Calendar', img: 'id-card', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Today’s Events', img: 'books', menu: [] },
+                        ]   }, 
                   ]
      
      this.showAdvanced = function (ev) {

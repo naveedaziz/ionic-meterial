@@ -5,11 +5,11 @@
          <md-tab label="{{items.name}}" ng-repeat="items in app.grids">
             <md-content class="md-padding"  layout="row" flex="100">
                
-                    <div layout="column" style="min-width: 200px;" flex="80"  ng-repeat="grid in items.list">
+                    <div layout="column" style="min-width: 180px;" flex="80"  ng-repeat="grid in items.list">
                      
                      <md-card flex="100">
                         <md-menu style="    position: relative;
-    right: -132px;
+    right: -121px;
     width: 51px;
     top: 0;
     height: 15px;
@@ -43,7 +43,7 @@
                         <img ng-src="img/university/{{grid.img}}.svg" class="md-card-image" style="padding:10%;" alt="Washed Out">
                         <md-card-actions  layout-align="center center">
                           
-                           <h4 style="text-align:center; margin-top:0; margin-bottom:0;">{{grid.name}}</h4>
+                           <h5 style="text-align:center; margin-top:0; margin-bottom:0;">{{grid.name}}</h5>
                          
                         </md-card-actions>
                      </md-card>

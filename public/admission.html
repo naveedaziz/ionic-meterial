@@ -1,6 +1,6 @@
 <div class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome" ng-init="app.stateLoader('page')">
    <md-content ng-repeat="items in app.grids" ng-if="app.urlParser(items.name) == app.pageName">
-      <h4 class="md-toolbar-tools md-toolbar-tools-heading">{{items.name}} <span class="borders"></span></h4>
+      <h4 class="md-toolbar-tools md-toolbar-tools-heading"> {{items.name}}</h4>
                  <md-content class="md-padding" layout="row" flex="100">
                  
                <div layout="column" style="min-width: 180px;" flex="80" ng-repeat="grid in items.list">

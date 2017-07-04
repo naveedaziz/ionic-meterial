@@ -16,8 +16,26 @@ angular.module('appCtrl', [])
       $mdDialog.hide(answer);
    };
 })
-   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
-      
+   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state) {
+      this.urlParser = function (str){
+         var rep = '-';
+         str = str.toLowerCase()
+            .replace(/\s+/g, rep) // replace whitespace
+         // remove accents, swap ñ for n, etc
+         var from = "àáäâèéëêìíïîòóöôùúüûñç";
+         var to = "aaaaeeeeiiiioooouuuunc";
+         for (var i = 0, l = from.length; i < l; i++) {
+            str = str.replace(
+               new RegExp(from.charAt(i), 'g'),
+               to.charAt(i)
+            );
+         }
+         // remove invalid chars
+         str = str.replace(new RegExp('[^a-z0-9-' + rep + ']', "g"), '')
+            .replace(/-+/g, rep); // collapse dashes;
+         
+         return str;
+      }
       this.grids = [
                      {
                         img:'student',name:'People',
@@ -111,7 +129,10 @@ angular.module('appCtrl', [])
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]   }, 
                   ]
-     
+     this.stateLoader = function(){
+        console.log($state);
+        this.pageName = $state.params.page;
+     }
      this.showAdvanced = function (ev) {
         console.log(ev);
          $mdDialog.show({

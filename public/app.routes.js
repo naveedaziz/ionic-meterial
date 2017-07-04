@@ -14,7 +14,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             }
         })
        .state('home', {
-          url: '/home',
+          url: '/home/:page',
           templateUrl: 'home.html',
           params: {
              title: "Welcome To"

@@ -27,6 +27,13 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "FCC News"
           }
        })
+       .state('admission', {
+          url: '/admission',
+          templateUrl: 'admission.html',
+          params: {
+             title: "FCC News"
+          }
+       })
         .state('list', {
             url: '/list',
             templateUrl: '/modules/list/views/list.html',

@@ -17,25 +17,7 @@ angular.module('appCtrl', [])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state) {
-      this.urlParser = function (str){
-         var rep = '-';
-         str = str.toLowerCase()
-            .replace(/\s+/g, rep) // replace whitespace
-         // remove accents, swap ñ for n, etc
-         var from = "àáäâèéëêìíïîòóöôùúüûñç";
-         var to = "aaaaeeeeiiiioooouuuunc";
-         for (var i = 0, l = from.length; i < l; i++) {
-            str = str.replace(
-               new RegExp(from.charAt(i), 'g'),
-               to.charAt(i)
-            );
-         }
-         // remove invalid chars
-         str = str.replace(new RegExp('[^a-z0-9-' + rep + ']', "g"), '')
-            .replace(/-+/g, rep); // collapse dashes;
-         
-         return str;
-      }
+      
       this.grids = [
                      {
                         img:'student',name:'People',
@@ -129,9 +111,33 @@ angular.module('appCtrl', [])
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]   }, 
                   ]
-     this.stateLoader = function(){
-        console.log($state);
-        this.pageName = $state.params.page;
+      this.urlParser = function (str) {
+         var rep = '-';
+         str = str.toLowerCase()
+            .replace(/\s+/g, rep) // replace whitespace
+         // remove accents, swap ñ for n, etc
+         var from = "àáäâèéëêìíïîòóöôùúüûñç";
+         var to = "aaaaeeeeiiiioooouuuunc";
+         for (var i = 0, l = from.length; i < l; i++) {
+            str = str.replace(
+               new RegExp(from.charAt(i), 'g'),
+               to.charAt(i)
+            );
+         }
+         // remove invalid chars
+         str = str.replace(new RegExp('[^a-z0-9-' + rep + ']', "g"), '')
+            .replace(/-+/g, rep); // collapse dashes;
+
+         return str;
+      }
+     this.stateLoader = function(pageType){
+        if (pageType == 'page'){
+           console.log($state)
+           this.pageName = this.urlParser($state.$current.url.prefix);
+        }else{
+           this.pageName = $state.params.page;
+        }
+        
      }
      this.showAdvanced = function (ev) {
         console.log(ev);
@@ -155,7 +161,7 @@ angular.module('appCtrl', [])
    for (var i = 0; i < 15; i++) {
       this.todos.push({
          face: imagePath,
-         what: "Brunch this weekend?",
+         what: "News Heading",
          who: "Min Li Chan",
          notes: "I'll be in your neighborhood doing errands."
       });

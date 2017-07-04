@@ -135,6 +135,16 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
     min-height: 88px;
     background: #fff;
 }
+md-list {
+    display: block;
+    padding: 0px 0;
+}
+.md-toolbar-tools-heading{
+       background: #31a5bf;
+    color: #fff;
+    text-align: center;
+    display: inline-grid;
+}
      </style>
 </head>
 
@@ -161,7 +171,8 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
          <md-menu>
             <md-list-item layout="row">
                <span flex="90">People</span>
-               <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+               
+               <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-list-item>
             <md-menu-content>
                <md-menu-item>
@@ -193,8 +204,8 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
       <md-menu-item>
          <md-menu>
             <md-list-item layout="row">
-               <span flex="90">Admissions</span>
-               <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+               <span flex="90" ng-click="app.toggleLeft()" ui-sref="admission">Admissions</span>
+               <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-list-item>
             <md-menu-content>
                <md-menu-item>
@@ -217,7 +228,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
       <md-menu>
          <md-list-item layout="row">
             <span flex="90">Events</span>
-            <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+            <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
          </md-list-item>
          <md-menu-content>
             <md-menu-item>
@@ -243,7 +254,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
    <md-menu>
       <md-list-item layout="row">
          <span flex="90">CAMPUS SERVICES</span>
-         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+         <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
       </md-list-item>
       <md-menu-content>
          <md-menu-item>
@@ -310,7 +321,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
    <md-menu>
       <md-list-item layout="row">
          <span flex="90">COURSES</span>
-         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+         <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
       </md-list-item>
       <md-menu-content>
          <md-menu-item>
@@ -342,7 +353,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
    <md-menu>
       <md-list-item layout="row">
          <span flex="90">SOCIAL</span>
-         <i class="fa fa-plus" flex="10" ng-click="$mdOpenMenu()" aria-hidden="true"></i>
+         <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
       </md-list-item>
       <md-menu-content>
          <md-menu-item>
@@ -391,6 +402,7 @@ md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
          <span>Chat</span>
       </md-list-item>
+      <md-divider></md-divider>
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
          <span>Logout</span>
       </md-list-item>

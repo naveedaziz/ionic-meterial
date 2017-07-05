@@ -17,7 +17,17 @@ angular.module('appCtrl', [])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state) {
-      
+      this.events = [{
+         title: 'Event Title',
+         start: new Date(),
+         end: new Date(),
+         allDay: false
+      }];
+      console.log(this.events)
+      this.eventClicked = function(id){
+         alert(1)
+            console.log(id)
+      }
       this.grids = [
                      {
                         img:'student',name:'People',

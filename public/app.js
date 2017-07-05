@@ -9,7 +9,8 @@ var materialApp = angular
     'listCtrl',
     'listService',
     'tabsCtrl',
-    'tabsService'
+    'tabsService',
+   'material.components.eventCalendar'
    ]).config(function ($mdThemingProvider, $mdIconProvider) {
       $mdIconProvider.icon('md-toggle-arrow', 'img/icons/toggle-arrow.svg', 48);
    $mdIconProvider.iconSet("avatar", 'img/avatar-icons.svg', 128);

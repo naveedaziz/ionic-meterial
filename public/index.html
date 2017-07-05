@@ -10,6 +10,7 @@
   <script src="http://127.0.0.1:8080/target/target-script-min.js#anonymous"></script>
 
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
+<link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
   <style>
@@ -235,7 +236,7 @@ md-list {
    <md-menu-item>
       <md-menu>
          <md-list-item layout="row">
-            <span flex="90">Events</span>
+            <span flex="90" ng-click="app.toggleLeft()" ui-sref="event">Events</span>
             <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
          </md-list-item>
          <md-menu-content>
@@ -479,7 +480,8 @@ md-list {
 <script src="scripts/angular-material/angular-material.min.js"></script>
 
 <script type="text/javascript" src="scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
-
+<script src="scripts/event/angular-material-event-calendar.min.js"></script>
+<script src="scripts/angular-material/angular-material.min.js"></script>
 <script src="modules/cards/controllers/cardsCtrl.js"></script>
 <script src="modules/cards/services/cardsService.js"></script>
 

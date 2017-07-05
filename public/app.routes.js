@@ -34,9 +34,9 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "FCC News"
           }
        })
-       .state('tution', {
-          url: '/tution',
-          templateUrl: 'tution.html',
+       .state('event', {
+          url: '/event',
+          templateUrl: 'event.html',
           params: {
              title: "FCC News"
           }

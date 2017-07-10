@@ -45,7 +45,7 @@
     <!-- Core plugins -->
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-splashscreen" />
-    <plugin name="com.phonegap.plugins.childbrowser" spec="5.0.0" source="pgb" />
+    <plugin name="com.phonegap.plugins.childbrowser" source="pgb" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->

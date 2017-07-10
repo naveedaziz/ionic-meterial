@@ -104,6 +104,16 @@ angular.module('appCtrl', [])
   //     label: 'Event Three'
   //   });
   // }, 1000)
+      this.openLink = function(link){
+         if (link && link.indexOf('http') >= 0){
+            if (window.plugins && window.plugins.ChildBrowser)
+             window.plugins.ChildBrowser.showWebPage(link,{ showLocationBar: true });
+            else
+            window.open(link,'_new');
+         }else if(link){
+            $location.path(link)
+         }
+      }
       this.grids = [
                      {
                         img:'student',name:'People',
@@ -128,7 +138,7 @@ angular.module('appCtrl', [])
                      {
                         img: 'school', name: 'Admission',
                         list: [
-                           { name: 'Admission Links', img: 'id-card', menu: [] },
+                           { name: 'Apply Now', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
                            { name: 'Financial Aid', img: 'check', menu: [] },
                            { name: 'Tuition Fee', img: 'books', menu: [] },
                            { name: 'Residential Life', img: 'books', menu: [] },

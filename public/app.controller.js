@@ -115,7 +115,7 @@ angular.module('appCtrl', [])
                //cordova.InAppBrowser.open(link, '_self', 'location=yes');   
             }else{
                alert(link);
-                   window.open(link, '_new');
+                  // window.open(link, '_new');
             }
          }else if(link){
             $location.path(link)

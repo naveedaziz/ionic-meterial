@@ -107,7 +107,8 @@ angular.module('appCtrl', [])
       this.openLink = function(link){
          alert(link);
          if (link && link.indexOf('http') >= 0){
-            if (cordova && cordova.InAppBrowser){
+            alert(link);
+            if (cordova){
                alert(123);
                alert(cordova);
                alert(cordova.InAppBrowser)

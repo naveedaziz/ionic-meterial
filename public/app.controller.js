@@ -105,6 +105,7 @@ angular.module('appCtrl', [])
   //   });
   // }, 1000)
       this.openLink = function(link){
+         alert(link);
          if (link && link.indexOf('http') >= 0){
             if (cordova && cordova.InAppBrowser){
                alert(123);

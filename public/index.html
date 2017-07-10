@@ -12,7 +12,12 @@
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
 <link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+<script>
+   document.addEventListener("deviceready", onDeviceReady, false);
+      function onDeviceReady() {
+         window.open = cordova.InAppBrowser.open;
+      }
+</script>
   <style>
      .no-bg-color{
         background: none !important;

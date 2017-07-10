@@ -110,9 +110,9 @@ angular.module('appCtrl', [])
             alert(link);
             if (cordova){
                alert(123);
-               alert(cordova);
-               alert(cordova.InAppBrowser)
-               cordova.InAppBrowser.open(link, '_self', 'location=yes');   
+               //alert(cordova);
+              // alert(cordova.InAppBrowser)
+               //cordova.InAppBrowser.open(link, '_self', 'location=yes');   
             }else{
                alert(link);
                    window.open(link, '_new');

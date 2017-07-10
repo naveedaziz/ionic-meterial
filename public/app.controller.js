@@ -106,10 +106,11 @@ angular.module('appCtrl', [])
   // }, 1000)
       this.openLink = function(link){
          if (link && link.indexOf('http') >= 0){
-            if (window.plugins && window.plugins.ChildBrowser)
-             window.plugins.ChildBrowser.showWebPage(link,{ showLocationBar: true });
-            else
-            window.open(link,'_new');
+            if (cordova && cordova.InAppBrowser){
+                  cordova.InAppBrowser.open(url, target, options);   
+            }else{
+                   window.open(link, '_new');
+            }
          }else if(link){
             $location.path(link)
          }

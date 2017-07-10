@@ -21,7 +21,6 @@
         following tag to your config.xml; you will still have the INTERNET
         permission on your app, which PhoneGap requires.
     -->
-    <preference name="phonegap-version"       value="3.7.0" />
     <preference name="permissions"                value="none"/>
 
     <!-- Customize your app and platform with the preference element. -->
@@ -46,7 +45,6 @@
     <!-- Core plugins -->
     <plugin name="cordova-plugin-inappbrowser" />
     <plugin name="cordova-plugin-splashscreen" />
-    <plugin name="org.apache.cordova.inappbrowser" spec="0.2.4" source="pgb" />
 
     <!-- Third party plugins -->
     <!-- A list of available plugins are available at https://build.phonegap.com/plugins -->

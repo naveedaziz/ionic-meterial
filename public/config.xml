@@ -77,8 +77,6 @@
 		<preference name="PaginationBreakingMode" value="page"/>
 		<preference name="PaginationMode" value="unpaginated"/>
 		<preference name="UIWebViewDecelerationSpeed" value="fast"/>
-  	<preference name="orientation" value="portrait" />
-
 
 		<icon src="res/icon/android/icon-48-mdpi.png" platform="android" qualifier="mdpi" />
 		<icon src="res/icon/android/icon-72-hdpi.png" platform="android" qualifier="hdpi" />

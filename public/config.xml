@@ -23,9 +23,6 @@
 
 	<!-- Plugins -->
 
-	<!-- Core plugins -->
-	<gap:plugin name="org.apache.cordova.inappbrowser" />
-	
 
   <name>Domino's Pizza Pakistan</name>
     <description>Ordering your favorite pizza has never been easier.</description>

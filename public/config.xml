@@ -29,8 +29,6 @@
 
   <name>Domino's Pizza Pakistan</name>
     <description>Ordering your favorite pizza has never been easier.</description>
-    <author href="http://dominos.com.pk/" email="anum.ishtiaq@bramerz.pk">Anum Ishtiaq</author>
-	<preference name="prerendered-icon" value="true"/>
+	
 	<access origin="*" />
-    <content src="index.html" />
 </widget>

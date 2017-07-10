@@ -107,6 +107,8 @@ angular.module('appCtrl', [])
       this.openLink = function(link){
          if (link && link.indexOf('http') >= 0){
             if (cordova && cordova.InAppBrowser){
+               alert(cordova);
+               alert(cordova.InAppBrowser)
                cordova.InAppBrowser.open(link, '_self', 'location=yes');   
             }else{
                    window.open(link, '_new');

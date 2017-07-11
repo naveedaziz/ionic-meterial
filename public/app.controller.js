@@ -108,15 +108,7 @@ angular.module('appCtrl', [])
          alert(link);
          if (link && link.indexOf('http') >= 0){
             alert(link);
-            if (cordova){
-               alert(123);
-               //alert(cordova);
-              // alert(cordova.InAppBrowser)
-               //cordova.InAppBrowser.open(link, '_self', 'location=yes');   
-            }else{
-               alert(link);
-                  // window.open(link, '_new');
-            }
+            window.open(link, '_blank', 'location=yes');
          }else if(link){
             $location.path(link)
          }

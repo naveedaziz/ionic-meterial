@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" ?>
     <widget xmlns   = "http://www.w3.org/ns/widgets"
         xmlns:gap   = "http://phonegap.com/ns/1.0"
-        id          = "com.retailer.tcs"
+        id          = "com.fcc.college"
         versionCode = "4"
 		CFBundleVersion = "4.0.0"
         version     = "4.0.0" >
@@ -33,7 +33,6 @@
 		<preference name="stay-in-webview"            value="false" />          <!-- ios: external links should open in the default browser, 'true' would use the webview the app lives in -->
 		<preference name="exit-on-suspend"            value="false" />          <!-- ios: if set to true, app will terminate when home button is pressed -->
 		<preference name="disable-cursor"             value="false" />
-    	<!-- <preference name="SplashScreen" value="splash" /> -->
     	<preference name="StatusBarOverlaysWebView" value="false"/>
     	<preference name="StatusBarBackgroundColor" value="#000000"/>
     	<preference name="StatusBarStyle" value="lightcontent" />
@@ -44,17 +43,7 @@
 		<preference name="PaginationBreakingMode" value="page"/>
 		<preference name="PaginationMode" value="unpaginated"/>
 		<preference name="UIWebViewDecelerationSpeed" value="fast"/>
-		<!-- <preference name="ShowSplashScreenSpinner" value="true" />
-		<preference name="AutoHideSplashScreen" value="true" />
-		<preference name="SplashScreenDelay" value="3000" />
-		<preference name="FadeSplashScreenDuration" value="3000"/>
-		<preference name="FadeSplashScreen" value="true" />
-		<preference name="SplashMaintainAspectRatio" value="true" />
-		<preference name="SplashShowOnlyFirstTime" value="true" />
-		<preference name="SplashScreenSpinnerColor" value="#000000"/> -->
-
-		<!-- Define a specific version of PhoneGap to build into your app. -->
-    <preference name="phonegap-version" value="cli-6.5.0" />
+      <preference name="phonegap-version" value="cli-6.5.0" />
 
 
 		<!-- Plugins -->
@@ -186,11 +175,11 @@
 
 	</platform>
 
-    <name>TCS Sentiments</name>
+    <name>FCC College</name>
 	<description>
-        A gift shop offering cakes, mithai, flowers, toys and clothing.    </description>
-	<author href="http://sentimentsexpress.com/" email="mohsin.sabir@bramerz.pk">
-        Mohsin Sabir
+         Forman Christian College  </description>
+	<author href="http://sentimentsexpress.com/" email="nidobda_92@hotmail.com">
+        Naveed Aziz
     </author>
 	<access origin="*" />
 	<allow-intent href="http://*/*" />

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        xmlns:android   = "http://schemas.android.com/apk/res/android"
+        id        = "com.wildabeast.pgbtester"
+        version   = "2.0.2">
+    <name>PGBTester</name>
+
+    <description>
+        Tests shit from PhoneGap Build.
+    </description>
+
+    <author href="http://phonegap.com" email="support@phonegap.com">
+        PhoneGap Team
+    </author>
+
+    <!-- pgb -->
+    <preference name="pgb-builder-version" value="2" />
+    <preference name="phonegap-version"           value="cli-6.5.0" />   
+
+    <!-- universal preferences -->        
+    <preference name="orientation"                value="portrait" />        
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="load-url-timeout"           value="1000" />
+
+    <!-- ios preferences -->
+    <preference name="webviewbounce"              value="false" />     
+    <preference name="prerendered-icon"           value="true" />   
+    <preference name="stay-in-webview"            value="false" />       
+    <preference name="ios-statusbarstyle"         value="black-opaque" />  
+    <preference name="detect-data-types"          value="true" />           
+    <preference name="show-splash-screen-spinner" value="true" />       
+    <preference name="auto-hide-splash-screen"    value="true" />  
+
+    <!-- android preferences -->  
+    <preference name="android-minSdkVersion"        value="14" />          
+    <preference name="android-installLocation"      value="auto" />           
+    <preference name="android-targetSdkVersion"     value="14" />
+    <preference name="android-maxSdkVersion"        value="17" />
+    <preference name="android-windowSoftInputMode"  value="stateVisible|adjustResize" />
+    <preference name="backupwebstorage"             value="none"/>
+    <preference name="fullscreen"                   value="true" />
+
+    <!-- third party plugins -->
+    <plugin name="phonegap-plugin-barcodescanner" />
+ 
+    <!-- core plugins -->
+    <plugin name="cordova-plugin-battery-status" />
+    <plugin name="cordova-plugin-camera"/>
+    <plugin name="cordova-plugin-media-capture"/>
+    <plugin name="cordova-plugin-console"/>
+    <plugin name="cordova-plugin-contacts"/>
+    <plugin name="cordova-plugin-device"/>
+    <plugin name="cordova-plugin-device-motion"/>
+    <plugin name="cordova-plugin-device-orientation"/>
+    <plugin name="cordova-plugin-file"/>
+    <plugin name="cordova-plugin-file-transfer"/>
+    <plugin name="cordova-plugin-geolocation"/>
+    <plugin name="cordova-plugin-globalization"/>
+    <plugin name="cordova-plugin-inappbrowser"/>
+    <plugin name="cordova-plugin-media"/>
+    <plugin name="cordova-plugin-dialogs"/>
+    <plugin name="cordova-plugin-vibration"/>
+    <plugin name="cordova-plugin-statusbar" />
+
+    <!-- icons -->
+    <!-- Define app icon for each platform. -->
+    <icon src="icon.png" />
+    <icon src="res/icon/android/icon-36-ldpi.png"   platform="android"    density="ldpi" />
+    <icon src="res/icon/android/icon-48-mdpi.png"   platform="android"    density="mdpi" />
+    <icon src="res/icon/android/icon-72-hdpi.png"   platform="android"    density="hdpi" />
+    <icon src="res/icon/android/icon-96-xhdpi.png"  platform="android"    density="xhdpi" />
+    <icon src="res/icon/ios/icon-57.png"            platform="ios"        width="57" height="57" />
+    <icon src="res/icon/ios/icon-72.png"            platform="ios"        width="72" height="72" />
+    <icon src="res/icon/ios/icon-57-2x.png"         platform="ios"        width="114" height="114" />
+    <icon src="res/icon/ios/icon-72-2x.png"         platform="ios"        width="144" height="144" />
+    <icon src="res/icon/windows-phone/icon-48.png"  platform="winphone" />
+    <icon src="res/icon/windows-phone/icon-173-tile.png" platform="winphone"   role="background" />
+
+    <!-- Define app splash screen for each platform. -->
+    <splash src="res/screen/android/screen-ldpi-portrait.png"       platform="android" density="ldpi" />
+    <splash src="res/screen/android/screen-mdpi-portrait.png"       platform="android" density="mdpi" />
+    <splash src="res/screen/android/screen-hdpi-portrait.png"       platform="android" density="hdpi" />
+    <splash src="res/screen/android/screen-xhdpi-portrait.png"      platform="android" density="xhdpi" />
+    <splash src="res/screen/ios/screen-iphone-portrait.png"         platform="ios"     width="320" height="480" />
+    <splash src="res/screen/ios/screen-iphone-portrait-2x.png"      platform="ios"     width="640" height="960" />
+    <splash src="res/screen/ios/screen-iphone-portrait-568h-2x.png" platform="ios"     width="640" height="1136" />
+    <splash src="res/screen/ios/screen-ipad-portrait.png"           platform="ios"     width="768" height="1024" />
+    <splash src="res/screen/ios/screen-ipad-landscape.png"          platform="ios"     width="1024" height="768" />
+    <splash src="res/screen/windows-phone/screen-portrait.jpg"      platform="winphone" />
+
+    <access origin="*" />
+</widget>

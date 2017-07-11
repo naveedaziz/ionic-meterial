@@ -1,55 +1,300 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
+<html lang="en">
+<head>
+  <title>Material Starter</title>
 
-    http://www.apache.org/licenses/LICENSE-2.0
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="">
+  <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
+  <script src="http://127.0.0.1:8080/target/target-script-min.js#anonymous"></script>
 
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>PhoneGap Build Tester</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>Apache Cordova</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
-            </div>
-            <p><a href="#" class="topcoat-button" id="scan">SCAN SOMETHING</a></p>
-            <p><a href="#" class="topcoat-button" id="encode">ENCODE</a></p>
-            <p><a href="#" class="topcoat-button" id="whitelist">TEST WHITELISTS</a></p>
-            <p><a href="#" class="topcoat-button" id="camera">CAMERA</a></p>
-            <p><a href="#" class="topcoat-button" id="video">CAPTURE VIDEO</a></p>
-            <p><input type="text" /></p>
-            <p><input type="file" /></p>
-            <p id="info"></p>
-            <h2>OPENING LINKS:</h2>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://yahoo.com', '_blank', 'location=yes');">InAppBrowser</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://yahoo.com', '_system', 'location=yes');">System Browser</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.open('http://www.yahoo.com', '_self', 'location=yes');">This Webview</a></p>
-            <p><a href="#" class="topcoat-button" onclick="window.plugins.childBrowser.showWebPage('http://www.nhl.com', {});">ChildBrowser</a></p>
+  <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
+<link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+  <style>
+     .no-bg-color{
+        background: none !important;
+     }
+     .text-center{
+        text-align: center;
+     }
+    .menu-icons{
+            text-align: center;
+    font-size: 70px !important;
+     }
+     md-icon{
+        font-size:20px !important;
+     }
+     .menudemoBasicUsage .md-menu-demo {
+  padding: 24px; }
+
+.menudemoBasicUsage .menu-demo-container {
+  min-height: 200px; }
+  md-sidenav md-menu-item md-menu{
+     padding-left: 0 !important;
+     padding-right: 0 !important;
+  } 
+    md-backdrop, md-sidenav {
+position: fixed;
+}
+.gridListdemoDynamicTiles md-icon {
+  width: 50%;
+  height: 30%; }
+
+.gridListdemoDynamicTiles md-icon svg {
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%; }
+
+.gridListdemoDynamicTiles .s64 {
+  font-size: 64px; }
+
+.gridListdemoDynamicTiles .s32 {
+  font-size: 48px; }
+
+.gridListdemoDynamicTiles md-icon.fa {
+  display: block;
+  padding-left: 0; }
+
+.gridListdemoDynamicTiles md-icon.s32 span {
+  padding-left: 8px; }
+
+.gridListdemoDynamicTiles md-grid-list {
+  margin:0 8px;}
+
+
+.gridListdemoDynamicTiles .darkBlue {
+  background: #fff; }
+
+
+.gridListdemoDynamicTiles md-grid-tile {
+  transition: all 300ms ease-out 50ms; }
+
+.gridListdemoDynamicTiles md-grid-tile md-icon {
+  padding-bottom: 32px; }
+
+.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
+  background: rgba(0, 0, 0, 0.68);
+  height: 36px; }
+
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption {
+  width: 100%; }
+
+.gridListdemoDynamicTiles md-grid-tile-footer figcaption h3 {
+  margin: 0;
+  font-weight: 700;
+  width: 100%;
+  text-align: center; }
+.gridListdemoDynamicTilesHome md-grid-tile-footer figcaption h3 {
+        margin: 0;
+    font-weight: 700;
+    width: auto;
+    text-align: left;
+    padding-left: 13px;
+    padding-top: 10px;
+}
+
+.gridListdemoDynamicTilesHome md-grid-list {
+  margin: 0; }
+  .gridListdemoDynamicTilesHome md-menu md-icon.md-default-theme, md-icon {
+    color: #eeeeee;
+}
+
+.clearfix{
+   clear: both;
+}
+md-tab-content.md-no-scroll {
+    
+     overflow: auto !important; 
+}
+body,html{
+   background:rgb(41, 100, 144)
+}
+md-content.md-default-theme, md-content {
+    color: rgb(238, 238, 238);
+    background-color: rgb(41, 100, 144);
+}
+md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
+    color: rgb(187, 187, 187);
+}
+md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.md-default-theme .md-tab.md-active md-icon, md-tabs .md-tab.md-active md-icon, md-tabs.md-default-theme .md-tab.md-focused, md-tabs .md-tab.md-focused, md-tabs.md-default-theme .md-tab.md-focused md-icon, md-tabs .md-tab.md-focused md-icon {
+    color: rgb(238, 238, 238);
+}
+.md-button.md-default-theme.md-warn.md-fab, .md-button.md-warn.md-fab, .md-button.md-default-theme.md-warn.md-raised, .md-button.md-warn.md-raised {
+    color: rgb(255,255,255);
+    background-color: rgb(49, 165, 191);
+}
+.gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
+    background: #fff;
+    height: 36px;
+    color: rgba(0,0,0,0.87);
+}
+md-list-item.md-3-line, md-list-item.md-3-line>.md-no-style {
+    height: auto;
+    min-height: 88px;
+    background: #fff;
+}
+md-list {
+    display: block;
+    padding: 0px 0;
+}
+.md-toolbar-tools-heading{
+     background: #fff;
+    color: #232323;
+    text-align: center;
+    display: inline-grid;
+    padding-left: 18px;
+    text-transform: uppercase;
+}
+.borders{
+   width: 100%;
+    background: rgb(255, 64, 129);
+    height: 2px;
+    display: inline-block;
+}
+md-event-calendar-month{
+   height:375px !important;
+}
+     </style>
+</head>
+
+<body ng-app="materialApp" layout="column" flex ng-controller="appCtrl as app">
+
+    <md-sidenav md-disable-scroll-target class="md-sidenav-left md-whiteframe-4dp ng-cloak" md-component-id="left">
+
+        <md-toolbar class="md-toolbar-tools" layout="row" layout-align="center-center">
+
+            <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Close User Menu">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
+            </md-button>
+
+            <h3 class="md-toolbar-tools">FCC</h3>
+        
+        </md-toolbar>
+
+       
+   <div  ng-repeat="links in app.grids">
+   <md-menu-item>
+         <md-menu>
+            <md-list-item layout="row">
+               <span flex="90" ng-click="app.toggleLeft()" ui-sref="{{app.urlParser(links.name)}}">{{links.name}}</span>
+               <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
+            </md-list-item>
+            <md-menu-content>
+               <md-menu-item ng-repeat="inner_links in links.list">
+                  <md-button  ng-click="app.openLink(inner_links.link)">{{inner_links.name}}</md-button>
+               </md-menu-item>
+            </md-menu-content>
+         </md-menu>
+      </md-menu-item>
+      <md-divider></md-divider>
+   </div>
+    </md-sidenav>
+
+    <md-sidenav class="md-sidenav-right md-whiteframe-4dp ng-cloak" md-component-id="right">
+
+        <md-toolbar class="md-toolbar-tools" layout="row" layout-align="space-between-center">
+            <h3 class="md-toolbar-tools">User Menu</h3>
+            
+            <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="Close User Menu">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">
+               account_box</md-icon>
+            </md-button>
+
+        </md-toolbar>
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+         <span>Calender</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+         <span>Chat</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+         <span>Logout</span>
+      </md-list-item>
+      <md-divider></md-divider>
+
+    </md-sidenav>
+
+
+
+
+<div style="width:100%" class="ng-cloak">
+   
+    <md-toolbar  class="toolbar">
+        <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
+
+            <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Main Menu">
+             
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
+            </md-button>
+
+            <span flex layout-align="center center" class="text-center">{{title}}</span>
+
+            <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
+
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">
+               account_box</md-icon>
+            </md-button>
+
         </div>
-        <script type="text/javascript" src="cordova.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+      
+
+      <md-card  class="no-bg-color header-bg" flex="100"  flex-gt-sm="33" layout-align="center center" layout="column">
+         <a ui-sref="default"><img src="img/fc2.jpg" flex="100" class="md-card-image" alt="Washed Out"></a>
+      </md-card>
+ 
+    </md-toolbar>
+  
+
+    <div ui-view style="margin-bottom:40px;"></div>
+   <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 1%;background:rgb(41, 100, 144)">
+     
+         <div  align="center">
+         <md-button ui-sref="default" class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">home</md-icon>
+             HOME
+         </md-button>
+         <md-button class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">website</md-icon>
+             Site
+
+         </md-button>
+         <md-button class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
+            <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
+               role="img" >chat</md-icon>
+             Chat
+
+         </md-button>
+         </div>
+      
+   </footer>
+
+</div>
+<script src="scripts/angular/angular.min.js"></script>
+<script src="scripts/angular-animate/angular-animate.min.js"></script>
+<script src="scripts/angular-aria/angular-aria.min.js"></script>
+<script src="scripts/angular-material/angular-material.min.js"></script>
+
+<script type="text/javascript" src="scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
+<script src="scripts/event/angular-material-event-calendar.min.js"></script>
+<script src="scripts/angular-material/angular-material.min.js"></script>
+<script src="modules/cards/controllers/cardsCtrl.js"></script>
+<script src="modules/cards/services/cardsService.js"></script>
+
+<script src="modules/list/controllers/listCtrl.js"></script>
+<script src="modules/list/services/listService.js"></script>
+
+<script src="modules/tabs/controllers/tabsCtrl.js"></script>
+<script src="modules/tabs/services/tabsService.js"></script>
+
+<script src="app.controller.js"></script>
+
+<script src="app.js"></script>
+<script src="app.routes.js"></script>
+
+</body>
 </html>

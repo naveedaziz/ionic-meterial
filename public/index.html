@@ -16,56 +16,7 @@
 <script src="cordova.js"></script>
 <script type="text/javascript" src="phonegap.js"></script>
 <script src="scripts/ng-cordova.min.js"></script>
-<script type="text/javascript" charset="utf-8">
-   var app = {
-      // Application Constructor
-      initialize: function () {
-         this.bindEvents();
-      },
-      // Bind Event Listeners
-      //
-      // Bind any events that are required on startup. Common events are:
-      // 'load', 'deviceready', 'offline', and 'online'.
-      bindEvents: function () {
-         document.addEventListener('deviceready', this.onDeviceReady, false);
-      },
-      // deviceready Event Handler
-      //
-      // The scope of 'this' is the event. In order to call the 'receivedEvent'
-      // function, we must explicitly call 'app.receivedEvent(...);'
-      onDeviceReady: function () {
-         // var inAppBrowserRef;
-         if (cordova.InAppBrowser && cordova.InAppBrowser.open) {
-            cordova.InAppBrowser.open('http://sentimentsexpress.com/', '_blank', 'location=no');
-            // inAppBrowserRef =
-            //if (inAppBrowserRef) {
-            //   inAppBrowserRef.addEventListener('loadstart', loadStartCallBack);
-            // }
-            app.receivedEvent('deviceready');
-         }
-      },
-      // Update DOM on a Received Event
-      receivedEvent: function (id) {
-         var parentElement = document.getElementById(id);
-         var listeningElement = parentElement.querySelector('.listening');
-         var receivedElement = parentElement.querySelector('.received');
 
-         listeningElement.setAttribute('style', 'display:none;');
-         receivedElement.setAttribute('style', 'display:block;');
-
-         console.log('Received Event: ' + id);
-      }
-   };
-
-   // function loadStartCallBack() {
-   //     $('#status-message').text("loading please wait ...");
-   // }
-
-   app.initialize();
-   function closeMeNow() {
-      navigator.app.exitApp();
-   }
-</script>
   <style>
      .no-bg-color{
         background: none !important;

@@ -148,7 +148,7 @@ angular.module('appCtrl', [])
                         img: 'calendar', name: 'Event',
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
+                           { name: 'Academic Calendar', img: 'check', menu: [], link:'acadamic-calender' },
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]  },
                      {

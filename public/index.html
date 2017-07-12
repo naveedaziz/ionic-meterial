@@ -7,14 +7,12 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="description" content="">
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-  <script src="http://127.0.0.1:8080/target/target-script-min.js#anonymous"></script>
-
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
 <link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 <!-- cordova script (this will be a 404 during development) -->
-<script src="cordova.js"></script>
-<script type="text/javascript" src="phonegap.js"></script>
+<!--<script src="cordova.js"></script>
+<script type="text/javascript" src="phonegap.js"></script>-->
 <!--<script src="scripts/ng-cordova.min.js"></script>-->
 
   <style>
@@ -161,6 +159,10 @@ md-list {
 md-event-calendar-month{
    height:375px !important;
 }
+md-tabs {
+    -webkit-transition: all 0.0s !important;
+    transition: all 0.0s !important;
+}
      </style>
 </head>
 
@@ -188,7 +190,7 @@ md-event-calendar-month{
             </md-list-item>
             <md-menu-content>
                <md-menu-item ng-repeat="inner_links in links.list">
-                  <md-button  ng-click="app.openLink(inner_links.link)">{{inner_links.name}}</md-button>
+                  <md-button  ng-click="app.openLink(inner_links.link,inner_links.params);app.toggleLeft()">{{inner_links.name}}</md-button>
                </md-menu-item>
             </md-menu-content>
          </md-menu>

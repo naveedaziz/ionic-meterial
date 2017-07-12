@@ -16,7 +16,7 @@ angular.module('appCtrl', [])
       $mdDialog.hide(answer);
    };
 })
-   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state) {
+   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state,$location) {
       this.events = [
          {
             start: getDate(-6, 10),
@@ -104,20 +104,22 @@ angular.module('appCtrl', [])
   //     label: 'Event Three'
   //   });
   // }, 1000)
-      this.openLink = function(link){
-         alert(link);
+      this.openLink = function(link,params){
          if (link && link.indexOf('http') >= 0){
-            alert(link);
             window.open(link, '_blank', 'location=yes');
          }else if(link){
-            $location.path(link)
+            if (params)
+                $state.go(link, params );
+            else
+               $state.go(link);
+            //$location.path(link)
          }
       }
       this.grids = [
                      {
                         img:'student',name:'People',
                         list:[
-                           { name: 'Admissions', img:'id-card', menu:[]},
+                           { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
                                  {name:'Accounts', img:'check', menu:[]},
                                  { name: 'Academics', img: 'books', menu: [] },
                                  { name: 'Empower Troubleshooting', img: 'bell', menu: [] },
@@ -138,9 +140,9 @@ angular.module('appCtrl', [])
                         img: 'school', name: 'Admission',
                         list: [
                            { name: 'Apply Now', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
-                           { name: 'Financial Aid', img: 'check', menu: [] },
-                           { name: 'Tuition Fee', img: 'books', menu: [] },
-                           { name: 'Residential Life', img: 'books', menu: [] },
+                           { name: 'Financial Aid', img: 'check', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
+                           { name: 'Tuition Fee', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/tuition-fee/' },
+                           { name: 'Residential Life', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
                         img: 'calendar', name: 'Event',
@@ -225,6 +227,7 @@ angular.module('appCtrl', [])
 
          return str;
       }
+    this.selectedTab = 0;
      this.stateLoader = function(pageType){
         if (pageType == 'page'){
            console.log($state)

@@ -269,6 +269,14 @@ angular.module('appCtrl', [])
             link: false,
             message: 'FCCU’s Writing Center guides students in their writing and research needs. The facility provides students one-to-one tutoring for their specific writing needs with trained tutors. Students may sign up for appointments or walk-in to meet a tutor at their convenience. The Writing Center also arranges workshops run by experts on different aspects of University level writing and research.'
          },
+         'contact': {
+            name: 'Contact Us',
+            address: 'Forman Christian College Ferozepur Road Lahore 54600 Pakistan',
+            phone: 'Tel: +92(42) 9923 1581 upto 88',
+            email: 'contact@fccollege.edu.pk',
+            link: 'http://fccollege.edu.pk',
+            message: 'Please feel free to contact us any time'
+         },
 
       }
       this.grids = [
@@ -341,9 +349,9 @@ angular.module('appCtrl', [])
                      {
                         img: 'professor', name: 'Jobs',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Faculty Positions', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
+                           { name: 'Staff Positions', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
+                           { name: 'Academic Support Staff Positions', img: 'books', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
                         ]   },
                      {
                         img: 'boss', name: 'Society',
@@ -355,9 +363,8 @@ angular.module('appCtrl', [])
                      {
                         img: 'support', name: 'Support FCCU',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Learn About Current Campaigns', img: 'id-card', menu: [] },
+                           { name: 'Give to FCCU', img: 'check', menu: [] },
                         ]   },
                      {
                         img: 'photo-camera', name: 'Photos',
@@ -369,16 +376,18 @@ angular.module('appCtrl', [])
                      {
                         img: 'network', name: 'Social',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Facebook', img: 'id-card', menu: [], link:'https://www.facebook.com/fccollege/' },
+                           { name: 'Twitter', img: 'check', menu: [], link: 'https://twitter.com/FCCollege' },
+                           { name: 'Instagram', img: 'books', menu: [], link: 'https://www.instagram.com/formanchristiancollege/' },
+                           { name: 'LinkedIn', img: 'books', menu: [], link: 'https://www.linkedin.com/school/310575/' },
+                           { name: 'YouTube', img: 'books', menu: [], link: 'https://www.youtube.com/user/FCCUniversity' },
                         ]   }, 
                      {
                         img: 'contact', name: 'Contact',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Address', img: 'id-card', menu: [],link:'page',params:{page:'contact'} },
+                           { name: 'Phone', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },
+                           { name: 'Email', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },
                         ]   }, 
                   ]
       this.urlParser = function (str) {

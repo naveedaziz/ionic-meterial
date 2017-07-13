@@ -115,12 +115,22 @@ angular.module('appCtrl', [])
             //$location.path(link)
          }
       }
+      this.pageStatic  = {
+         'account': {
+                        name: 'Account Office', 
+                        address: 'Room # 010, Ground Floor, Ahmad Saeed Administration Building', 
+                        phone: 'Tel: (92-42) 99231581-8 Ext: 211, 217, 244', 
+                        email: 'fccaccounts@fccollege.edu.pk', 
+                        link: 'http://www.fccollege.edu.pk/accounts-office/', 
+                        message: 'The Accounts Office deals with tuition fee, its billing and collections, maintaining students’ financial accounts, payments, and refunds.'
+                     }
+      }
       this.grids = [
                      {
                         img:'student',name:'People',
                         list:[
                            { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
-                                 {name:'Accounts', img:'check', menu:[]},
+                                 {name:'Accounts', img:'check', menu:[],link:'page',params:{page:'account'}},
                                  { name: 'Academics', img: 'books', menu: [] },
                                  { name: 'Empower Troubleshooting', img: 'bell', menu: [] },
                                  { name: 'University Counseling Center', img: 'glasses', menu: [] },

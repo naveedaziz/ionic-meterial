@@ -1,0 +1,32 @@
+<div  layout="column"  ng-cloak ng-init="app.stateLoader()">
+<div  ng-cloak>
+
+   <md-toolbar class="md-accent">
+      <div class="md-toolbar-tools">
+         <h2 style="width:100%;">{{app.pageStatic[app.pageName].name}}</h2>
+         <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24 pull-right" role="img">info</md-icon>
+
+      </div>
+   </md-toolbar>
+
+   <md-content layout-padding  class="pageContents">
+      <div>
+         <p>
+            <p dir="ltr"><md-icon ng-style="{color: '#000'}" class="material-icons step ng-binding md-24" role="img">address</md-icon>{{app.pageStatic[app.pageName].address}}</p>
+            <br>
+            <p dir="ltr"><md-icon ng-style="{color: '#000'}" class="material-icons step ng-binding md-24" role="img">webiste</md-icon><a href="{{app.pageStatic[app.pageName].link}}">{{app.pageStatic[app.pageName].link}}</a></p>
+            <br>
+            <p dir="ltr"><md-icon ng-style="{color: '#000'}" class="material-icons step ng-binding md-24" role="img">message</md-icon>{{app.pageStatic[app.pageName].message}}</p>
+            <br>
+            <p dir="ltr"><b><md-icon ng-style="{color: '#000'}" class="material-icons step ng-binding md-24" role="img">phone</md-icon>{{app.pageStatic[app.pageName].phone}}</b></p>
+            <br>
+            <p dir="ltr"><b><md-icon ng-style="{color: '#000'}" class="material-icons step ng-binding md-24" role="img">email</md-icon>{{app.pageStatic[app.pageName].email}}</b></p>
+
+         </p>
+         
+      </div>
+   </md-content>
+
+</div>
+
+</div>

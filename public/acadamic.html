@@ -1,0 +1,55 @@
+<md-content> 
+  <div class="toolbardemoBasicUsage ng-scope">
+   <md-content>
+      <md-subheader class="md-no-sticky">Courses</md-subheader>
+      <!-- ngRepeat: data in accordianData -->
+      <div class="md-accordion ng-scope" ng-repeat="course in app.courses">
+         <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded" role="button" tabindex="0">
+            <div class="md-toolbar-tools" style="    background: rgb(41, 100, 144);font-size:14px;">
+               <h2>
+                  <span class="ng-binding">{{course.name}}</span>
+               </h2>
+               <span flex="" class="flex"></span>
+               <span ng-class="{expandCollapse:true, active:data.expanded}" class="expandCollapse"></span>
+            </div>
+         </md-toolbar>
+         <div ng-class="{dataContent:true, activeContent:data.expanded}" class="ng-binding dataContent">
+               <!--<div ng-repeat="course_department in course.departments">
+                  <h4 ng-init="dataDepartment.expanded = false">{{course_department.name}}</h4>
+                  <span  ng-class="{expandCollapse:true, active:dataDepartment.expanded}" style="color:red;" class="expandCollapse"></span>
+               </div>-->
+               <div class="md-accordion ng-scope" ng-repeat="course_department in course.departments">
+                  <md-toolbar ng-init="dataDepartment.expanded = false" ng-click="dataDepartment.expanded = !dataDepartment.expanded" role="button" tabindex="0">
+                     <div class="md-toolbar-tools" style="    background: rgb(38, 72, 97);font-size:14px;">
+                        <h2>
+                           <span class="ng-binding">{{course_department.name}}</span>
+                        </h2>
+                        <span flex="" class="flex"></span>
+                        <span ng-class="{expandCollapse:true, active:dataDepartment.expanded}" class="expandCollapse"></span>
+                     </div>
+                  </md-toolbar>
+                  <div ng-class="{dataDepartmentContent:true, activeContent:dataDepartment.expanded}" class="ng-binding dataContent">
+                     <!--<div ng-repeat="course_department in course.departments">
+                        <h4 ng-init="dataDepartment.expanded = false">{{course_department.name}}</h4>
+                        <span ng-class="{expandCollapse:true, active:dataDepartment.expanded}" style="color:red;" class="expandCollapse"></span>
+                     </div>-->
+                     <!--<h4 ng-repeat="course_outline in course_department.courses">{{course_outline.name}}</h4>-->
+                     <md-list flex>
+                        <md-list-item style="background:#0e6eb5; border-bottom:1px solid #fff;color:#fff;"  ng-repeat="course_outline in course_department.courses"ng-click="null">
+                           <div class="md-list-item-text" layout="column">
+                              <h4 style="margin:0;">{{course_outline.name}}</h4>
+                           </div>
+                        </md-list-item>
+                  </div>
+                  <div>
+                  </div>
+               </div>
+         </div>
+         <div>
+         </div>
+      </div>
+      <!-- end ngRepeat: data in accordianData -->
+      
+   </md-content>
+</div>
+</md-content>

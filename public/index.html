@@ -10,12 +10,28 @@
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
 <link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 <!-- cordova script (this will be a 404 during development) -->
 <!--<script src="cordova.js"></script>
 <script type="text/javascript" src="phonegap.js"></script>-->
 <!--<script src="scripts/ng-cordova.min.js"></script>-->
 
   <style>
+     .md-accordion .expandCollapse { width:30px; height:30px; position:relative; font-size:20px; font-weight:bold; cursor:pointer; color:#fff; display:block; margin-top: -2px; margin-left: -2px; overflow:hidden; } 
+.md-accordion .expandCollapse:active { border:0px; }
+.md-accordion .expandCollapse:before, .md-accordion .expandCollapse:after { width:30px; height:30px; display:block; position:absolute; top:0; left:0; line-height:32px; text-align:center; -webkit-transition: .3s all ease-out; transition: .3s all ease-out; }
+.md-accordion .expandCollapse:before { opacity:1 -webkit-transform: rotate(0deg); transform: rotate(0deg); content: "|"; margin-top:-3px; }
+.md-accordion .expandCollapse:after { opacity:1; -webkit-transform: rotate(-90deg); transform: rotate(-90deg); content: "|"; margin-left:-3px; }
+.md-accordion .active:before { opacity:1; -webkit-transform: rotate(90deg); transform: rotate(90deg); margin-left:3px; margin-top:0px; }
+.md-accordion .dataContent { background: #fff; height:0px; overflow:hidden; -webkit-transition: .3s all ease-out; transition: .3s all ease-out; }
+.md-accordion .activeContent { height: auto;
+    padding: 12px;
+    display: block;
+    color: rgba(0, 0, 0, 0.71);
+    box-shadow: inset 1px 1px 20px 3px #688ba5;
+    font-size: 13px; }
+.md-accordion md-toolbar{ cursor:pointer; border-bottom:1px solid rgb(255, 255, 255)}
+
      .pageContents{
     color: rgba(0, 0, 0, 0.76);
     font-size: 14px;
@@ -183,6 +199,14 @@ md-tabs {
      background: #fff;
 
 }
+.event-details{
+   background: #0189b3;
+    margin-top: 2px;
+    margin-bottom: 2px;
+}
+.event-details .md-secondary-container{
+   width:25px;
+}
      </style>
 </head>
 
@@ -205,7 +229,7 @@ md-tabs {
    <md-menu-item>
          <md-menu>
             <md-list-item layout="row">
-               <span flex="90" ng-click="app.toggleLeft()" ui-sref="{{app.urlParser(links.name)}}">{{links.name}}</span>
+               <span ng-click="app.openLink(links.link,links.params);app.toggleLeft()" flex="90">{{links.name}}</span>
                <md-icon ng-style="{color: '#000'}" ng-click="$mdOpenMenu()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-list-item>
             <md-menu-content>

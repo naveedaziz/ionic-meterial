@@ -17,65 +17,225 @@ angular.module('appCtrl', [])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state,$location) {
+      this.departments = [
+         {name: 'Department of Business',image:'img/department/department.jpg',
+         courses:[
+            { name:'Baccalaureate (Hons) in Business'},
+            { name: 'Postgraduate in Business' }
+         ]},
+         { name: 'Department of Economics', image: 'img/department/Ecomonics.jpg',
+            courses: [
+               { name: 'Baccalaureate (Hons) in Economics' },
+               { name: 'Postgraduate in Economics' }
+            ]
+          }
+      ];
+      this.courses = [
+         { name: 'Faculty of Business and Economics', image: 'img/department/department.jpg',
+           departments:[
+              { name: 'Department of Business', image: 'img/department/department.jpg',
+                 courses: [
+                    { name: 'Baccalaureate (Hons) in Business' },
+                    { name: 'Postgraduate in Business' }
+                 ]
+               },
+              { name: 'Department of Economics', image: 'img/department/Ecomonics.jpg',
+                 courses: [
+                    { name: 'Baccalaureate (Hons) in Economics' },
+                    { name: 'Postgraduate in Economics' }
+                 ]
+               }
+           ] },
+         { name: 'Faculty of Computer Science & Mathematics', image: 'img/department/Ecomonics.jpg' ,
+            departments:[
+               { name: 'Department of Computer Science', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate(Hons) in Computer Sciences' },
+                     { name: 'MS Computer Science' }
+                  ]
+                   },
+               { name: 'Department of Mathematics', image: 'img/department/Ecomonics.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Mathematics' }
+                  ] },
+               { name: 'Department of Statistics', image: 'img/department/Ecomonics.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Statistics' },
+                  ] },
+            ] },
+         { name: 'Faculty of Education', image: 'img/department/Ecomonics.jpg' ,
+            departments:[
+               { name: 'Department of Education', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Education' }
+                  ] }
+            ] },
+         { name: 'Faculty of Humanities', image: 'img/department/Ecomonics.jpg',
+            departments: [
+               { name: 'Department of English', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in English' },
+                     { name: 'Postgraduate in English' },
+                  ] },
+               { name: 'Department of Mass Communication', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Mass Communication' }
+                  ]  },
+               { name: 'Department of Philosophy', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Philosophy' }
+                  ] },
+               { name: 'Department of Religious Studies', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Religious Studies' }
+                  ] },
+               { name: 'Department of Urdu', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Urdu' }
+                  ] },
+            ]
+         },
+         {
+            name: 'Faculty of Natural & Physical Sciences', image: 'img/department/Ecomonics.jpg',
+            departments: [
+               { name: 'Department of Biological Sciences', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Biological Sciences' },
+                     { name: 'Postgraduate in Biological Sciences' }
+                  ] },
+               { name: 'Department of Chemistry', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Chemistry' },
+                     { name: 'Postgraduate in Chemistry' }
+                  ] },
+               { name: 'Department of Physics', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Physics' },
+                     { name: 'Postgraduate in Physics' }
+                  ] },
+               { name: 'Department of Environmental Sciences', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Environmental Sciences' },
+                     { name: 'Postgraduate in Environmental Sciences' }
+                  ] },
+               { name: 'Bioinformatics Program', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Bioinformatics' }
+                  ] },
+               { name: 'Department of Pharmacy', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Doctor of Pharmacy (PharmD) Program' }
+                     ]},
+            ]
+         },
+         {
+            name: 'Faculty of Social Sciences', image: 'img/department/Ecomonics.jpg',
+            departments: [
+               { name: 'Department of Geography', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Geography' }
+                  ] },
+               { name: 'Department of History', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in History' }
+                  ] },
+               { name: 'Department of Political Science', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Political Science' },
+                     { name: 'Postgraduate in Political Science' }
+                  ] },
+               { name: 'Department of Psychology', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate (Hons) in Political Science' },
+                     { name: 'Postgraduate in Political Science' }
+                  ] },
+               { name: 'Department of Sociology', image: 'img/department/department.jpg',
+                  courses: [
+                     { name: 'Baccalaureate(Hons) in Psychology' },
+                     ]},
+            ]
+         },
+      ]
       this.events = [
          {
             start: getDate(-6, 10),
             end: getDate(-6, 11),
-            title: 'Event 1'
+            venue:'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description:'  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker:'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details:'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(0, 10),
             end: getDate(1, 11),
-            title: 'Event 1'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(1, 11),
             end: getDate(2, 12),
-            title: 'Event 2'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(2, 12),
             end: getDate(3, 13),
-            title: 'Event 3'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(4, 12),
             end: getDate(5, 13),
-            title: 'Event 4'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(5, 12),
             end: getDate(6, 13),
-            title: 'Event 5'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(6, 12),
             end: getDate(6, 13),
-            title: 'Event 6'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          },
          {
             start: getDate(6, 12),
             allDay: true,
-            title: 'Event 7'
-         },
-
-
-
-
-         {
-            start: getDate(8, 12),
-            end: getDate(8, 13),
-            title: 'Event 5'
-         },
-         {
-            start: getDate(8, 12),
-            end: getDate(8, 13),
-            title: 'Event 6'
-         },
-         {
-            start: getDate(8, 12),
-            allDay: true,
-            title: 'Event 7'
+            venue: 'E-038',
+            title: '19 Students Selected for International University Exchange Program',
+            short_description: '  International Education Office alongwith Student Affairs Department team would like to congratulate all of our students who have been selected to study abroad on a semester exchange program. Sixteen Baccalaureate (Hons) students have been selected for International University Exchange Program. Two of our Postgraduate students have been nominated for E+ICM exchange Grant to Middlesex for their Research',
+            speaker: 'Faham Ahmad',
+            image: 'img/events/event.png',
+            speaker_details: 'Faham Ahmad is currently serving as the Director HR at PepsiCo International. With over 10 years of HR Management experience across various organizations, Faham has managed to establish his identity in the world of HR.'
          }
       ];
       this.selected = this.events[0];
@@ -281,7 +441,7 @@ angular.module('appCtrl', [])
       }
       this.grids = [
                      {
-                        img:'student',name:'People',
+            img: 'student', name: 'People', link: 'home', params: { page: 'people' },
                         list:[
                            { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
                                  {name:'Accounts', img:'check', menu:[],link:'page',params:{page:'account'}},
@@ -293,7 +453,7 @@ angular.module('appCtrl', [])
                              ]
                      },
                      {
-                        img: 'news-report', name: 'News', 
+                        img: 'news-report', name: 'News',link:'news', 
                         list: [
                            { name: 'Latest News 1', img: 'id-card', menu: [] },
                            { name: 'Latest News 1', img: 'check', menu: [] },
@@ -301,7 +461,7 @@ angular.module('appCtrl', [])
                         ]
                      },
                      {
-                        img: 'school', name: 'Admission',
+                        img: 'school', name: 'Admission', link: 'home', params: { page: 'admission' },
                         list: [
                            { name: 'Apply Now', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
                            { name: 'Financial Aid', img: 'check', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
@@ -309,14 +469,14 @@ angular.module('appCtrl', [])
                            { name: 'Residential Life', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
-                        img: 'calendar', name: 'Event',
+                        img: 'calendar', name: 'Event', link:'eventlist',
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [] },
                            { name: 'Academic Calendar', img: 'check', menu: [], link:'acadamic-calender' },
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]  },
                      {
-                        img: 'team', name: 'Campus Services',
+                        img: 'team', name: 'Campus Services', link: 'home', params: { page: 'campus-services' },
                         list: [
                            { name: 'Academic Office', img: 'id-card', menu: [], link: 'page', params: { page: 'academic' } },
                            { name: 'Accounts Office', img: 'check', menu: [], link: 'page', params: { page: 'account' }  },
@@ -340,11 +500,11 @@ angular.module('appCtrl', [])
 
                         ]   },
                      {
-                        img: 'blackboard', name: 'Courses',
+                        img: 'blackboard', name: 'Courses', link: 'home', params: { page: 'courses' },
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Academic Faculties', img: 'id-card', menu: [], link: 'acadamic', params: { page: 'faculties' }    },
+                           { name: 'Academic Departments', img: 'check', menu: [], link: 'acadamic', params: { page: 'departments' }   },
+                           { name: 'Courses', img: 'books', menu: [] },
                         ]   },
                      {
                         img: 'professor', name: 'Jobs',
@@ -391,23 +551,28 @@ angular.module('appCtrl', [])
                         ]   }, 
                   ]
       this.urlParser = function (str) {
-         var rep = '-';
-         str = str.toLowerCase()
-            .replace(/\s+/g, rep) // replace whitespace
-         // remove accents, swap ñ for n, etc
-         var from = "àáäâèéëêìíïîòóöôùúüûñç";
-         var to = "aaaaeeeeiiiioooouuuunc";
-         for (var i = 0, l = from.length; i < l; i++) {
-            str = str.replace(
-               new RegExp(from.charAt(i), 'g'),
-               to.charAt(i)
-            );
-         }
-         // remove invalid chars
-         str = str.replace(new RegExp('[^a-z0-9-' + rep + ']', "g"), '')
-            .replace(/-+/g, rep); // collapse dashes;
+         if(str){
+            var rep = '-';
+            str = str.toLowerCase()
+               .replace(/\s+/g, rep) // replace whitespace
+            // remove accents, swap ñ for n, etc
+            var from = "àáäâèéëêìíïîòóöôùúüûñç";
+            var to = "aaaaeeeeiiiioooouuuunc";
+            for (var i = 0, l = from.length; i < l; i++) {
+               str = str.replace(
+                  new RegExp(from.charAt(i), 'g'),
+                  to.charAt(i)
+               );
+            }
+            // remove invalid chars
+            str = str.replace(new RegExp('[^a-z0-9-' + rep + ']', "g"), '')
+               .replace(/-+/g, rep); // collapse dashes;
 
-         return str;
+            return str;
+         }else{
+            return false
+         }
+        
       }
     this.selectedTab = 0;
      this.stateLoader = function(pageType){

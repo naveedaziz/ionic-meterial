@@ -1,0 +1,22 @@
+<div  layout="column" style="height:600px" ng-cloak>
+
+  
+
+  <md-content flex>
+    <md-list>
+      <md-subheader class="md-no-sticky">Event List</md-subheader>
+      <md-list-item ng-repeat="event in app.events"  class="noright event-details">
+         <img alt="{{event.title }}" ng-src="{{event.image }}" class="md-avatar" />
+         <p flex="100" style="width:300px">{{ event.title }}</p>
+         
+               <md-icon ng-style="{color: '#fff'}" class="md-secondary material-icons step ng-binding md-24" role="img">update</md-icon>
+         
+
+         <md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>
+         <md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
+      </md-list-item>
+    </md-list>
+    <div class="clearfix"></div>
+  </md-content>
+
+</div>

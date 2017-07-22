@@ -17,26 +17,33 @@ angular.module('appCtrl', [])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$state,$location) {
-      this.departments = [
-         {name: 'Department of Business',image:'img/department/department.jpg',
-         courses:[
-            { name:'Baccalaureate (Hons) in Business'},
-            { name: 'Postgraduate in Business' }
-         ]},
-         { name: 'Department of Economics', image: 'img/department/Ecomonics.jpg',
-            courses: [
-               { name: 'Baccalaureate (Hons) in Economics' },
-               { name: 'Postgraduate in Economics' }
-            ]
-          }
-      ];
+      
       this.courses = [
          { name: 'Faculty of Business and Economics', image: 'img/department/department.jpg',
            departments:[
               { name: 'Department of Business', image: 'img/department/department.jpg',
                  courses: [
-                    { name: 'Baccalaureate (Hons) in Business' },
-                    { name: 'Postgraduate in Business' }
+                    { name: 'Baccalaureate (Hons) in Business',
+                       intro:'The department of Business offers a 4-year degree program in Business with five specializations.',
+                        degrees:[
+                            {
+                             name: 'BS (Hons) Business', description: 'The 4-year degree has a strong emphasis on developing skill and confidence and currently offers specializations in Accounting and Finance, Operations Management and Marketing and Sales Management, and Human Resource Management. The program has been designed to ensure that students understand best practice in business and function efficiently in the practical world. The course contents intend to provide the right balance between academics and real world application. Students take core (required) courses throughout the four years of the program and begin to take courses in their areas of specialization from the third year. Business students are expected to maintain a minimum CGPA of 2.0 during the program. However, they are expected to maintain a higher CGPA in their major. Students take 72 credit hours in their business major (66 in taught courses and six in the mandatory Internship) as well as 51 credit hours in General Education and 15 in free electives (six of which are for the Summer Internship).The choice of specialization is made in the second year.',
+                             link:'http://www.fccollege.edu.pk/wp-content/uploads/2016/02/Roadmap-for-BS-Hons-Business.pdf'
+                            }
+                         ] 
+                     },
+                    { name: 'Postgraduate in Business',
+                       intro: 'The postgraduate programs in Business aim to develop the functional competence any contemporary manager is expected to have in today’s increasingly global business environment. The programs have a general management orientation without compromising any essentials of the core functional areas. The Executive MBA has been designed for optimal flexibility while retaining the rigor of comparable international programs.',
+                       degrees: [
+                          {
+                             name: 'Masters in Business Administration', description: 'This is a two-year program with a general management focus. The program aims to develop high-quality professionals who will be agents of change through a combination of their creativity, initiative, competence and adaptability. The learning experience is highly interactive and offers the best mix of cases, simulations, and lectures to ensure that students gain both from theory and best practice of business. There is a strong emphasis on understanding and managing the modern enterprise in the Pakistani environment. The key to this is the varied experience of the SoM faculty.',
+                             link: 'http://www.fccollege.edu.pk/wp-content/uploads/2015/12/Roadmap-for-MBA.pdf'
+                          },
+                          {
+                             name: 'Executive Masters in Business Administration', description: 'The Executive MBA is a two-year modular, evening program. The Executive MBA has a unique structure. A total of 66 credit hours are earned through 14 modules and one project. The 14th and final module includes a Business Simulation game which will enable the students to apply all the concepts learnt during the entire program. Therefore, this module is 6 credit hours. Students will also be required to undertake a project under the supervision of a faculty advisor. This project will be spread out over a period of almost one year and is 8 credit hours.',
+                             link: 'http://www.fccollege.edu.pk/wp-content/uploads/2015/12/Roadmap-for-EMBA.pdf'
+                          }
+                       ] }
                  ]
                },
               { name: 'Department of Economics', image: 'img/department/Ecomonics.jpg',
@@ -444,12 +451,12 @@ angular.module('appCtrl', [])
             img: 'student', name: 'People', link: 'home', params: { page: 'people' },
                         list:[
                            { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
-                                 {name:'Accounts', img:'check', menu:[],link:'page',params:{page:'account'}},
-                                 { name: 'Academics', img: 'books', menu: [] },
-                                 { name: 'Empower Troubleshooting', img: 'bell', menu: [] },
-                                 { name: 'University Counseling Center', img: 'glasses', menu: [] },
-                                 { name: 'Mercy Health Center', img: 'heart', menu: [] },
-                                 { name: 'Communications Office', img: 'phone-receiver', menu: [] },
+                           { name: 'Accounts', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/accounts-office/'},
+                                 { name: 'Academics', img: 'books', menu: [], link:'acadamic-calender' },
+                                 { name: 'Empower Troubleshooting', img: 'bell', menu: [], link:'http://www.fccollege.edu.pk/empower-web-module/' },
+                                 { name: 'University Counseling Center', img: 'glasses', menu: [], link:'http://www.fccollege.edu.pk/university-counseling-center-staff/' },
+                                 { name: 'Mercy Health Center', img: 'heart', menu: [], link:'http://www.fccollege.edu.pk/mercy-health-center-2/' },
+                                 { name: 'Communications Office', img: 'phone-receiver', menu: [], link:'http://www.fccollege.edu.pk/office-communications-publications/' },
                              ]
                      },
                      {

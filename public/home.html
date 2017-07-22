@@ -8,12 +8,7 @@
          <div layout="column" style="min-width: 180px;" flex="80" ng-repeat="grid in items.list">
 
             <md-card flex="100" ng-click="app.openLink(grid.link,grid.params)">
-               <md-menu ng-if="grid.list" style="    position: relative;
-    right: -121px;
-    width: 51px;
-    top: 0;
-    height: 15px;
-    z-index: 9999;">
+               <md-menu ng-if="grid.list" style="position: relative;right: -121px;width: 51px;top: 0;height: 15px;z-index: 9999;">
                   <md-button aria-label="Open phone interactions menu" class="md-icon-button" ng-click="app.openMenu($mdMenu, $event)">
                      <md-icon md-svg-icon="img/icons/menu.svg" style="    color: #296490;"></md-icon>
                   </md-button>

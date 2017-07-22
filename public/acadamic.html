@@ -34,12 +34,36 @@
                         <span ng-class="{expandCollapse:true, active:dataDepartment.expanded}" style="color:red;" class="expandCollapse"></span>
                      </div>-->
                      <!--<h4 ng-repeat="course_outline in course_department.courses">{{course_outline.name}}</h4>-->
-                     <md-list flex>
-                        <md-list-item style="background:#0e6eb5; border-bottom:1px solid #fff;color:#fff;"  ng-repeat="course_outline in course_department.courses"ng-click="null">
+                     <!--<md-list flex>-->
+                        <div class="md-accordion ng-scope" ng-repeat="course_outline in course_department.courses">
+                           <md-toolbar ng-init="dataDepartmentCourses.expanded = false" ng-click="dataDepartmentCourses.expanded = !dataDepartmentCourses.expanded" role="button"
+                              tabindex="0">
+                              <div class="md-toolbar-tools" style="    background: rgb(38, 72, 97);font-size:14px;">
+                                 <h2>
+                                    <span class="ng-binding">{{course_outline.name}}</span>
+                                 </h2>
+                                 <span flex="" class="flex"></span>
+                                 <span ng-class="{expandCollapse:true, active:dataDepartmentCourses.expanded}" class="expandCollapse"></span>
+                              </div>
+                           </md-toolbar>
+                           <div ng-class="{dataDepartmentCoursesContent:true, activeContent:dataDepartmentCourses.expanded}" class="ng-binding dataContent">
+                              <p>
+                                 <p>{{course_outline.intro}}</p>
+                                 <div ng-repeat="degrees in course_outline.degrees">
+                                       <h3>{{degrees.name}}</h3>
+                                       <p>{{degrees.description}}</p>
+                                       <h3><a href="{{degrees.link}}" target="_blank">Roadmap for {{degrees.name}}</a></h3>
+                                 </div>                            
+                              </p>
+                           </div>
+                           <div>
+                           </div>
+                        </div>
+                        <!--<md-list-item style="background:#0e6eb5; border-bottom:1px solid #fff;color:#fff;"  ng-repeat="course_outline in course_department.courses"ng-click="null">
                            <div class="md-list-item-text" layout="column">
                               <h4 style="margin:0;">{{course_outline.name}}</h4>
                            </div>
-                        </md-list-item>
+                        </md-list-item>-->
                   </div>
                   <div>
                   </div>

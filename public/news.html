@@ -1,25 +1,27 @@
-<div  layout="column" style="height:600px" ng-cloak>
+<div  layout="column" style="height:600px" ng-cloak ng-init="getNews()">
 
   
 
   <md-content flex>
     <md-list>
-      <md-list-item class="md-3-line" ng-repeat="item in app.todos">
-        <img ng-src="{{item.face}}" alt="{{item.who}}" class="md-avatar">
+      <md-list-item class="md-3-line" ng-repeat="(key,item) in news | orderObjectBy:'id':'descending'">
+        <img style="margin-top: 22px;" ng-src="{{item.image}}" alt="{{item.title.rendered}}" class="md-avatar">
 
         <div class="md-list-item-text">
-          <h3>{{item.what}}</h3>
-          <h4>{{item.who}}</h4>
-
-          <p>
-            {{item.notes}}
-          </p>
+          <p ng-click="app.openLink(item.link)">{{item.title.rendered}}</p>
         </div>
         <md-divider inset></md-divider>
       </md-list-item>
 
     </md-list>
+ <div align="center">
+   <md-button class="md-raised md-warn" aria-label="Load More" style="margin: 3%;
+    width: 124px;
+    background: #8BC34A;" ng-click="getNews()">
+       Load More
 
+   </md-button>
+ </div>
   </md-content>
 
 </div>

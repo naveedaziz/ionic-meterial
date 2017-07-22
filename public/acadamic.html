@@ -48,11 +48,11 @@
                            </md-toolbar>
                            <div ng-class="{dataDepartmentCoursesContent:true, activeContent:dataDepartmentCourses.expanded}" class="ng-binding dataContent">
                               <p>
-                                 <p>{{course_outline.intro}}</p>
+                                 <p ng-if="course_outline.intro">{{course_outline.intro}}</p>
                                  <div ng-repeat="degrees in course_outline.degrees">
-                                       <h3>{{degrees.name}}</h3>
+                                       <h3 ng-if="degrees.name">{{degrees.name}}</h3>
                                        <p>{{degrees.description}}</p>
-                                       <h3><a href="{{degrees.link}}" target="_blank">Roadmap for {{degrees.name}}</a></h3>
+                                       <h3 ng-if="degrees.link"><a href="{{degrees.link}}" target="_blank">Roadmap for {{degrees.name}}</a></h3>
                                  </div>                            
                               </p>
                            </div>

@@ -68,7 +68,54 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       $mdDialog.hide(answer);
    };
 })
-   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http,$controller,$scope) {
+   .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http, $controller, $scope, $interval) {
+      $scope.returnOrderState = function(obj){
+         return Object.keys(obj).length;
+      }
+      var self = this, j = 0, counter = 0;
+
+      self.mode = 'query';
+      self.activated = true;
+      self.determinateValue = 30;
+      self.determinateValue2 = 30;
+
+      self.showList = [];
+
+      /**
+       * Turn off or on the 5 themed loaders
+       */
+      self.toggleActivation = function () {
+         if (!self.activated) self.showList = [];
+         if (self.activated) {
+            j = counter = 0;
+            self.determinateValue = 30;
+            self.determinateValue2 = 30;
+         }
+      };
+
+      $interval(function () {
+         self.determinateValue += 1;
+         self.determinateValue2 += 1.5;
+
+         if (self.determinateValue > 100) self.determinateValue = 30;
+         if (self.determinateValue2 > 100) self.determinateValue2 = 30;
+
+         // Incrementally start animation the five (5) Indeterminate,
+         // themed progress circular bars
+
+         if ((j < 2) && !self.showList[j] && self.activated) {
+            self.showList[j] = true;
+         }
+         if (counter++ % 4 === 0) j++;
+
+         // Show the indicator in the "Used within Containers" after 200ms delay
+         if (j == 2) self.contained = "indeterminate";
+
+      }, 100, 0, true);
+
+      $interval(function () {
+         self.mode = (self.mode == 'query' ? 'determinate' : 'query');
+      }, 7200, 0, true);
       $scope.news = {};
       $scope.processImages = function(id,parent){
          $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/media/' + id + '?fields=source_url')
@@ -77,10 +124,13 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
             })
       }
       $scope.newsPage = 0;
+      $scope.loadMoreCall = true;
       $scope.getNews = function(){
+         $scope.loadMoreCall = true;
          $scope.newsPage = $scope.newsPage + 1;
          $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?categories=113&fields=title,link,featured_media,id&page=' + $scope.newsPage)
          .then(function(response){
+            $scope.loadMoreCall = false;
             for (var news_data in response.data){
                if (response.data[news_data].featured_media){
                   $scope.news[response.data[news_data].id] = response.data[news_data];
@@ -91,6 +141,80 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
             }
          })
          
+      }
+     
+      $scope.getEvents = function(){
+         if($state.params.page == 'academy'){
+            $scope.getEventAcademy();
+         }
+         if ($state.params.page == 'international') {
+            $scope.getEventInternational();
+         }
+         $scope.pageName = $state.params.page;
+      }
+      $scope.events = {};
+      $scope.events.academy = {};
+      $scope.events.international = {};
+      $scope.EventAcademyPage = 0;
+      $scope.monthArray = [0,'Jan','Feb','Mrh','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
+      $scope.returnDate = function(itm,type){
+         var dated = itm.split('-');
+        if(type == 'day'){
+           var days = dated[2].split('T');
+           return days[0];
+        }
+        if (type == 'month') {
+           return $scope.monthArray[parseInt(dated[1])];
+        }
+        if (type == 'year') {
+           return dated[0];
+        }    
+      }
+      $scope.getEventAcademy = function () {
+         $scope.loadMoreCall = true;
+         $scope.EventAcademyPage = $scope.EventAcademyPage + 1;
+         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?categories=112&fields=title,link,featured_media,id,date&page=' + $scope.EventAcademyPage)
+            .then(function (response) {
+               console.log(response)
+               if (!response.data.length){
+                  $scope.loadMoreCall = -1;
+               }else{
+                  $scope.loadMoreCall = false;
+               }
+               for (var news_data in response.data) {
+                  if (response.data[news_data].featured_media) {
+                     $scope.events.academy[response.data[news_data].id] = response.data[news_data];
+                    //$scope.processImages(response.data[news_data].featured_media, response.data[news_data].id)
+                  } else {
+                     $scope.events.academy[response.data[news_data].id] = response.data[news_data];
+                  }
+               }
+            })
+
+      }
+      $scope.EventInternationalPage = 0;
+      $scope.getEventInternational = function () {
+         $scope.loadMoreCall = true;
+         $scope.EventInternationalPage = $scope.EventInternationalPage + 1;
+         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?categories=109&fields=title,link,featured_media,id,date&page=' + $scope.EventInternationalPage)
+            .then(function (response) {
+               console.log(response)
+               if (!response.data.length) {
+                  $scope.loadMoreCall = -1;
+               }else{
+                  $scope.loadMoreCall = false;
+               }
+              
+               for (var news_data in response.data) {
+                  if (response.data[news_data].featured_media) {
+                     $scope.events.international[response.data[news_data].id] = response.data[news_data];
+                     //$scope.processImages(response.data[news_data].featured_media, response.data[news_data].id)
+                  } else {
+                     $scope.events.international[response.data[news_data].id] = response.data[news_data];
+                  }
+               }
+            })
+
       }
       this.courses = [
          { name: 'Faculty of Business and Economics', image: 'img/department/department.jpg',
@@ -794,9 +918,9 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                      {
                         img: 'calendar', name: 'Event', link:'eventlist',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [], link:'acadamic-calender' },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
+                           { name: 'Events Calendar', img: 'id-card', menu: [], link: 'events', params: { page: 'academy' } },
+                           { name: 'Academic Calendar', img: 'check', menu: [], link: 'events', params: { page: 'international' } },
+                           { name: 'Today’s Events', img: 'books', menu: [], link: 'events', params: { page: 'academy' } },
                         ]  },
                      {
                         img: 'team', name: 'Campus Services', link: 'home', params: { page: 'campus-services' },
@@ -830,7 +954,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Courses', img: 'books', menu: [] },
                         ]   },
                      {
-                        img: 'professor', name: 'Jobs',
+                        img: 'professor', name: 'Jobs', link: 'home', params: { page: 'jobs' },
                         list: [
                            { name: 'Faculty Positions', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
                            { name: 'Staff Positions', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
@@ -844,7 +968,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]   },
                      {
-                        img: 'support', name: 'Support FCCU',
+                        img: 'support', name: 'Support FCCU', link: 'home', params: { page: 'support-fccu' },
                         list: [
                            { name: 'Learn About Current Campaigns', img: 'id-card', menu: [] },
                            { name: 'Give to FCCU', img: 'check', menu: [] },
@@ -857,7 +981,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]   }, 
                      {
-                        img: 'network', name: 'Social',
+                        img: 'network', name: 'Social', link: 'home', params: { page: 'social' },
                         list: [
                            { name: 'Facebook', img: 'id-card', menu: [], link:'https://www.facebook.com/fccollege/' },
                            { name: 'Twitter', img: 'check', menu: [], link: 'https://twitter.com/FCCollege' },
@@ -866,7 +990,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'YouTube', img: 'books', menu: [], link: 'https://www.youtube.com/user/FCCUniversity' },
                         ]   }, 
                      {
-                        img: 'contact', name: 'Contact',
+                        img: 'contact', name: 'Contact', link: 'page', params: { page: 'contact' },
                         list: [
                            { name: 'Address', img: 'id-card', menu: [],link:'page',params:{page:'contact'} },
                            { name: 'Phone', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },

@@ -34,16 +34,16 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "FCC News"
           }
        })
-       .state('event', {
-          url: '/event',
-          templateUrl: 'event.html',
+       .state('events', {
+          url: '/event/:page',
+          templateUrl: 'events.html',
           params: {
              title: "FCC News"
           }
        })
        .state('eventlist', {
           url: '/event_list',
-          templateUrl: 'event_list.html',
+          templateUrl: 'event.html',
           params: {
              title: "FCC News"
           }

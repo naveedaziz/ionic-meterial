@@ -11,12 +11,70 @@
 <link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
 <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
-<!-- cordova script (this will be a 404 during development) -->
-<!--<script src="cordova.js"></script>
+ <!--cordova script (this will be a 404 during development) -->
+<script src="cordova.js"></script>
 <script type="text/javascript" src="phonegap.js"></script>-->
-<!--<script src="scripts/ng-cordova.min.js"></script>-->
+<!--<script src="scripts/ng-cordova.min.js"></script>
 
   <style>
+   .progressLineardemoBasicUsage body {
+  padding: 20px; }
+
+.progressLineardemoBasicUsage h4 {
+  margin: 10px 0; }
+
+.progressLineardemoBasicUsage md-progress-linear {
+  padding-top: 10px;
+  margin-bottom: 20px; }
+
+.progressLineardemoBasicUsage #loaders > md-switch {
+  margin: 0;
+  margin-left: 10px;
+  margin-top: -10px; }
+
+.progressLineardemoBasicUsage #loaders > h5 {
+  margin-top: 0; }
+
+.progressLineardemoBasicUsage #loaders > p {
+  margin-right: 20px;
+  margin-bottom: 24px; }
+
+.progressLineardemoBasicUsage p.small {
+  font-size: 0.8em;
+  margin-top: -18px; }
+
+.progressLineardemoBasicUsage hr {
+  width: 100%;
+  margin-top: 20px;
+  border-color: rgba(221, 221, 177, 0.1); }
+
+.progressLineardemoBasicUsage p.small > code {
+  font-size: 0.8em; }
+
+.progressLineardemoBasicUsage .visible {
+  opacity: 0;
+  border: 2px solid white !important; }
+
+.progressLineardemoBasicUsage .container {
+  display: block;
+  position: relative;
+  width: 100%;
+  border: 2px solid #aad1f9;
+  transition: opacity  0.1s linear;
+  border-top: 0px; }
+
+.progressLineardemoBasicUsage .bottom-block {
+  display: block;
+  position: relative;
+  background-color: rgba(255, 235, 169, 0.25);
+  height: 85px;
+  width: 100%; }
+
+.progressLineardemoBasicUsage .bottom-block > span {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 25px;
+  font-size: 0.9em; }
      .md-accordion .expandCollapse { width:30px; height:30px; position:relative; font-size:20px; font-weight:bold; cursor:pointer; color:#fff; display:block; margin-top: -2px; margin-left: -2px; overflow:hidden; } 
 .md-accordion .expandCollapse:active { border:0px; }
 .md-accordion .expandCollapse:before, .md-accordion .expandCollapse:after { width:30px; height:30px; display:block; position:absolute; top:0; left:0; line-height:32px; text-align:center; -webkit-transition: .3s all ease-out; transition: .3s all ease-out; }
@@ -207,6 +265,54 @@ md-tabs {
 .event-details .md-secondary-container{
    width:25px;
 }
+.spin{
+   -webkit-animation: spin 3s infinite linear;
+}
+
+
+@-webkit-keyframes spin {
+    0%   {-webkit-transform: rotate(0deg)}
+    100% {-webkit-transform: rotate(360deg)}
+}
+.date {
+  position: relative;
+  width: 103px;
+  font-family: Georgia, serif;
+  color: #999;
+  margin: 0 auto;
+  margin-top:17px; 
+   -webkit-box-flex: 0;
+   -webkit-flex: none;
+   flex: none;
+   width: 68px;
+   height: 40px;
+ }
+ 
+.day, .month, .year {
+  position: absolute;
+      color: #296490;
+  }
+ 
+.day { 
+  font-size: 30px;
+  top: 15px;
+  }
+ 
+.month { 
+  top: 0;
+  left: 0;  
+  font-size: 18px;
+  }
+ 
+.year { 
+  top: 19px;
+  left: 20px;
+  font-size: 20px;
+  rotation: -90deg !important;
+  /* ** Hacks ** */
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);  
+  }
      </style>
 </head>
 

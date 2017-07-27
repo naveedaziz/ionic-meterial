@@ -51,8 +51,30 @@
    }
 )(angular);
 angular.module('appCtrl', ['ngOrderObjectBy'])
+   .run(['$rootScope', '$location', function ($rootScope, $location) {
+      document.addEventListener("deviceready", function () {
+         console.log("deviceready");
+         document.addEventListener("backbutton", onBackKeyDown, false);
+         function onBackKeyDown(e) {
+            e.preventDefault();
+            if ($location.path() === "/login" || $location.path() === "/home") {
+               var r = confirm("exit");
+               if (r == true) {
+                  console.log("not exit");
+                  navigator.app.exitApp();
+               } else {
+                  navigator.app.goBack();
+               }
+            } else {
+               /* $ionicHistory.goBack(); */
+               window.history.back();
+               navigator.app.goBack();
+            }
+         }
+      }, 100)
+   }
+   ])
    .controller('DialogController', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
-
    this.hide = function () {
       $mdDialog.hide();
    };
@@ -69,6 +91,53 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http, $controller, $scope, $interval) {
+      this.tiles = buildGridModel({
+         icon: "avatar:svg-",
+         title: "Svg-",
+         background: ""
+      });
+
+      function buildGridModel(tileTmpl) {
+         var it, results = [];
+
+         for (var j = 0; j < 11; j++) {
+
+            it = angular.extend({}, tileTmpl);
+            it.icon = it.icon + (j + 1);
+            it.title = it.title + (j + 1);
+            it.span = { row: 1, col: 1 };
+
+            switch (j + 1) {
+               case 1:
+                  it.background = "red";
+                  it.span.row = it.span.col = 2;
+                  break;
+
+               case 2: it.background = "green"; break;
+               case 3: it.background = "darkBlue"; break;
+               case 4:
+                  it.background = "blue";
+                  it.span.col = 2;
+                  break;
+
+               case 5:
+                  it.background = "yellow";
+                  it.span.row = it.span.col = 2;
+                  break;
+
+               case 6: it.background = "pink"; break;
+               case 7: it.background = "darkBlue"; break;
+               case 8: it.background = "purple"; break;
+               case 9: it.background = "deepBlue"; break;
+               case 10: it.background = "lightPurple"; break;
+               case 11: it.background = "yellow"; break;
+            }
+
+            results.push(it);
+         }
+         return results;
+      }
+     $scope.currentpages = $location.$$path;;
       $scope.returnOrderState = function(obj){
          return Object.keys(obj).length;
       }
@@ -726,56 +795,68 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'account': {
                         name: 'Account Office', 
                         address: 'Room # 010, Ground Floor, Ahmad Saeed Administration Building', 
-                        phone: 'Tel: (92-42) 99231581-8 Ext: 211, 217, 244', 
+                        phone: '+924299231581-8211, 217, 244', 
                         email: 'fccaccounts@fccollege.edu.pk', 
                         link: 'http://www.fccollege.edu.pk/accounts-office/', 
+                        img: 'account-office.jpg',
+                        p_link: 'page', params: { page: 'account' },
                         message: 'The Accounts Office deals with tuition fee, its billing and collections, maintaining students’ financial accounts, payments, and refunds.'
                      },
          'academic': {
             name: 'Acadamic Office',
             address: 'Room # 006, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 314',
+            phone: '314',
             email: 'academicoffice@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/academic-office/',
+            img:'academic-office.jpg',
+            p_link: 'page', params: { page: 'academic' },
             message: 'The Academic Office is the first place to go if students have questions regarding academics. This includes attendance, academic standing, roll number slips, transfers to or from other institutions and any forms students may need, such as character certificates, equivalence certificates, hope certificates, migration etc.'
          },
          'admission': {
             name: 'Admission Office',
             address: 'Room # 008, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 377, 566',
+            phone: '377, 566',
             email: 'admissions@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/admissions-office/',
+            img: 'admission-office.jpg',
+            p_link: 'page', params: { page: 'admission' },
             message: 'The Admissions Office is responsible for admitting students through a concentrated recruitment program that reaches both internal and external audiences.'
          },
          'communication': {
             name: 'Communications Office',
             address: 'Room # 217, 2nd Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 322, 324',
+            phone: '322, 324',
             email: 'communications@fccollege.edu.pk',
+            img: 'Communications-Office.jpg',
+            p_link: 'page', params: { page: 'communication' },
             link: 'http://www.fccollege.edu.pk/office-communications-publications/',
             message: 'The Communications and Publications Office consults in-house clients on their marketing, publications and communications needs. The Office helps to identify audiences, decides on the most effective communications tools to reach these audiences, facilitates collaborations among different academic and administrative departments, and connects departments to the right FCCU-approved vendors to complete projects.'
          },
          'campus': {
             name: 'Campus Security',
             address: 'Room # 009, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 336',
+            phone: '336',
             email: 'securityreception@fccollege.edu.pk',
+            img: 'Campus-Security.jpg',
+            p_link: 'page', params: { page: 'campus' },
             link: 'http://www.fccollege.edu.pk/security-office/',
             message: false
          },
          'career': {
             name: 'Career Services',
             address: 'Room # 011, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 319',
+            phone: '319',
             email: 'careers@fccollege.edu.pk, internships@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/career-servicesinternships-office/',
+            img: 'Career-Services.jpg',
+            p_link: 'page', params: { page: 'career' },
             message: 'The Career Services Office provides comprehensive guidance and counseling to its students and graduates on career development. It provides consistent assistance to students in finding attractive jobs and internships.'
          },
          
          'financial': {
             name: 'Financial Aid',
             address: 'Room # 011, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 313',
+            phone: '313',
             email: 'financialaid@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/financial-aid-3/',
             message: 'The Financial Aid Office oversees the process of offering scholarships, need-based financial assistance, and Work-Study funds, for eligible entering and continuing students.'
@@ -783,7 +864,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'information': {
             name: 'Information Commons',
             address: 'Room # 125, 1st Floor, Armacost Science Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 554',
+            phone: '554',
             email: 'library@fccollege.edu.pk',
             link: 'http://library.fccollege.edu.pk/information-commons/',
             message: 'The Information Commons is a learning space that provides comfortable and flexible discussion areas and meeting rooms as well as individual work areas for serious and focused research.This is a one stop shop for users to get printing and publishing support that facilitates the users in finalizing their projects conveniently in one place. Quick and guided access to information resources (online and offline) is provided with high-speed internet, latest computer hardware and utility software'
@@ -791,7 +872,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'information_tech': {
             name: 'Information Technology Services',
             address: 'Room # 016, 1st Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 250',
+            phone: '250',
             email: 'ithelp@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/it-office/',
             message: 'The Information Technology Office provides the University administrative and academic departments with innovative, customer-centric, IT support and services.'
@@ -799,7 +880,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'international': {
             name: 'International Education',
             address: 'Room # 013, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 413',
+            phone: '413',
             email: 'ieo@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/international-education-office/',
             message: 'The International Education Office (IEO) at Forman Christian College (A Chartered University) is committed to providing inclusive counseling and advising for extensive opportunities in prestigious foreign universities.'
@@ -807,15 +888,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'library': {
             name: 'Library',
             address: 'Ewing Memorial Library',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 426, 554',
-            email: 'library@fccollege.edu.pk',
-            link: 'http://library.fccollege.edu.pk/',
-            message: 'The Ewing Memorial Library is one of the oldest and best college libraries in Lahore and now fast transforming itself into a state-of-the-art University Library.'
-         },
-         'library': {
-            name: 'Library',
-            address: 'Ewing Memorial Library',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 426, 554',
+            phone: '426, 554',
             email: 'library@fccollege.edu.pk',
             link: 'http://library.fccollege.edu.pk/',
             message: 'The Ewing Memorial Library is one of the oldest and best college libraries in Lahore and now fast transforming itself into a state-of-the-art University Library.'
@@ -823,7 +896,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'mercy': {
             name: 'Mercy Health Center',
             address: 'Mercy Health Center,',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 413 or 0300 0642006',
+            phone: '413 or 0300 0642006',
             email: 'health@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/mercy-health-center/',
             message: 'The university operates an emergency first response centre services through the Mercy Health Center, an on-campus facility equipped for the routine medical needs of the on-campus residents, day scholars, faculty and staff and has an on-going relationship with the nearby United Christian Hospital for cases that require specialized attention. For emergencies, please call Ext 413 or 0300 0642006 for medical assistance during regular hours of operation.Please save this number in your phone.'
@@ -831,7 +904,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'quality': {
             name: 'Quality Enhancement Cell',
             address: 'Room # 125, First Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 323',
+            phone: '323',
             email: 'info@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/quality-enhancement-cell/',
             message: 'The Office of Assessment and Institutional Research oversees continuous assessment activities that are done throughout university.  Our Quality Enhancement Cell (QEC) resides in the Office of Assessment and Institutional Research and meets the specifications of the Higher Education Commission of Pakistan.'
@@ -839,7 +912,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'residential': {
             name: 'Residential Life',
             address: 'Hostel Office behind Armacost Science Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 402',
+            phone: '402',
             email: 'hostels@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/hostel-office/',
             message: 'This Office provides students with comfortable and secure housing in FCCU’s on and off-campus residential facilities.'
@@ -847,7 +920,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'sports': {
             name: 'Sports',
             address: 'Lucas Center',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 312',
+            phone: '312',
             email: 'shoaibbarket@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/sports/',
             message: 'The Sports Office organizes, promotes and conducts games. The Sports Board features a very active intramural sports program with competition in athletics, basketball, cricket, football, hockey, table tennis, wrestling, lawn tennis and swimming.'
@@ -855,7 +928,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'student': {
             name: 'Student Affairs Office',
             address: 'Room # 010, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 321, 355',
+            phone: '321, 355',
             email: 'dos@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/student-affairs-office/',
             message: 'Student Affairs Office provides support to students throughout their academic career. This includes overseeing the academic advisors, and answering questions regarding courses or general “how to be successful in college” questions.'
@@ -863,10 +936,20 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          'university': {
             name: 'First Floor, Mercy Health Center',
             address: 'Room # 010, Ground Floor, Ahmad Saeed Administration Building',
-            phone: 'Tel: (92-42) 99231581-8 Ext: 554',
+            phone: '554',
             email: 'ucc@fccollege.edu.pk',
             link: 'http://www.fccollege.edu.pk/university-counseling-center/',
             message: 'The UCC is a facility to help students deal with problems which they may not want to discuss with family, friends or their teachers. The Center provides individual and confidential counseling and may refer students to other professionals if needed.'
+         },
+         'cafeteria': {
+            name: 'Cafeteria',
+            address: false,
+            phone: false,
+            email: false,
+            link: false,
+            img: 'Cafeteria.jpg',
+            p_link: 'page', params: { page: 'cafeteria' },
+            message: 'FCCU’s Cafeteria .'
          },
          'writing': {
             name: 'Writing Center',
@@ -947,7 +1030,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
 
                         ]   },
                      {
-                        img: 'blackboard', name: 'Courses', link: 'home', params: { page: 'courses' },
+                        img: 'blackboard', name: 'Courses', link: 'acadamic', params: { page: 'faculties' },
                         list: [
                            { name: 'Academic Faculties', img: 'id-card', menu: [], link: 'acadamic', params: { page: 'faculties' }    },
                            { name: 'Academic Departments', img: 'check', menu: [], link: 'acadamic', params: { page: 'departments' }   },
@@ -981,14 +1064,8 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Today’s Events', img: 'books', menu: [] },
                         ]   }, 
                      {
-                        img: 'network', name: 'Social', link: 'home', params: { page: 'social' },
-                        list: [
-                           { name: 'Facebook', img: 'id-card', menu: [], link:'https://www.facebook.com/fccollege/' },
-                           { name: 'Twitter', img: 'check', menu: [], link: 'https://twitter.com/FCCollege' },
-                           { name: 'Instagram', img: 'books', menu: [], link: 'https://www.instagram.com/formanchristiancollege/' },
-                           { name: 'LinkedIn', img: 'books', menu: [], link: 'https://www.linkedin.com/school/310575/' },
-                           { name: 'YouTube', img: 'books', menu: [], link: 'https://www.youtube.com/user/FCCUniversity' },
-                        ]   }, 
+                        img: 'network', name: 'Socials', link: 'social'
+                        }, 
                      {
                         img: 'contact', name: 'Contact', link: 'page', params: { page: 'contact' },
                         list: [

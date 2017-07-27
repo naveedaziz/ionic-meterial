@@ -9,7 +9,7 @@
   <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
   <link rel="stylesheet" href="scripts/angular-material/angular-material.min.css"/>
 <link rel="stylesheet" href="scripts/event/angular-material-event-calendar.min.css" />
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<link href="css/icon.css?family=Material+Icons" rel="stylesheet">
 
 
 <script src="cordova.js"></script>
@@ -313,6 +313,19 @@ md-tabs {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);  
   }
+  md-grid-list md-grid-tile md-grid-tile-footer, md-grid-list md-grid-tile md-grid-tile-header {
+    background: rgba(41, 100, 144, 0.73);
+}
+ md-grid-list figure{
+    background:rgba(255, 255, 255, 0.95);
+ }
+ .first-social figure{
+    background: none;
+
+ }
+ md-grid-tile-footer figcaption{
+    width:100%;
+ }
      </style>
 </head>
 
@@ -365,7 +378,7 @@ md-tabs {
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
-         <span>Chat</span>
+         <span>Help Desk</span>
       </md-list-item>
       <md-divider></md-divider>
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
@@ -399,9 +412,7 @@ md-tabs {
         </div>
       
 
-      <md-card  class="no-bg-color header-bg" flex="100"  flex-gt-sm="33" layout-align="center center" layout="column">
-         <a ui-sref="default"><img src="img/fc2.jpg" flex="100" class="md-card-image" alt="Washed Out"></a>
-      </md-card>
+      
  
     </md-toolbar>
   
@@ -422,7 +433,7 @@ md-tabs {
          <md-button class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
             <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
                role="img" >chat</md-icon>
-             Chat
+             Help Desk
 
          </md-button>
          </div>

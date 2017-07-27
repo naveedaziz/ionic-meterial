@@ -1,0 +1,10 @@
+<div  layout="column"  ng-cloak ng-init="instagram()">
+{{instaFeeds}}
+  <md-content flex style="background:#fff;">
+    <div ng-repeat="(key,item) in app.pageStatic" ng-if="item.img"  ng-click="app.openLink(item.p_link,item.params)">
+     <img  src="img/campus/{{item.img}}" width="100%" style="margin-top: 1%;margin-bottom: -1%;" />
+    </div>
+
+  </md-content>
+
+</div>

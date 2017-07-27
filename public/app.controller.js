@@ -1053,7 +1053,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Give to FCCU', img: 'check', menu: [] },
                         ]   },
                      {
-                        img: 'photo-camera', name: 'Photos',
+                        img: 'photo-camera', name: 'Photos', link:'insta',
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [] },
                            { name: 'Academic Calendar', img: 'check', menu: [] },
@@ -1287,6 +1287,15 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       link: 'http://www.fccsocieties.org/directory/women-empowerment-society/'
 }
       ];
+      $scope.instaFeeds = [];
+      $scope.instagram = function(){
+         $http.get('https://www.instagram.com/formanchristiancollege/media/')
+            .then(function (respose) {
+               alert(JSON.stringify(respose));
+               $scope.instaFeeds = respose.items;
+               console.log($scope.instaFeeds);
+            })
+      }
       this.urlParser = function (str) {
          if(str){
             var rep = '-';

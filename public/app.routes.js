@@ -17,7 +17,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/home/:page',
           templateUrl: 'home.html',
           params: {
-             title: "Welcome To"
+             title: "Home"
           }
        })
        .state('news', {
@@ -31,49 +31,56 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/acadamic-calender',
           templateUrl: 'acdamic-calender.html',
           params: {
-             title: "FCC News"
+             title: "FCC Acadamic Calender"
           }
        })
        .state('events', {
           url: '/event/:page',
           templateUrl: 'events.html',
           params: {
-             title: "FCC News"
+             title: "FCC Events"
           }
        })
        .state('eventlist', {
           url: '/event_list',
           templateUrl: 'event.html',
           params: {
-             title: "FCC News"
+             title: "FCC Events"
           }
        })
        .state('acadamic', {
           url: '/acadamic/:page',
           templateUrl: 'acadamic.html',
           params: {
-             title: "FCC News"
+             title: "FCC Courses"
           }
        })
        .state('social', {
           url: '/social',
           templateUrl: 'social.html',
           params: {
-             title: "FCC News"
+             title: "FCC Social"
+          }
+       })
+       .state('societies', {
+          url: '/societies',
+          templateUrl: 'societies.html',
+          params: {
+             title: "FCC Society"
           }
        })
        .state('page', {
           url: '/page/:page',
           templateUrl: 'page.html',
           params: {
-             title: "FCC News"
+             title: "FCC Campus Information"
           }
        })
        .state('campus', {
           url: '/campus',
           templateUrl: 'campus.html',
           params: {
-             title: "FCC News"
+             title: "FCC Campus"
           }
        })
         .state('list', {

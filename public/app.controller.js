@@ -1006,7 +1006,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Today’s Events', img: 'books', menu: [], link: 'events', params: { page: 'academy' } },
                         ]  },
                      {
-                        img: 'team', name: 'Campus Services', link: 'home', params: { page: 'campus-services' },
+                        img: 'team', name: 'Campus Services', link: 'campus',
                         list: [
                            { name: 'Academic Office', img: 'id-card', menu: [], link: 'page', params: { page: 'academic' } },
                            { name: 'Accounts Office', img: 'check', menu: [], link: 'page', params: { page: 'account' }  },
@@ -1044,12 +1044,8 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Academic Support Staff Positions', img: 'books', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
                         ]   },
                      {
-                        img: 'boss', name: 'Society',
-                        list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
-                        ]   },
+                        img: 'boss', name: 'Society', link:'societies',
+                        },
                      {
                         img: 'support', name: 'Support FCCU', link: 'home', params: { page: 'support-fccu' },
                         list: [
@@ -1074,6 +1070,223 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Email', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },
                         ]   }, 
                   ]
+      this.societies = [
+         {
+            name: 'THE ART JUNCTION',
+            Advisor: 'Mr Adil Arshad',
+            President: 'Qudsia Shahzad qudsiashahzad@yahoo.com',
+            link:'http://www.fccsocieties.org/directory/art-junction/'
+         },
+         {
+            name: 'ARMACOST PSYCHOLOGICAL SOCIETY',
+            Advisor: 'Nazia Asif',
+            President: 'Anam Nadeem Khan anamkhan10389@gmail.com',
+            link: 'http://www.fccsocieties.org/directory/armacost-psychological-society/'
+         },
+         {
+
+            name: 'BAZM-E-FIKR-O-NAZAR',
+            Advisor: 'Dr Mohammad Tahir',
+            President: 'Ali Shaharyar Khan 18-10088@formanite.fccollege.edu.pk',
+            link: 'http://www.fccsocieties.org/directory/bazm-e-fikr-o-nazar/'
+         },
+         {
+
+            name: 'BENADE PHYSICS SOCIETY',
+            Advisor: 'Syeda Ammara Anwar',
+            President: 'Arsalan Ahmad Chattha  arsalanahmadchattha@gmail.com',
+            link: 'http://www.fccsocieties.org/directory/benade-physics-society/'
+         },
+         {
+            name: 'CHRISTIAN LIFE PROGRAM',
+            Advisor: 'Rev Babar Iqbal- babarrana@fccollege.edu.pk',
+            President: 'Eraj Naeem John 17-10446@formanite.fccollege.edu.pk, Shayan Qamar shahyan.qamar@gmail.com',
+            link: 'http://www.fccsocieties.org/directory/christian-life-program/'
+         },
+         {
+            name: 'CHARACTER BUILDING CLUB',
+            Advisor: 'Dr Hamid Latif',
+            President: 'Qindeel Rabbani 16-10590@formanite.fccollege.edu.pk ',
+            link: 'http://www.fccsocieties.org/directory/character-building-club/'
+         },
+         {
+            name: 'DEAN GEOGRAPHICAL SOCIETY',
+            Advisor: 'Mr Adeel Ahmad',
+            President: 'Shahrukh Khan  17-10119@formanite.fccollege.edu.pk',
+            link: 'http://www.fccsocieties.org/directory/'
+         },
+         {
+            name: 'EARTH WATCH CLUB',
+            Advisor: 'Ms Sara Ali',
+            President: 'Hamza Irshad hamzairshadch@gmail.com',
+            link: 'http://www.fccsocieties.org/directory/earth-watch-club/'
+   },
+   {
+      name: 'FCCYDC',
+      Advisor: 'Salahuddin Ayyubi',
+      President: 'Abdul Malik malikkhan353@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/fccydc/'
+   },
+   {
+      name: 'EWING ENGLISH SOCIETY',
+      Advisor: ' Jacqoline J Austin',
+      President: 'Arslan Rashid  a1ch.arslan@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/ewing-english-society/'
+   },
+   {
+      name: 'JUNIOR BIOLOGICAL SOCIETY',
+      Advisor: 'Muhammad Umer Bhatti',
+      President: 'Muhammad Asadullah asadchaudhry414@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/'
+   },
+   {
+      name: 'FORMAN BIOLOGY SOCIETY (SENIOR)',
+      Advisor: 'Dr Muhammad Irfan',
+      President: 'Syed Mohammad Khizar  18-10528@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/societies/forman-biology-society-senior/'
+   },
+   {
+      name: 'FORMANITES COMPUTING SOCIETY',
+      Advisor: 'Dr Nazim Ashraf- nazimashraf@fccollege.edu.pk',
+      President: 'Abubakar Siddique Bhatti abubakarbhatti95@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/formanites-computing-society/'
+   },
+   {
+      name: 'FORMANITES DEBATING SOCIETY',
+      Advisor: 'Ms Neelam Hanif',
+      President: 'Osama Aziz  osama.mazari@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/formanites-debating-society/'
+   },
+   {
+      name: 'FORMAN DRAMATICS CLUB',
+      Advisor: 'Ms Qurra-tul-Aen',
+      President: 'Daniyal Azher  daniyalazhar8@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/forman-dramatics-club/'
+   },
+   {
+      name: 'FORMANITES EDUCATION SOCIETY',
+      Advisor: 'Ms Fizza Anwar',
+      President: 'Haseeb Bilal  hbr328@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/formanites-education-society/'
+   },
+   {
+      name: 'FORMANITE JOURNALISM SOCIETY',
+      Advisor: 'Mr Muhammad Saqib Saleem',
+      President: 'Muhammad Ahmad Imtiaz  ahmad1710558@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/formanite-journalism-society/'
+   },
+   {
+      name: 'FORMAN MODEL UN SOCIETY',
+      Advisor: 'Mr Omer Chauhdray',
+      President: 'Aneeq Sarwar  aneeq.alikhan@gmail.com',
+      link: 'http://formun.fccsocieties.org/'
+},
+   {
+      name: 'FORMAN MUSIC SOCIETY',
+      Advisor: 'Mr Rizwan Sabir- rizwansabir@fccollege.edu.pk',
+      President: 'Nokhiaz Joseph  17-10160@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/directory/forman-music-society/'
+   },
+   {
+      name: 'FORMAN PHOTOGRAPHIC SOCIETY',
+      Advisor: 'Mr Fakhir Shaheen',
+      President: 'Muhammad Saad Amin Hotiana  saadaminhotiana@hotmail.com',
+      link: 'http://www.fccsocieties.org/directory/forman-photographic-society/'
+   },
+   {
+      name: 'FORMAN POLITICAL SCIENCE SOCIETY',
+      Advisor: 'Dr Muhammad Younis',
+      President: 'Muqarab Husaain 17-10437@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/directory/forman-political-science-society/'
+   },
+   {
+      name: 'FORMAN SOCIOLOGICAL ASSOCIATION',
+      Advisor: 'Mr Ather Azeem',
+      President: 'Ramsha Khalil  17-10613@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/directory/forman-sociological-association/'
+   },
+   {
+      name: 'GRISWOLD HISTORY SOCIETY',
+      Advisor: 'Mr Umber Bin Ibad',
+      President: 'Muhammad Sohaib Lali  muhammadsohaiblali@yahoo.com',
+      link: 'http://www.fccsocieties.org/directory/griswold-history-society/'
+   },
+   {
+      name: 'ISLAMIC SOCIETY',
+      Advisor: 'Dr Farhat Aziz',
+      President: 'TBD',
+      link: 'http://www.fccsocieties.org/directory/'
+   },
+   {
+      name: 'INTERNATIONAL AFFAIRS SOCIETY (IAS)',
+      Advisor: 'Dr Grace Clark',
+      President: 'Syeda Sumbleen Zahra sumbleen.fcc@gmail.com',
+      Facebook: 'http://www.facebook.com/pages/International-Affairs-Society/183777181635077',
+      link: 'http://www.fccsocieties.org/directory/international-affairs-societies/'
+   },
+   {
+      name: 'LEADERSHIP FORUM',
+      Advisor: 'Mr Zeeshan Bhutta',
+      President: 'Junaid Iqbal 18-10801@formanite.fccollege.edu.pk, Zantasha Baig  zbaig171@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/leadership-forum/'
+     
+   },
+   {
+      name: 'LUCAS ECONOMICS SOCIETY',
+      Advisor: 'Mr Salahuddin Ayubi & Ms Ayesha Anwar- salahuddinayyubi@fccollege.edu.pk',
+      President: 'Abdul Malik malikkhan353@gmail.com',
+      link: 'http://www.fccsocieties.org/directory/lucas-economics-society/'
+   },
+   {
+      name: 'MATHEMATICS SOCIETY',
+      Advisor: 'Ms Sadia Arif',
+      President: 'M.Hasher Havaid  18- 10393@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/directory/mathematics-society/'
+},
+{
+   name: 'PHILOSOPHY SOCIETY',
+      Advisor: 'Dr Mark J Boone',
+         President: 'Sara Onar  17-10302@formanite.fccollege.edu.pk',
+         link: 'http://www.fccsocieties.org/philosophy-society/'
+},
+{
+   name: 'ROTARACT CLUB',
+      Advisor: 'Mr Raheem ul Haq',
+         President: 'Farooq Khan   farooqkhan434@gmail.com',
+         link: 'http://www.fccsocieties.org/directory/rotaract-club/'
+},
+{
+   name: 'SPEERS CHEMICAL SOCIETY',
+      Advisor: 'Dr Sadia Shaukat',
+         President: 'Fawad Mehmood  17-10593@formanite.fccollege.edu.pk',
+         link: 'http://www.fccsocieties.org/directory/speers-chemical-society/'
+},
+{
+   name: 'SPORTS SOCIETY',
+      Advisor: 'Mr Shahzad Nazir',
+         President: 'Abuzar Hassan  17-10145@formanite.fccollege.edu.pk',
+         link: 'http://www.fccsocieties.org/directory/'
+},
+{
+   name: 'INTERMEDIATE ENGLISH SOCIETY',
+      Advisor: 'Sara Youhanna',
+         President: 'TBD',
+         link: 'http://www.fccsocieties.org/directory/intermediate-english-society/'
+},
+{
+   name: 'INTERMEDIATE CHEMISTRY CLUB',
+      Advisor: 'Dr Rubab Zohra',
+         President: ' Zaib Hassan Malik',
+            Email: 'zaibmalik_11998@yahoo.com ',
+            link: 'http://www.fccsocieties.org/directory/intermediate-chemistry-club/'
+},
+{
+   name: 'Women Empowerment Society',
+      Advisor: 'Julie Flowerday',
+      President: 'Rameeza Ahmad  rameezaahmad@gmail.com, Jaffar Hussain Gardezi   17-10032@formanite.fccollege.edu.pk',
+      link: 'http://www.fccsocieties.org/directory/women-empowerment-society/'
+}
+      ];
       this.urlParser = function (str) {
          if(str){
             var rep = '-';

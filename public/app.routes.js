@@ -73,7 +73,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/insta',
           templateUrl: 'insta.html',
           params: {
-             title: "FCC Society"
+             title: "FCC Photos"
           }
        })
        .state('page', {

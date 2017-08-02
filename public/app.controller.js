@@ -91,6 +91,52 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http, $controller, $scope, $interval) {
+      
+      $scope.posts = {};
+      $scope.getBlog = function(){
+         $http.get('https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/posts_1.json').then(function (res) {
+            $scope.posts = res.data;
+         });
+      }
+      $scope.posts_detail = {};
+      $scope.getBlogDetail = function () {
+         $http.get('https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/posts_1.json').then(function (res) {
+            $scope.posts_detail = res.data[0];
+            $scope.posts_detail.likes = [];
+         });
+      }
+      $scope.liked = function(){
+         if ($scope.posts_detail && $scope.posts_detail.likes)
+         return $scope.posts_detail.likes.filter(function (elem) { return elem.name == "nido" }).length;
+      }
+      $scope.likeEvent = function(){
+         if ($scope.posts_detail.likes.filter(function (elem) { return elem.name == "nido" }).length){
+            $scope.posts_detail.likes = [];
+         }else{
+            $scope.posts_detail.likes = [];
+            $scope.posts_detail.likes.push({name:"nido"});
+         }
+      }
+      $scope.addPost = function () {
+         $scope.post.createdOn = Date.now();
+         $scope.post.comments = [];
+         $scope.post.likes = 0;
+         $scope.posts.unshift($scope.post);
+         $scope.tab = 0;
+         $scope.post = {};
+      }; 
+      //bda.filter(function(elem){ console.log(elem); return elem.name == "nidos"}).length
+      $scope.pushComments = function () {
+         if (document.getElementById('commentText').value && document.getElementById('commentText').value != ''){
+            var createdOn = Date.now();
+            $scope.posts_detail.comments.push({ createdOn: createdOn, body: document.getElementById('commentText').value,author:'Nidobda'}); 
+            console.log($scope.posts_detail.comments)
+            document.getElementById('commentText').value = ''
+         }
+      };
+
+
+
       this.tiles = buildGridModel({
          icon: "avatar:svg-",
          title: "Svg-",
@@ -242,7 +288,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       $scope.getEventAcademy = function () {
          $scope.loadMoreCall = true;
          $scope.EventAcademyPage = $scope.EventAcademyPage + 1;
-         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?categories=112&fields=title,link,featured_media,id,date&page=' + $scope.EventAcademyPage)
+         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?fields=title,link,featured_media,id,meta,date&post_type=u_event&page=' + $scope.EventAcademyPage)
             .then(function (response) {
                console.log(response)
                if (!response.data.length){
@@ -265,7 +311,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       $scope.getEventInternational = function () {
          $scope.loadMoreCall = true;
          $scope.EventInternationalPage = $scope.EventInternationalPage + 1;
-         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?categories=109&fields=title,link,featured_media,id,date&page=' + $scope.EventInternationalPage)
+         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?fields=title,link,featured_media,id,meta,date&post_type=u_event&page=' + $scope.EventInternationalPage)
             .then(function (response) {
                console.log(response)
                if (!response.data.length) {
@@ -784,6 +830,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          if (link && link.indexOf('http') >= 0){
             window.open(link, '_blank', 'location=yes');
          }else if(link){
+            console.log(link,params)
             if (params)
                 $state.go(link, params );
             else
@@ -971,7 +1018,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       }
       this.grids = [
                      {
-            img: 'student', name: 'People', link: 'home', params: { page: 'people' },
+            img: 'student', name: 'People', link: 'home', params: { page: 'people' }, is_home: true,
                         list:[
                            { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
                            { name: 'Accounts', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/accounts-office/'},
@@ -984,14 +1031,10 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                      },
                      {
                         img: 'news-report', name: 'News',link:'news', 
-                        list: [
-                           { name: 'Latest News 1', img: 'id-card', menu: [] },
-                           { name: 'Latest News 1', img: 'check', menu: [] },
-                           { name: 'Latest News 1', img: 'books', menu: [] },
-                        ]
+                        
                      },
                      {
-                        img: 'school', name: 'Admission', link: 'home', params: { page: 'admission' },
+                        img: 'school', name: 'Admission', link: 'home', params: { page: 'admission' }, is_home: true,
                         list: [
                            { name: 'Apply Now', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
                            { name: 'Financial Aid', img: 'check', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
@@ -999,11 +1042,11 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Residential Life', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
-                        img: 'calendar', name: 'Event', link:'eventlist',
+                        img: 'calendar', name: 'Event', link: 'events', params: { page: 'academy' } , is_home: true,
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [], link: 'events', params: { page: 'academy' } },
                            { name: 'Academic Calendar', img: 'check', menu: [], link: 'events', params: { page: 'international' } },
-                           { name: 'Today’s Events', img: 'books', menu: [], link: 'events', params: { page: 'academy' } },
+                           { name: 'Today’s Events', img: 'books', menu: [], link: 'eventlist'},
                         ]  },
                      {
                         img: 'team', name: 'Campus Services', link: 'campus',
@@ -1054,22 +1097,15 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         ]   },
                      {
                         img: 'photo-camera', name: 'Photos', link:'insta',
-                        list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [] },
-                           { name: 'Academic Calendar', img: 'check', menu: [] },
-                           { name: 'Today’s Events', img: 'books', menu: [] },
-                        ]   }, 
+                          }, 
                      {
                         img: 'network', name: 'Socials', link: 'social'
                         }, 
                      {
                         img: 'contact', name: 'Contact', link: 'page', params: { page: 'contact' },
-                        list: [
-                           { name: 'Address', img: 'id-card', menu: [],link:'page',params:{page:'contact'} },
-                           { name: 'Phone', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },
-                           { name: 'Email', img: 'id-card', menu: [], link: 'page', params: { page: 'contact' }  },
-                        ]   }, 
+                         }, 
                   ]
+    
       this.societies = [
          {
             name: 'THE ART JUNCTION',

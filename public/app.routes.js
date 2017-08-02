@@ -83,6 +83,20 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "FCC Campus Information"
           }
        })
+       .state('blog', {
+          url: '/blog/list',
+          templateUrl: 'blog.html',
+          params: {
+             title: "FCC Blog"
+          }
+       })
+       .state('blogdetails', {
+          url: '/blogs/:page',
+          templateUrl: 'blog_details.html',
+          params: {
+             title: "FCC Blog"
+          }
+       })
        .state('campus', {
           url: '/campus',
           templateUrl: 'campus.html',

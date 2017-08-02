@@ -332,6 +332,9 @@ md-tabs {
     /* box-shadow: 2px 12px 15px aliceblue; */
     text-shadow: 1px 1px 3px #296490;
  }
+ .disabled{
+    background: #ccc !important;
+ }
      </style>
 </head>
 
@@ -407,7 +410,7 @@ md-tabs {
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
-            <span flex layout-align="center center" class="text-center">{{title}}</span>
+            <span ui-sref="default" flex layout-align="center center" class="text-center">{{title}}</span>
 
             <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
 
@@ -431,12 +434,12 @@ md-tabs {
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">home</md-icon>
              HOME
          </md-button>
-         <md-button class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
+         <md-button  class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">website</md-icon>
              Site
 
          </md-button>
-         <md-button class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
+         <md-button ui-sref="blog" class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
             <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
                role="img" >chat</md-icon>
              Help Desk

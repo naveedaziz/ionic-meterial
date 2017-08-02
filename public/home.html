@@ -4,7 +4,7 @@
 <div class="gridListdemoDynamicTiles gridListdemoDynamicTilesHome" ng-init="app.stateLoader()">
    <md-content>
       <md-tabs md-dynamic-height md-selected="app.selectedTab">
-         <md-tab ui-sref="home({page:app.urlParser(items.name)})" ng-repeat="items in app.grids" label="{{items.name}}"></md-tab>
+         <md-tab ng-click="app.openLink(items.link,items.params)" ng-repeat="items in app.grids" label="{{items.name}}"></md-tab>
       </md-tabs>
       <md-content ng-init="app.selectedTab = $index" ng-repeat="items in app.grids" ng-if="app.urlParser(items.name) == app.pageName" class="md-padding" layout="row" flex="100">
 

@@ -9,9 +9,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
         .state('default', {
            url: '/',
             templateUrl: 'default.html',
-            params: {
-               title: "Welcome To"
-            }
+            
         })
        .state('home', {
           url: '/home/:page',
@@ -24,84 +22,98 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/news',
           templateUrl: 'news.html',
           params: {
-             title: "FCC News"
+             title: "News"
           }
        })
        .state('acadamic-calender', {
           url: '/acadamic-calender',
           templateUrl: 'acdamic-calender.html',
           params: {
-             title: "FCC Acadamic Calender"
+             title: "Acadamic Calender"
           }
        })
        .state('events', {
           url: '/event/:page',
           templateUrl: 'events.html',
           params: {
-             title: "FCC Events"
+             title: "Events"
           }
        })
        .state('eventlist', {
           url: '/event_list',
           templateUrl: 'event.html',
           params: {
-             title: "FCC Events"
+             title: "Events"
           }
        })
        .state('acadamic', {
           url: '/acadamic/:page',
           templateUrl: 'acadamic.html',
           params: {
-             title: "FCC Courses"
+             title: "Courses"
           }
        })
        .state('social', {
           url: '/social',
           templateUrl: 'social.html',
           params: {
-             title: "FCC Social"
+             title: "CONNECT WITH US"
           }
        })
        .state('societies', {
           url: '/societies',
           templateUrl: 'societies.html',
           params: {
-             title: "FCC Society"
+             title: "Society"
           }
        })
        .state('insta', {
           url: '/insta',
           templateUrl: 'insta.html',
           params: {
-             title: "FCC Photos"
+             title: "Photos"
           }
        })
        .state('page', {
           url: '/page/:page',
           templateUrl: 'page.html',
           params: {
-             title: "FCC Campus Information"
+             title: "Contact Information"
           }
        })
        .state('blog', {
           url: '/blog/list',
           templateUrl: 'blog.html',
           params: {
-             title: "FCC Blog"
+             title: "Blog"
           }
        })
        .state('blogdetails', {
           url: '/blogs/:page',
           templateUrl: 'blog_details.html',
           params: {
-             title: "FCC Blog"
+             title: "Blog"
           }
        })
        .state('campus', {
           url: '/campus',
           templateUrl: 'campus.html',
           params: {
-             title: "FCC Campus"
+             title: "Campus"
+          }
+       })
+       .state('jobs', {
+          url: '/jobs',
+          templateUrl: 'jobs.html',
+          params: {
+             title: "Jobs"
+          }
+       })
+       .state('admission', {
+          url: '/admission',
+          templateUrl: 'admission.html',
+          params: {
+             title: "Admission"
           }
        })
         .state('list', {

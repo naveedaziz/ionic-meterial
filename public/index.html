@@ -93,11 +93,11 @@
      .pageContents{
     color: rgba(0, 0, 0, 0.76);
     font-size: 14px;
-    min-height: 400px
+    min-height: 400px;
 
      }
      md-toolbar:not(.md-menu-toolbar).md-accent {
-    background-color: #00BCD4;
+    background-color: rgb(37, 59, 128);
     color: rgb(255,255,255);
 }
      .no-bg-color{
@@ -196,11 +196,11 @@ md-tab-content.md-no-scroll {
      overflow: auto !important; 
 }
 body,html{
-   background:rgb(41, 100, 144)
+   background:#253b80
 }
 md-content.md-default-theme, md-content {
     color: rgb(238, 238, 238);
-    background-color: rgb(41, 100, 144);
+    background-color: #253b80;
 }
 md-tabs.md-default-theme .md-tab, md-tabs .md-tab {
     color: rgb(187, 187, 187);
@@ -210,7 +210,10 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
 }
 .md-button.md-default-theme.md-warn.md-fab, .md-button.md-warn.md-fab, .md-button.md-default-theme.md-warn.md-raised, .md-button.md-warn.md-raised {
     color: rgb(255,255,255);
-    background-color: rgb(49, 165, 191);
+    background-color: rgb(60, 128, 187);
+}
+ .md-button.md-warn.md-raised:not([disabled]):hover {
+    background-color: #00aef0
 }
 .gridListdemoDynamicTiles md-grid-tile md-grid-tile-footer {
     background: #fff;
@@ -254,6 +257,9 @@ md-tabs {
        box-shadow: 1px 1px 5px #000;
     padding: 10px;
     font-size: 12px;
+
+
+    margin: 0px;
      background: #fff;
 
 }
@@ -410,7 +416,11 @@ md-tabs {
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
-            <span ui-sref="default" flex layout-align="center center" class="text-center">{{title}}</span>
+            <span ui-sref="default" flex layout-align="center center" class="text-center" ng-if="title">{{title}}</span>
+            <span ui-sref="default" flex layout-align="center center" class="text-center" ng-if="!title">
+               <img src="img/logo.png" style="    width: 314px;
+    margin-top: 10px;">
+            </span>
 
             <md-button ng-click="app.toggleRight()" class="md-icon-button" aria-label="User Menu">
 
@@ -427,7 +437,7 @@ md-tabs {
   
 
     <div ui-view style="margin-bottom:30px;"></div>
-   <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 1%;background:rgb(41, 100, 144);z-index:99999">
+   <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 1%;background:#253b80;z-index:99999">
      
          <div  align="center">
          <md-button ui-sref="default" class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">

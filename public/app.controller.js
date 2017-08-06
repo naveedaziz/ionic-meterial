@@ -1017,39 +1017,39 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
 
       }
       this.grids = [
+            //          {
+            // img: 'student', name: 'People', link: 'home', params: { page: 'people' }, is_home: true,
+            //             list:[
+            //                { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
+            //                { name: 'Accounts', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/accounts-office/'},
+            //                      { name: 'Academics', img: 'books', menu: [], link:'acadamic-calender' },
+            //                      { name: 'Empower Troubleshooting', img: 'bell', menu: [], link:'http://www.fccollege.edu.pk/empower-web-module/' },
+            //                      { name: 'University Counseling Center', img: 'glasses', menu: [], link:'http://www.fccollege.edu.pk/university-counseling-center-staff/' },
+            //                      { name: 'Mercy Health Center', img: 'heart', menu: [], link:'http://www.fccollege.edu.pk/mercy-health-center-2/' },
+            //                      { name: 'Communications Office', img: 'phone-receiver', menu: [], link:'http://www.fccollege.edu.pk/office-communications-publications/' },
+            //                  ]
+            //          },
                      {
-            img: 'student', name: 'People', link: 'home', params: { page: 'people' }, is_home: true,
-                        list:[
-                           { name: 'Admissions', img: 'id-card', menu: [], link:'home',params:{page:'admission'}},
-                           { name: 'Accounts', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/accounts-office/'},
-                                 { name: 'Academics', img: 'books', menu: [], link:'acadamic-calender' },
-                                 { name: 'Empower Troubleshooting', img: 'bell', menu: [], link:'http://www.fccollege.edu.pk/empower-web-module/' },
-                                 { name: 'University Counseling Center', img: 'glasses', menu: [], link:'http://www.fccollege.edu.pk/university-counseling-center-staff/' },
-                                 { name: 'Mercy Health Center', img: 'heart', menu: [], link:'http://www.fccollege.edu.pk/mercy-health-center-2/' },
-                                 { name: 'Communications Office', img: 'phone-receiver', menu: [], link:'http://www.fccollege.edu.pk/office-communications-publications/' },
-                             ]
-                     },
-                     {
-                        img: 'news-report', name: 'News',link:'news', 
+            img: 'News', name: 'News',link:'news', 
                         
                      },
                      {
-                        img: 'school', name: 'Admission', link: 'home', params: { page: 'admission' }, is_home: true,
+                        img: 'Admissions', name: 'Admission', link: 'home', params: { page: 'admission' }, is_home: true,
                         list: [
-                           { name: 'Apply Now', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
-                           { name: 'Financial Aid', img: 'check', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
-                           { name: 'Tuition Fee', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/tuition-fee/' },
-                           { name: 'Residential Life', img: 'books', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
+                           { name: 'Apply Now', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
+                           { name: 'Financial Aid', img: 'Campus-Security.jpg', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
+                           { name: 'Tuition Fee', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/tuition-fee/' },
+                           { name: 'Residential Life', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
-                        img: 'calendar', name: 'Event', link: 'events', params: { page: 'academy' } , is_home: true,
+                        img: 'Events', name: 'Event', link: 'events', params: { page: 'academy' } , is_home: true,
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [], link: 'events', params: { page: 'academy' } },
                            { name: 'Academic Calendar', img: 'check', menu: [], link: 'events', params: { page: 'international' } },
                            { name: 'Today’s Events', img: 'books', menu: [], link: 'eventlist'},
                         ]  },
                      {
-                        img: 'team', name: 'Campus Services', link: 'campus',
+                        img: 'Student Services', name: 'Campus Services', link: 'campus',
                         list: [
                            { name: 'Academic Office', img: 'id-card', menu: [], link: 'page', params: { page: 'academic' } },
                            { name: 'Accounts Office', img: 'check', menu: [], link: 'page', params: { page: 'account' }  },
@@ -1073,255 +1073,243 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
 
                         ]   },
                      {
-                        img: 'blackboard', name: 'Courses', link: 'acadamic', params: { page: 'faculties' },
+                        img: 'Academics', name: 'Academics', link: 'acadamic', params: { page: 'faculties' },
                         list: [
                            { name: 'Academic Faculties', img: 'id-card', menu: [], link: 'acadamic', params: { page: 'faculties' }    },
                            { name: 'Academic Departments', img: 'check', menu: [], link: 'acadamic', params: { page: 'departments' }   },
                            { name: 'Courses', img: 'books', menu: [] },
                         ]   },
                      {
-                        img: 'professor', name: 'Jobs', link: 'home', params: { page: 'jobs' },
+                        img: 'Jobs', name: 'Jobs', link: 'jobs',
                         list: [
-                           { name: 'Faculty Positions', img: 'id-card', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
-                           { name: 'Staff Positions', img: 'check', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
-                           { name: 'Academic Support Staff Positions', img: 'books', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
+                           { name: 'Faculty Positions', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
+                           { name: 'Staff Positions', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
+                           { name: 'Academic Support Staff Positions', img: 'Campus-Security.jpg', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
                         ]   },
                      {
-                        img: 'boss', name: 'Society', link:'societies',
+                        img: 'boss', name: 'Student Societies', link:'societies',
                         },
                      {
-                        img: 'support', name: 'Support FCCU', link: 'home', params: { page: 'support-fccu' },
+                        img: 'Support FCCU', name: 'Support FCCU', link: 'home', params: { page: 'support-fccu' },
                         list: [
                            { name: 'Learn About Current Campaigns', img: 'id-card', menu: [] },
                            { name: 'Give to FCCU', img: 'check', menu: [] },
                         ]   },
                      {
-                        img: 'photo-camera', name: 'Photos', link:'insta',
+                        img: 'Photos', name: 'Photos', link:'insta',
                           }, 
                      {
-                        img: 'network', name: 'Socials', link: 'social'
+                        img: 'Socials', name: 'Socials', link: 'social'
                         }, 
                      {
-                        img: 'contact', name: 'Contact', link: 'page', params: { page: 'contact' },
+                        img: 'Contact Us 2', name: 'Contact', link: 'page', params: { page: 'contact' },
                          }, 
+                     {
+                        img: 'question', name: 'Help Desk', link: 'page', params: { page: 'contact' },
+                     }, 
                   ]
     
       this.societies = [
          {
-            name: 'THE ART JUNCTION',
-            Advisor: 'Mr Adil Arshad',
-            President: 'Qudsia Shahzad qudsiashahzad@yahoo.com',
-            link:'http://www.fccsocieties.org/directory/art-junction/'
+            name: 'ACM FCCU Chapter',
+            email: 'acm@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/acm-fccu-chapter/',
          },
          {
-            name: 'ARMACOST PSYCHOLOGICAL SOCIETY',
-            Advisor: 'Nazia Asif',
-            President: 'Anam Nadeem Khan anamkhan10389@gmail.com',
-            link: 'http://www.fccsocieties.org/directory/armacost-psychological-society/'
+            name: 'Armacost Psychological Society',
+            email: 'aps@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/category/armacost-psychological-society/',
          },
          {
-
             name: 'BAZM-E-FIKR-O-NAZAR',
-            Advisor: 'Dr Mohammad Tahir',
-            President: 'Ali Shaharyar Khan 18-10088@formanite.fccollege.edu.pk',
-            link: 'http://www.fccsocieties.org/directory/bazm-e-fikr-o-nazar/'
+            email: 'mohammadtahir@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/bazm-e-fikr-o-nazar/',
          },
-         {
 
-            name: 'BENADE PHYSICS SOCIETY',
-            Advisor: 'Syeda Ammara Anwar',
-            President: 'Arsalan Ahmad Chattha  arsalanahmadchattha@gmail.com',
-            link: 'http://www.fccsocieties.org/directory/benade-physics-society/'
+
+         {
+            name: 'Benade Physics Society',
+            email: 'benadephysicssociety@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/benade-physics-society/',
+         },
+
+
+         {
+            name: 'Christian Life Program',
+            email: ' babarrana@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/christian-life-program/',
+         },
+
+
+         {
+            name: 'Character Building Club',
+            email: 'hamidlatif@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/character-building-club/',
+
+         },
+
+         {
+            name: 'Dean Geographical Society',
+            email: 'adeelahmad@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/dean-geographical-society/',
+         },
+
+
+         {
+            name: 'Earth Watch Club',
+            email: 'earthwatch@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/earth-watch-club/',
          },
          {
-            name: 'CHRISTIAN LIFE PROGRAM',
-            Advisor: 'Rev Babar Iqbal- babarrana@fccollege.edu.pk',
-            President: 'Eraj Naeem John 17-10446@formanite.fccollege.edu.pk, Shayan Qamar shahyan.qamar@gmail.com',
-            link: 'http://www.fccsocieties.org/directory/christian-life-program/'
+            name: 'Ewing English Society',
+            email: 'ewingenglishsociety@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/ewing-english-society/',
+         },
+
+         {
+            name: 'Formanites Computing Society',
+            email: 'fcs@formanite.fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/formanites-computing-society/',
+         },
+
+         {
+            name: 'Senior Biological Society',
+
+            email: 'sbs@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/',
+         },
+
+         {
+            name: 'Formanites Debating Society',
+
+            email: 'fds@formanite.fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/formanites-debating-society/',
+         },
+
+
+         {
+            name: 'Forman Dramatics Club',
+
+            email: 'dramaticsfcu@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/forman-dramatics-club/',
+         },
+
+         {
+            name: 'Formanites Education Society',
+
+            email: 'fizzaanwar@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/formanites-education-society/',
+
          },
          {
-            name: 'CHARACTER BUILDING CLUB',
-            Advisor: 'Dr Hamid Latif',
-            President: 'Qindeel Rabbani 16-10590@formanite.fccollege.edu.pk ',
-            link: 'http://www.fccsocieties.org/directory/character-building-club/'
+            name: 'Formanites Journalism Society',
+
+
+            email: 'syedsaqib@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/formanite-journalism-society/',
+         },
+
+         {
+            name: 'FORMUN',
+
+
+            email: 'formun@fccollege.edu.pk',
+            website: 'http://formun.fccsocieties.org/home-page/',
+
+         },
+
+         {
+            name: 'Forman Music Society',
+
+            email: 'musicsociety@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/forman-music-society/',
+         },
+
+         {
+            name: 'Forman Photography Society',
+
+            email: 'photography@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/forman-photographic-society/',
+         },
+
+         {
+            name: 'Forman Political Science Society',
+
+            email: 'muhammadyounis@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/forman-political-science-society/',
+         },
+
+         {
+            name: 'Forman Sociological Association',
+
+            email: 'atharazeem@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/forman-sociological-association/',
+         },
+
+         {
+            name: 'Griswold History Society',
+
+            email: 'umberibad@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/griswold-history-society/',
+         },
+
+         {
+            name: 'Islamic Society',
+            email: 'nisarahmad@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/islamic-society/',
+         },
+
+
+         {
+            name: 'International Affairs Society',
+            email: 'ias@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/international-affairs-societies/',
+         },
+
+         {
+            name: 'Leadership Forum',
+            email: 'leadershipforum@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/leadership-forum/',
+
+         },
+
+         {
+            name: 'Lucas Economics Society',
+            email: 'humnaahsan@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/lucas-economics-society/',
+
          },
          {
-            name: 'DEAN GEOGRAPHICAL SOCIETY',
-            Advisor: 'Mr Adeel Ahmad',
-            President: 'Shahrukh Khan  17-10119@formanite.fccollege.edu.pk',
-            link: 'http://www.fccsocieties.org/directory/'
+            name: 'Mathematics Society',
+            email: 'sadiaarif@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/mathematics-society/',
          },
          {
-            name: 'EARTH WATCH CLUB',
-            Advisor: 'Ms Sara Ali',
-            President: 'Hamza Irshad hamzairshadch@gmail.com',
-            link: 'http://www.fccsocieties.org/directory/earth-watch-club/'
-   },
-   {
-      name: 'FCCYDC',
-      Advisor: 'Salahuddin Ayyubi',
-      President: 'Abdul Malik malikkhan353@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/fccydc/'
-   },
-   {
-      name: 'EWING ENGLISH SOCIETY',
-      Advisor: ' Jacqoline J Austin',
-      President: 'Arslan Rashid  a1ch.arslan@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/ewing-english-society/'
-   },
-   {
-      name: 'JUNIOR BIOLOGICAL SOCIETY',
-      Advisor: 'Muhammad Umer Bhatti',
-      President: 'Muhammad Asadullah asadchaudhry414@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/'
-   },
-   {
-      name: 'FORMAN BIOLOGY SOCIETY (SENIOR)',
-      Advisor: 'Dr Muhammad Irfan',
-      President: 'Syed Mohammad Khizar  18-10528@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/societies/forman-biology-society-senior/'
-   },
-   {
-      name: 'FORMANITES COMPUTING SOCIETY',
-      Advisor: 'Dr Nazim Ashraf- nazimashraf@fccollege.edu.pk',
-      President: 'Abubakar Siddique Bhatti abubakarbhatti95@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/formanites-computing-society/'
-   },
-   {
-      name: 'FORMANITES DEBATING SOCIETY',
-      Advisor: 'Ms Neelam Hanif',
-      President: 'Osama Aziz  osama.mazari@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/formanites-debating-society/'
-   },
-   {
-      name: 'FORMAN DRAMATICS CLUB',
-      Advisor: 'Ms Qurra-tul-Aen',
-      President: 'Daniyal Azher  daniyalazhar8@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/forman-dramatics-club/'
-   },
-   {
-      name: 'FORMANITES EDUCATION SOCIETY',
-      Advisor: 'Ms Fizza Anwar',
-      President: 'Haseeb Bilal  hbr328@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/formanites-education-society/'
-   },
-   {
-      name: 'FORMANITE JOURNALISM SOCIETY',
-      Advisor: 'Mr Muhammad Saqib Saleem',
-      President: 'Muhammad Ahmad Imtiaz  ahmad1710558@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/formanite-journalism-society/'
-   },
-   {
-      name: 'FORMAN MODEL UN SOCIETY',
-      Advisor: 'Mr Omer Chauhdray',
-      President: 'Aneeq Sarwar  aneeq.alikhan@gmail.com',
-      link: 'http://formun.fccsocieties.org/'
-},
-   {
-      name: 'FORMAN MUSIC SOCIETY',
-      Advisor: 'Mr Rizwan Sabir- rizwansabir@fccollege.edu.pk',
-      President: 'Nokhiaz Joseph  17-10160@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/directory/forman-music-society/'
-   },
-   {
-      name: 'FORMAN PHOTOGRAPHIC SOCIETY',
-      Advisor: 'Mr Fakhir Shaheen',
-      President: 'Muhammad Saad Amin Hotiana  saadaminhotiana@hotmail.com',
-      link: 'http://www.fccsocieties.org/directory/forman-photographic-society/'
-   },
-   {
-      name: 'FORMAN POLITICAL SCIENCE SOCIETY',
-      Advisor: 'Dr Muhammad Younis',
-      President: 'Muqarab Husaain 17-10437@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/directory/forman-political-science-society/'
-   },
-   {
-      name: 'FORMAN SOCIOLOGICAL ASSOCIATION',
-      Advisor: 'Mr Ather Azeem',
-      President: 'Ramsha Khalil  17-10613@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/directory/forman-sociological-association/'
-   },
-   {
-      name: 'GRISWOLD HISTORY SOCIETY',
-      Advisor: 'Mr Umber Bin Ibad',
-      President: 'Muhammad Sohaib Lali  muhammadsohaiblali@yahoo.com',
-      link: 'http://www.fccsocieties.org/directory/griswold-history-society/'
-   },
-   {
-      name: 'ISLAMIC SOCIETY',
-      Advisor: 'Dr Farhat Aziz',
-      President: 'TBD',
-      link: 'http://www.fccsocieties.org/directory/'
-   },
-   {
-      name: 'INTERNATIONAL AFFAIRS SOCIETY (IAS)',
-      Advisor: 'Dr Grace Clark',
-      President: 'Syeda Sumbleen Zahra sumbleen.fcc@gmail.com',
-      Facebook: 'http://www.facebook.com/pages/International-Affairs-Society/183777181635077',
-      link: 'http://www.fccsocieties.org/directory/international-affairs-societies/'
-   },
-   {
-      name: 'LEADERSHIP FORUM',
-      Advisor: 'Mr Zeeshan Bhutta',
-      President: 'Junaid Iqbal 18-10801@formanite.fccollege.edu.pk, Zantasha Baig  zbaig171@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/leadership-forum/'
-     
-   },
-   {
-      name: 'LUCAS ECONOMICS SOCIETY',
-      Advisor: 'Mr Salahuddin Ayubi & Ms Ayesha Anwar- salahuddinayyubi@fccollege.edu.pk',
-      President: 'Abdul Malik malikkhan353@gmail.com',
-      link: 'http://www.fccsocieties.org/directory/lucas-economics-society/'
-   },
-   {
-      name: 'MATHEMATICS SOCIETY',
-      Advisor: 'Ms Sadia Arif',
-      President: 'M.Hasher Havaid  18- 10393@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/directory/mathematics-society/'
-},
-{
-   name: 'PHILOSOPHY SOCIETY',
-      Advisor: 'Dr Mark J Boone',
-         President: 'Sara Onar  17-10302@formanite.fccollege.edu.pk',
-         link: 'http://www.fccsocieties.org/philosophy-society/'
-},
-{
-   name: 'ROTARACT CLUB',
-      Advisor: 'Mr Raheem ul Haq',
-         President: 'Farooq Khan   farooqkhan434@gmail.com',
-         link: 'http://www.fccsocieties.org/directory/rotaract-club/'
-},
-{
-   name: 'SPEERS CHEMICAL SOCIETY',
-      Advisor: 'Dr Sadia Shaukat',
-         President: 'Fawad Mehmood  17-10593@formanite.fccollege.edu.pk',
-         link: 'http://www.fccsocieties.org/directory/speers-chemical-society/'
-},
-{
-   name: 'SPORTS SOCIETY',
-      Advisor: 'Mr Shahzad Nazir',
-         President: 'Abuzar Hassan  17-10145@formanite.fccollege.edu.pk',
-         link: 'http://www.fccsocieties.org/directory/'
-},
-{
-   name: 'INTERMEDIATE ENGLISH SOCIETY',
-      Advisor: 'Sara Youhanna',
-         President: 'TBD',
-         link: 'http://www.fccsocieties.org/directory/intermediate-english-society/'
-},
-{
-   name: 'INTERMEDIATE CHEMISTRY CLUB',
-      Advisor: 'Dr Rubab Zohra',
-         President: ' Zaib Hassan Malik',
-            Email: 'zaibmalik_11998@yahoo.com ',
-            link: 'http://www.fccsocieties.org/directory/intermediate-chemistry-club/'
-},
-{
-   name: 'Women Empowerment Society',
-      Advisor: 'Julie Flowerday',
-      President: 'Rameeza Ahmad  rameezaahmad@gmail.com, Jaffar Hussain Gardezi   17-10032@formanite.fccollege.edu.pk',
-      link: 'http://www.fccsocieties.org/directory/women-empowerment-society/'
-}
+            name: 'Philosophy Society ',
+            website: 'http://www.fccsocieties.org/philosophy-society/',
+
+         },
+         {
+            name: 'Rotaract Club',
+            email: 'raheemhaque@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/rotaract-club/',
+         },
+
+         {
+            name: 'Speers Chemical Society ',
+            email: 'scs@formanite.fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/speers-chemical-society/',
+         },
+         {
+            name: 'Intermediate English Society',
+            email: 'rubabzohra@fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/intermediate-english-society/',
+         },
+         {
+            name: 'Women Empowerment Society',
+            email: 'wes@formanite.fccollege.edu.pk',
+            website: 'http://www.fccsocieties.org/directory/women-empowerment-society/',
+         },
       ];
       $scope.tempInsat = { "items": [{ "id": "1567948956516181317_2158748948", "code": "BXCeUTDF2VF", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/20394371_359205091178414_2803235466592124928_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/20394371_359205091178414_2803235466592124928_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20394371_359205091178414_2803235466592124928_n.jpg" } }, "created_time": "1501134102", "caption": { "id": "17888661436065172", "text": "#FCCU provides its students comprehensive guidance and counseling to become self sufficient in building their own life-long career strategies which can continue well beyond graduation. #Admissions2017 #formanchristiancollege", "created_time": "1501134102", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2191105701", "full_name": "Hassaan Akram Hashmi", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20180874_1476779729026323_5159660030772903936_a.jpg", "username": "hasaan.hashmi" }, { "id": "1762208541", "full_name": "\u062d\u0633\u0646\u06cc\u0646 \u0645\u0646\u06cc\u0631 \u062c\u0633\u06a9\u0627\u0646\u06cc", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20398353_256319404884552_7429263699375816704_a.jpg", "username": "hasnainjaskani" }, { "id": "2237944054", "full_name": "Ammar Mukhtar", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19436320_723924554475619_5684342383932604416_a.jpg", "username": "ammarraja599" }, { "id": "1494747081", "full_name": "Sheikh Usama \u2122", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20213839_141375903113580_2991701547823398912_a.jpg", "username": "beingsheikh9" }], "count": 128 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BXCeUTDF2VF/", "location": null, "alt_media_url": null }, { "id": "1566494929815255671_2158748948", "code": "BW9TtbKFrp3", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/20214464_259398664561069_4579678629352439808_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/20214464_259398664561069_4579678629352439808_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20214464_259398664561069_4579678629352439808_n.jpg" } }, "created_time": "1500960769", "caption": { "id": "17865035968161576", "text": "Our wide range of scholarships \u0026 financial assistance ensures that no deserving student is denied an education with us because of financial difficulty. Feel secure \u0026 apply now! #FCCU #Admissions2017 #formanchristiancollege", "created_time": "1500960769", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "3768891741", "full_name": "Farhan imtiaz", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17818196_202677380234195_8555484869772181504_a.jpg", "username": "haleemamalik2016" }, { "id": "2035868052", "full_name": "Mr.\u00dfuN\u00f1y...!\ud83d\udc07", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19933005_251593801995133_4796373030949355520_a.jpg", "username": "bunnyy__here" }, { "id": "4181646905", "full_name": "Osama Khalid", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19623670_234532157056197_2631054861965197312_a.jpg", "username": "osama_khalid786" }, { "id": "3032805889", "full_name": "Sheheryar Nasir\ud83d\ude0d", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20346948_1950040181920570_4570666976216612864_a.jpg", "username": "sheheryar_nasir" }], "count": 205 }, "comments": { "data": [{ "id": "17890876261000010", "text": "Everything is possible if you work hard for getting your success", "created_time": "1501010673", "from": { "id": "1545766254", "full_name": "Sultan Haider", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15625231_399638820368737_108976003337945088_a.jpg", "username": "sultan__haider" } }, { "id": "17876058634082537", "text": "Addmissions open for bachelors?", "created_time": "1501122480", "from": { "id": "4831095354", "full_name": "", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/18513581_760013420839672_3967944319964282880_a.jpg", "username": "shonaa_0077" } }], "count": 2 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BW9TtbKFrp3/", "location": null, "alt_media_url": null }, { "id": "1565194862240079157_2158748948", "code": "BW4sG84Fh01", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/19535427_456171411419756_1440257634207793152_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/19535427_456171411419756_1440257634207793152_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/19535427_456171411419756_1440257634207793152_n.jpg" } }, "created_time": "1500805789", "caption": { "id": "17889770107037784", "text": "#FCCU is recognised as much for its distinguished sporting tradition as it is for its excellence in education. A wide variety of #sports activities are made available to the students for an all-round development. #fccollege #formanchristiancollege", "created_time": "1500805789", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "1405161110", "full_name": "Mirza Husnain Baig", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12107578_971163092933133_139733297_a.jpg", "username": "mirzahusnain.baig.5" }, { "id": "1722466500", "full_name": "\u0633\u0644\u0637\u0627\u0646 \u062e\u0627\u0646 \u0628\u0627\u0628\u0631", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20346818_309732779487832_75416795334311936_a.jpg", "username": "sultaaanbabar" }, { "id": "3639412363", "full_name": "i.am.asfand", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932209_249242392245978_5469798794583343104_a.jpg", "username": "i.am.asfand" }, { "id": "1599593551", "full_name": "\u062a\u06cc\u0645\u0648\u0631 \u0645\u0633\u0639\u0648\u062f \u06d4\ud83d\udc96", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18579953_127522151149228_6184567595581046784_a.jpg", "username": "taimoormasaud" }], "count": 256 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BW4sG84Fh01/", "location": null, "alt_media_url": null }, { "id": "1564429840308167719_2158748948", "code": "BW1-KarluQn", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/20181198_293128121096311_4470889538696249344_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/20181198_293128121096311_4470889538696249344_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20181198_293128121096311_4470889538696249344_n.jpg" } }, "created_time": "1500714591", "caption": { "id": "17885463553065137", "text": "#FCCU will prepare you for a range of careers in which independent thought, analysis \u0026 effective #communication can contribute to economic welfare. #fccollege #formanchristiancollege #university", "created_time": "1500714591", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "3235282095", "full_name": "The_Xtrome10", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19379535_143143862906495_1449980383603982336_a.jpg", "username": "the_xtrome10" }, { "id": "1349385916", "full_name": "Monis Abbas", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18161501_411043595944821_3233034325666562048_a.jpg", "username": "syedmonisabbas" }, { "id": "2127136433", "full_name": "Muhammad Khurram Anwaar", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15624083_1171455299617434_53448548716380160_n.jpg", "username": "mkhurram_57" }, { "id": "1484172766", "full_name": "Ally", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19428690_1880948622174004_2225320257973649408_a.jpg", "username": "ally_faizan" }], "count": 175 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BW1-KarluQn/", "location": null, "alt_media_url": null }, { "id": "1563056357363789385_2158748948", "code": "BWxF3nAla5J", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/20180867_468496003517927_5677631665036328960_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/20180867_468496003517927_5677631665036328960_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/20180867_468496003517927_5677631665036328960_n.jpg" } }, "created_time": "1500550859", "caption": { "id": "17864495098191244", "text": "#FCCU is the university that will recognize your outstanding academic achievements and support you in fulfilling your goals.", "created_time": "1500550859", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "1762208541", "full_name": "\u062d\u0633\u0646\u06cc\u0646 \u0645\u0646\u06cc\u0631 \u062c\u0633\u06a9\u0627\u0646\u06cc", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20398353_256319404884552_7429263699375816704_a.jpg", "username": "hasnainjaskani" }, { "id": "1936228141", "full_name": "Mahnoor Talat \ud83d\udc3c", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19955220_247910665727206_3574728291510124544_a.jpg", "username": "itsnoortalat" }, { "id": "3905532925", "full_name": "Peerzada Hamza shah", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809600_100747047195272_8095968638055481344_a.jpg", "username": "peerzada_hamza_shah" }, { "id": "2261918427", "full_name": "Salik Razzaque", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20347085_872517062923832_3248424816985767936_a.jpg", "username": "salikrazzaque" }], "count": 166 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BWxF3nAla5J/", "location": null, "alt_media_url": null }, { "id": "1557969883203169209_2158748948", "code": "BWfBVqzFOu5", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e15/19985514_483836718617792_2026988533784248320_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e15/19985514_483836718617792_2026988533784248320_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/e15/19985514_483836718617792_2026988533784248320_n.jpg" } }, "created_time": "1499944504", "caption": { "id": "17863092763189589", "text": "Admissions are open! Apply now to FCCU and be a part of the learning experience that will give you a greater purpose. Merit \u0026 Need-Based scholarships available. Apply now to be a Formanite. https://goo.gl/f02QWq", "created_time": "1499944504", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "1727902852", "full_name": "Khayam khalid", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19955448_114136222464296_2883518215059668992_a.jpg", "username": "rising_mughal" }, { "id": "2008970224", "full_name": "FASEEH ABBAS", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20214312_247740825739811_6440744390284541952_a.jpg", "username": "faseeh_abbas" }, { "id": "647351805", "full_name": "Mirza Aamin", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932108_479558895721053_2341441394675023872_a.jpg", "username": "aamino.acid" }, { "id": "1746846145", "full_name": "Barrister At Law \u2696\ufe0f", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19050985_2012804285656632_5819155368630026240_a.jpg", "username": "azhar_ali_csp" }], "count": 122 }, "comments": { "data": [{ "id": "17888632009029572", "text": "FCCU was the first love \u003c3 I miss that place \ud83d\ude0d", "created_time": "1499950221", "from": { "id": "2974236104", "full_name": "Rana Arslan Tariq", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19051057_1865368040380328_407149370513817600_a.jpg", "username": "ranaarslan_tariq" } }], "count": 1 }, "can_view_comments": true, "can_delete_comments": false, "type": "video", "link": "https://www.instagram.com/p/BWfBVqzFOu5/", "location": null, "alt_media_url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19958582_293071051160528_8760153805321928704_n.mp4", "videos": { "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19958582_293071051160528_8760153805321928704_n.mp4" }, "low_bandwidth": { "width": 480, "height": 480, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/20130329_455439511498776_5105465867144003584_n.mp4" }, "low_resolution": { "width": 480, "height": 480, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/20130329_455439511498776_5105465867144003584_n.mp4" } }, "video_views": 639 }, { "id": "1545169378731355451_2158748948", "code": "BVxi10BF-07", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c135.0.810.810/19379673_801056666735674_2125398384998088704_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c135.0.810.810/19379673_801056666735674_2125398384998088704_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c135.0.810.810/19379673_801056666735674_2125398384998088704_n.jpg" } }, "created_time": "1498418565", "caption": { "id": "17888157403036980", "text": "#FCCU wishes everyone a blessed #Eid. May this day and life ahead be enveloped in happiness and love. #HappyEid #eidmubarak #EidWishes", "created_time": "1498418565", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2883401502", "full_name": "S Y E D I Q B A L \u2764", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18160458_422937144749359_5594973786769195008_a.jpg", "username": "syediqbal.2311" }, { "id": "1601764544", "full_name": "Arslan Malik", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20226065_341916269573716_7710208350704631808_a.jpg", "username": "ars_lanmalik" }, { "id": "1822586270", "full_name": "Sunny Javed", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/11142098_357538417775669_483508625_a.jpg", "username": "sunnyjaved8" }, { "id": "4111557531", "full_name": "iamAsfandchaudhary", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19429460_147479302468051_8143265835826282496_a.jpg", "username": "asfand_chaudhary" }], "count": 335 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BVxi10BF-07/", "location": null, "alt_media_url": null }, { "id": "1537619105624202783_2158748948", "code": "BVWuG4OlZ4f", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e15/c236.0.607.607/19051987_754101611418021_8935652967969718272_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e15/c236.0.607.607/19051987_754101611418021_8935652967969718272_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/e15/c236.0.607.607/19051987_754101611418021_8935652967969718272_n.jpg" } }, "created_time": "1497518502", "caption": { "id": "17887862782029341", "text": "Admissions are open for Baccalaureate, Pharm D and Postgraduate programs \nApply Now! https://goo.gl/f02QWq\n\n#MYFCCU #University #FCCUSocial #Admissions", "created_time": "1497518502", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "4676574057", "full_name": "Abia Ali", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20214447_1708589146101835_2221059375538110464_a.jpg", "username": "abia_ali97" }, { "id": "2270910665", "full_name": "Moeez Suleman", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17333240_423871414627744_8151966404480860160_a.jpg", "username": "moeez3198" }, { "id": "2357200933", "full_name": "Rohma Batool", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20347637_274985206313601_4539717351687323648_a.jpg", "username": "rohmabatool" }, { "id": "1517774265", "full_name": "\u0641\u0627\u0637\u0645\u06c1 \u0627\u06cc\u0645\u0627\u0646", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20347291_467154116989264_6243940428912001024_a.jpg", "username": "fatima.malik22" }], "count": 229 }, "comments": { "data": [{ "id": "17872559398118095", "text": "@eiman.18 \ud83e\udd17\ud83d\ude18\u2764\ufe0f", "created_time": "1497754437", "from": { "id": "2200232801", "full_name": "Hejab\ud83c\udf38", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20393807_119221295374743_478590533665554432_a.jpg", "username": "hejabahmed" } }, { "id": "17873236927105744", "text": "\ud83d\udc4d", "created_time": "1497862275", "from": { "id": "3087110152", "full_name": "Bestways Travels", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12519662_981405711929825_263264915_a.jpg", "username": "bestwaystravels" } }, { "id": "17861459068160741", "text": "How I apply", "created_time": "1499006806", "from": { "id": "3075103111", "full_name": "Bushra Iftikhar", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724708_103503153384542_295628067_a.jpg", "username": "bushraiftikhar364" } }, { "id": "17886139225008124", "text": "Marks required for admission", "created_time": "1499006820", "from": { "id": "3075103111", "full_name": "Bushra Iftikhar", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724708_103503153384542_295628067_a.jpg", "username": "bushraiftikhar364" } }], "count": 5 }, "can_view_comments": true, "can_delete_comments": false, "type": "video", "link": "https://www.instagram.com/p/BVWuG4OlZ4f/", "location": { "name": "Forman Christian College" }, "alt_media_url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19231648_318678891907488_3442774161598971904_n.mp4", "videos": { "standard_resolution": { "width": 640, "height": 359, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19232316_647720022094211_9024536684800245760_n.mp4" }, "low_bandwidth": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19230352_1910286522577889_7486225625829605376_n.mp4" }, "low_resolution": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19230352_1910286522577889_7486225625829605376_n.mp4" } }, "video_views": 1562 }, { "id": "1531170557437400479_2158748948", "code": "BU_z4Jul9Wf", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e15/c236.0.607.607/18950011_1680373475325955_4460300747799527424_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e15/c236.0.607.607/18950011_1680373475325955_4460300747799527424_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/e15/c236.0.607.607/18950011_1680373475325955_4460300747799527424_n.jpg" } }, "created_time": "1496749776", "caption": { "id": "17868566116090206", "text": "Admissions now open for Baccalaureate, Pharm D and Postgraduate program.\n\nApply Now! https://t.co/Mu1sKB6YVo\n\n#MYFCCU #University #Admissions https://t.co/nXQ7ldxokY", "created_time": "1496749776", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "993521530", "full_name": "Fatima Chaudhary", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809638_447985912229657_6778901111257432064_a.jpg", "username": "fati_chaudhary" }, { "id": "3432938123", "full_name": "Chaudhry Daniyal Zaheer", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20180672_1915846221996509_4528362063747088384_a.jpg", "username": "ch.daniyal121" }, { "id": "198385761", "full_name": "Hashim Khan", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12677290_467396226787397_487543556_a.jpg", "username": "hashiaus" }, { "id": "2279109654", "full_name": "Muhammad Talha", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20181097_762148540622839_3813799056107372544_a.jpg", "username": "muhammad_talha70" }], "count": 196 }, "comments": { "data": [{ "id": "17872362856104314", "text": "Is there any entry test for bsc math hons?", "created_time": "1497523405", "from": { "id": "3516113031", "full_name": "Fahad khan", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14499056_233178633754450_5373225003233837056_a.jpg", "username": "faddykhan1" } }, { "id": "17859950914152064", "text": "What is the last date for apply?", "created_time": "1497523423", "from": { "id": "3516113031", "full_name": "Fahad khan", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14499056_233178633754450_5373225003233837056_a.jpg", "username": "faddykhan1" } }, { "id": "17886811327017191", "text": "Is there any entry test for pharm d", "created_time": "1499006882", "from": { "id": "3075103111", "full_name": "Bushra Iftikhar", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724708_103503153384542_295628067_a.jpg", "username": "bushraiftikhar364" } }, { "id": "17860723984169732", "text": "Kindly tell", "created_time": "1499006888", "from": { "id": "3075103111", "full_name": "Bushra Iftikhar", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724708_103503153384542_295628067_a.jpg", "username": "bushraiftikhar364" } }], "count": 8 }, "can_view_comments": true, "can_delete_comments": false, "type": "video", "link": "https://www.instagram.com/p/BU_z4Jul9Wf/", "location": { "name": "Forman Christian College" }, "alt_media_url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19026441_278720032599642_637691940673945600_n.mp4", "videos": { "standard_resolution": { "width": 640, "height": 359, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19000597_262988790843827_4282965078610804736_n.mp4" }, "low_bandwidth": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19000216_499918310356249_5136285461538406400_n.mp4" }, "low_resolution": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19000216_499918310356249_5136285461538406400_n.mp4" } }, "video_views": 1126 }, { "id": "1530410545366653204_2158748948", "code": "BU9HEhVF1kU", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e15/18888635_778553905638127_3779061614020395008_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e15/18888635_778553905638127_3779061614020395008_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/e15/18888635_778553905638127_3779061614020395008_n.jpg" } }, "created_time": "1496659175", "caption": { "id": "17858143783181229", "text": "Admissions are open! Apply now to FCCU and be a part of the learning experience that will give you a greater purpose. Merit \u0026 Need-Based scholarships available. Apply now to be a Formanite http://www.fccollege.edu.pk/apply-now/", "created_time": "1496659175", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "4034878698", "full_name": "Jannat Afzal", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20213824_1402398129842678_1754595797996929024_a.jpg", "username": "jannat_afzal" }, { "id": "3918249147", "full_name": "Madiha Aamir", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17265328_190219311470452_8792667691300159488_a.jpg", "username": "maddiaamir" }, { "id": "5359596769", "full_name": "Usman Sharif", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19933163_1952261915053797_5409707679511740416_a.jpg", "username": "usmansharif8605" }, { "id": "5490981091", "full_name": "Danyal Tabassam", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19534799_143013129587283_3042979725011058688_a.jpg", "username": "danyaltabassam" }], "count": 197 }, "comments": { "data": [{ "id": "17873908804074479", "text": "@qarsamgardezi1", "created_time": "1496660507", "from": { "id": "1917084292", "full_name": "Aimen", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932971_1844211179229502_7781224239079620608_a.jpg", "username": "aimenrashidniaz" } }, { "id": "17857990369178766", "text": "Saaf juth .jitny obstacles fc mai hain itni zalalat kahen ni. Koi kam parh jaye sahi itnaa zaleel krty hain itny chakar lagaty hain", "created_time": "1496667158", "from": { "id": "2347432629", "full_name": "Ali Hassan Bukhari", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14597300_1313123258721635_1074537818878902272_a.jpg", "username": "syedbukhari5" } }, { "id": "17882799124060804", "text": "Fsc k liay merit kiya hota fc ka", "created_time": "1496812407", "from": { "id": "2680399116", "full_name": "Tayyabamehmood", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17586659_1875577826032820_5613489751559503872_a.jpg", "username": "duadoll" } }, { "id": "17843480584194689", "text": "900 marks", "created_time": "1496900819", "from": { "id": "1647693630", "full_name": "Shoaib Bukhari", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20347624_412102222517855_7394377608470724608_a.jpg", "username": "shoaib_bukhari.7" } }], "count": 4 }, "can_view_comments": true, "can_delete_comments": false, "type": "video", "link": "https://www.instagram.com/p/BU9HEhVF1kU/", "location": null, "alt_media_url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18951686_476153916066109_5602606583604314112_n.mp4", "videos": { "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18951686_476153916066109_5602606583604314112_n.mp4" }, "low_bandwidth": { "width": 480, "height": 480, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19001084_304923656625310_495674809762447360_n.mp4" }, "low_resolution": { "width": 480, "height": 480, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/19001084_304923656625310_495674809762447360_n.mp4" } }, "video_views": 1019 }, { "id": "1525240342068345148_2158748948", "code": "BUqvgKSFDk8", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/18809439_1901081860114831_8948225166173798400_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/18809439_1901081860114831_8948225166173798400_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18809439_1901081860114831_8948225166173798400_n.jpg" } }, "created_time": "1496042839", "caption": { "id": "17881511203033889", "text": "Congratulations to @hamza.b93 for winning this week's #FCCU Instagram Photography Competition. The winner can collect his prize from the Communications Office, N 217 tomorrow Monday 30 May at 11:00 am. \n#FCCUPC17 #PhotographyCompetition #MYFCCU #FCCUSocial #FCCUCampus", "created_time": "1496042839", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2459539934", "full_name": "Ch Faisal Rajput", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15876048_741669299322314_7778231608946982912_a.jpg", "username": "chfaisalrajput" }, { "id": "1269124868", "full_name": "Araaf Ahmad Khan", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19624707_121009818507130_211916499588218880_a.jpg", "username": "araafkhan" }, { "id": "2325289740", "full_name": "Abdullah Sarfraz", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20214700_344195599342942_4237264165565104128_a.jpg", "username": "abdullahsarfraz_" }, { "id": "2327520560", "full_name": "Muaviya Ijaz", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/16123987_586637561547519_3508531124513013760_a.jpg", "username": "muaviya_ijaz" }], "count": 322 }, "comments": { "data": [{ "id": "17881233871022064", "text": "@hamza.b93 congratulations buddy", "created_time": "1496060377", "from": { "id": "1315212061", "full_name": "Hamza Latif", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/11424694_941001712589185_1966769875_a.jpg", "username": "hamza.latif.90" } }, { "id": "17867782975088489", "text": "@hamza.latif.90 Thanks a lot man.", "created_time": "1496064371", "from": { "id": "2308375066", "full_name": "Hamza Butt", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18382391_740030462845202_254738938437042176_a.jpg", "username": "hamza.b93" } }, { "id": "17868049948080682", "text": "Congrats boyee \ud83d\udc4d\ud83c\udffb @hamza.b93", "created_time": "1496079267", "from": { "id": "1689371392", "full_name": "Manazir Ali Chaudhry", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17663026_269215796869995_7162912560939794432_a.jpg", "username": "manazir_ali_chaudhry" } }, { "id": "17882603647033937", "text": "@manazir_ali_chaudhry Thank you sir.", "created_time": "1496080557", "from": { "id": "2308375066", "full_name": "Hamza Butt", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18382391_740030462845202_254738938437042176_a.jpg", "username": "hamza.b93" } }], "count": 6 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUqvgKSFDk8/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1525214595669031561_2158748948", "code": "BUqppgFF_qJ", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/18646451_782449158586705_9134491524069851136_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/18646451_782449158586705_9134491524069851136_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18646451_782449158586705_9134491524069851136_n.jpg" } }, "created_time": "1496039770", "caption": { "id": "17881774063031629", "text": "FCCU won\u2019t just be a place to study. It will be your new home for the next few years. Fully-equipped \u0026 secure accommodation in #FCCU will help you make lasting memories. Join the #Baccalaureate (Hons) programs now. For admission details https://goo.gl/VvLSmX\n#Admission2017 #Hostel #ApplyNow #formanchristiancollege", "created_time": "1496039770", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "4626209210", "full_name": "Adil Khan Niazi", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/16585243_1392485314136370_211279384139530240_a.jpg", "username": "adilkhanniazi970" }, { "id": "1587631078", "full_name": "\u0627\u0644\u0644\u06c1 \u062f\u0627\u062f \u06af\u06be\u0645\u0646. \ud83d\udd31", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20184709_706970272823015_4477605226869686272_a.jpg", "username": "allahdad_ghumman" }, { "id": "2261918427", "full_name": "Salik Razzaque", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20347085_872517062923832_3248424816985767936_a.jpg", "username": "salikrazzaque" }, { "id": "1497230104", "full_name": "Akif Sher \ud83d\udc05 \ud83d\ude04", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19765148_1719399021695936_2083532680179220480_a.jpg", "username": "akif_sher" }], "count": 137 }, "comments": { "data": [{ "id": "17870846440110189", "text": "@samancutie its 22nd June. I've applied too", "created_time": "1496402243", "from": { "id": "5341803953", "full_name": "", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18948302_312029839222133_5594913425298817024_a.jpg", "username": "blaccklisted_" } }, { "id": "17882670559054537", "text": "@samancutie oh You got admission... I'll see you then xD ;)", "created_time": "1496412381", "from": { "id": "5341803953", "full_name": "", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18948302_312029839222133_5594913425298817024_a.jpg", "username": "blaccklisted_" } }], "count": 2 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUqppgFF_qJ/", "location": null, "alt_media_url": null }, { "id": "1523280622537607950_2158748948", "code": "BUjx6fPlwsO", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c180.0.720.720/18581260_1223903151051607_4203955165176266752_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c180.0.720.720/18581260_1223903151051607_4203955165176266752_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c180.0.720.720/18581260_1223903151051607_4203955165176266752_n.jpg" } }, "created_time": "1495809222", "caption": { "id": "17880611992001744", "text": "Contestant # 5: @sehar.khurshid\n\nVoting is open till 12:00 pm, Monday 29 May 2017. \nGreater the number of likes, higher the chances of winning. \n#FCCUPC17 #PhotographyCompetition #Photography #VoteNow #FCCUSocial #MYFCCU", "created_time": "1495809222", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "3056734440", "full_name": "Muhammad Imran Khetran", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15875691_1903045159931636_7059693364261683200_a.jpg", "username": "khetranmuhammad" }, { "id": "2537640011", "full_name": "Mahnoor Naveed", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19624664_249473208886885_684355441790025728_a.jpg", "username": "mahnoornaveed94" }, { "id": "1813891522", "full_name": "Ch Muhammad Tayyab Sindhu", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19761494_243307652847349_1968596460530302976_a.jpg", "username": "tayyabsindhu" }, { "id": "4299730294", "full_name": "clever catoo", "profile_picture": "https://scontent-mad1-1.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg", "username": "clever_catoo" }], "count": 749 }, "comments": { "data": [{ "id": "17870266051100273", "text": "Beautiful click", "created_time": "1495819976", "from": { "id": "229502319", "full_name": "UmerDurrani", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14099613_1049772951738185_848695123_a.jpg", "username": "durranimusic" } }, { "id": "17857807930158635", "text": "Beautiful Click", "created_time": "1495820493", "from": { "id": "3032805889", "full_name": "Sheheryar Nasir\ud83d\ude0d", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20346948_1950040181920570_4570666976216612864_a.jpg", "username": "sheheryar_nasir" } }, { "id": "17870063284104682", "text": "woww amazing", "created_time": "1495820908", "from": { "id": "1810490352", "full_name": "Siki BOi", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14596890_1713058945676351_2411597765604802560_a.jpg", "username": "sikandarnawazrajput" } }, { "id": "17859797389130532", "text": "@sehar.khurshid great stuff, solid balance and the perspective is very intricate yet easy on the eyes!", "created_time": "1495832985", "from": { "id": "813447220", "full_name": "Irtiza Shafaat Bokharee", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20225295_1281419961967202_8349157106183569408_a.jpg", "username": "irtiza_shafaat" } }], "count": 14 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjx6fPlwsO/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1523280293779634769_2158748948", "code": "BUjx1tEFnpR", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c236.0.607.607/18645067_1946029382335057_5542225897542647808_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c236.0.607.607/18645067_1946029382335057_5542225897542647808_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/e35/c236.0.607.607/18645067_1946029382335057_5542225897542647808_n.jpg" } }, "created_time": "1495809183", "caption": { "id": "17881526947009757", "text": "Contestant # 4: @fastomar\n\nVoting is open till 12:00 pm, Monday 29 May 2017. \nGreater the number of likes, higher the chances of winning. \n#FCCUPC17 #PhotographyCompetition #Photography #VoteNow #FCCUSocial #MYFCCU", "created_time": "1495809183", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2281967890", "full_name": "Azeem Samson", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18812078_316158368805163_7650540161062666240_a.jpg", "username": "azeem_samson" }, { "id": "1956290176", "full_name": "Manahil", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932248_1938531973054460_3335982350994505728_a.jpg", "username": "the_manahilghani" }, { "id": "1695198500", "full_name": "bluewater94", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18013788_1851970351721883_1507726510956478464_a.jpg", "username": "ata.ahmad94" }, { "id": "445407220", "full_name": "Mehreen Tahir", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19765081_607357112721669_5240402482475040768_a.jpg", "username": "mehreentahir" }], "count": 697 }, "comments": { "data": [{ "id": "17881273759016405", "text": "\u2764\u2764\u2764\u2764\u2764", "created_time": "1495818539", "from": { "id": "1570471594", "full_name": "\u2133\u03b1\u043d\u03b1\u2202 \u2133\u03b1\u043d\u043c\u03c3\u03c3\u2202 \u01ea\u03c5\u044f\u03b5s\u043d\u03b9", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932861_133324180587210_2207681398519627776_a.jpg", "username": "mahadmahmood" } }, { "id": "17881711372029656", "text": "Brilliant \ud83d\udc4d", "created_time": "1495824097", "from": { "id": "53979449", "full_name": "", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/11324365_1772783166282046_1381492085_a.jpg", "username": "saad_rahman" } }, { "id": "17857272424164859", "text": "Level \ud83d\udc4d", "created_time": "1495879043", "from": { "id": "1610571044", "full_name": "Mohammad Ahmad Azeem", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19624587_166430580565468_8385821974974169088_a.jpg", "username": "ahmad_azeem55" } }, { "id": "17880632440018784", "text": "That's mine favorite", "created_time": "1495881939", "from": { "id": "3184238222", "full_name": "MALIK HAROON", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19051380_1778303562480139_7578928208536403968_a.jpg", "username": "malikharoon789" } }], "count": 15 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjx1tEFnpR/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1523279964761619578_2158748948", "code": "BUjxw6pFfx6", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c0.135.1080.1080/18722001_368634326871877_1449209625952911360_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c0.135.1080.1080/18722001_368634326871877_1449209625952911360_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/18722001_368634326871877_1449209625952911360_n.jpg" } }, "created_time": "1495809144", "caption": { "id": "17857142098182022", "text": "Contestant # 3: @queenamite\n\nVoting is open till 12:00 pm, Monday 29 May 2017. \nGreater the number of likes, higher the chances of winning. \n#FCCUPC17 #PhotographyCompetition #Photography #VoteNow #FCCUSocial #MYFCCU", "created_time": "1495809144", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2295847256", "full_name": "Hassan Raza", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17819074_410105852702038_1769805642991665152_a.jpg", "username": "hasspeaks" }, { "id": "30604041", "full_name": "Mohsin Khalid", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17586977_1528016970571288_5742266133952593920_a.jpg", "username": "sheikhmohsink" }, { "id": "3056734440", "full_name": "Muhammad Imran Khetran", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15875691_1903045159931636_7059693364261683200_a.jpg", "username": "khetranmuhammad" }, { "id": "2537640011", "full_name": "Mahnoor Naveed", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19624664_249473208886885_684355441790025728_a.jpg", "username": "mahnoornaveed94" }], "count": 895 }, "comments": { "data": [{ "id": "17881895269044062", "text": "Love", "created_time": "1495810197", "from": { "id": "1501654648", "full_name": "Talha Butt \u25cb\u00b0\u25cb", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19535427_202429933621917_6145583573299625984_a.jpg", "username": "talhabutt1500" } }, { "id": "17882093749041169", "text": "Bring in your shots @zaiddsaleem", "created_time": "1495817098", "from": { "id": "1438424133", "full_name": "Fatimah.", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19624635_135469437035226_8069599639097049088_a.jpg", "username": "fatimahzaheer7" } }, { "id": "17842453105197932", "text": "\u2764\u2764\u2764\ud83d\udc95\ud83d\udc95\ud83d\udc95\ud83d\udc95\ud83d\udc95\ud83d\udc95\ud83d\udcab", "created_time": "1495818479", "from": { "id": "1570471594", "full_name": "\u2133\u03b1\u043d\u03b1\u2202 \u2133\u03b1\u043d\u043c\u03c3\u03c3\u2202 \u01ea\u03c5\u044f\u03b5s\u043d\u03b9", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19932861_133324180587210_2207681398519627776_a.jpg", "username": "mahadmahmood" } }, { "id": "17857733341159061", "text": "Damn \ud83d\ude33\u2764\ufe0f\u2764\ufe0f", "created_time": "1495876388", "from": { "id": "1499792545", "full_name": "Zohaib Ahsan Khan Niazi", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19984449_2094315317308304_4042624824760074240_a.jpg", "username": "z.ahsan46" } }], "count": 5 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjxw6pFfx6/", "location": null, "alt_media_url": null }, { "id": "1523279650180425473_2158748948", "code": "BUjxsVqlecB", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c0.135.1080.1080/18645709_613809075495292_1809004976278601728_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c0.135.1080.1080/18645709_613809075495292_1809004976278601728_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/18645709_613809075495292_1809004976278601728_n.jpg" } }, "created_time": "1495809106", "caption": { "id": "17881359523022552", "text": "Contestant # 2: @hamza.b93\n\nVoting is open till 12:00 pm, Monday 29 May 2017. \nGreater the number of likes, higher the chances of winning. \n#FCCUPC17 #PhotographyCompetition #Photography #VoteNow #FCCUSocial #MYFCCU", "created_time": "1495809106", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "1033812965", "full_name": "Khushnood Warriach", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15099502_593167130869103_5720995291239284736_a.jpg", "username": "khushnood_warriach" }, { "id": "2461531085", "full_name": "Kashaf_Naeem Gondal", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13381043_578571272321536_1515905306_a.jpg", "username": "kashaf_naeem" }, { "id": "1731011218", "full_name": "", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18380754_791596527675256_3009382515136790528_a.jpg", "username": "saadtariq441" }, { "id": "1524650600", "full_name": "Attique Ahmed", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13256964_1042779942470151_1307602039_a.jpg", "username": "this_is_atiq" }], "count": 1204 }, "comments": { "data": [{ "id": "17882389207018827", "text": "@fatimahzaheer7 art is never worthy of this. It'll always perish differently. It'll always be judged differently. I'll always be perceived differently. So Yeah. Also I'm scared :D", "created_time": "1495827156", "from": { "id": "385267827", "full_name": "Zaid Saleem", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12237562_741033772669573_36080393_a.jpg", "username": "zaiddsaleem" } }, { "id": "17858166616150233", "text": "Love it", "created_time": "1495838238", "from": { "id": "445923305", "full_name": "Talha Murtaza Chaudary", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19051092_454603784908042_9000399075970908160_a.jpg", "username": "talhamch" } }, { "id": "17881066936038183", "text": "\ud83d\ude0d\ud83d\ude0d", "created_time": "1495879601", "from": { "id": "3320364650", "full_name": "Ehtisham Ali", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19534692_235331153636930_6651463616199393280_a.jpg", "username": "ehti_sham_007" } }, { "id": "17870445994129036", "text": "\u2714\ufe0f", "created_time": "1496269902", "from": { "id": "5537769435", "full_name": "M Salman Bilal", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18809438_1505135456227390_6738144637577330688_a.jpg", "username": "msb_m_salman_bilal" } }], "count": 12 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjxsVqlecB/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1523279340481298315_2158748948", "code": "BUjxn1PFD-L", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c0.135.1080.1080/18645352_1282971811840064_5966316457317892096_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c0.135.1080.1080/18645352_1282971811840064_5966316457317892096_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c0.135.1080.1080/18645352_1282971811840064_5966316457317892096_n.jpg" } }, "created_time": "1495809069", "caption": { "id": "17881482700047668", "text": "Contestant # 1: @qasimamjad\n\nVoting is open till 12:00 pm, Monday 29 May 2017. \nGreater the number of likes, higher the chances of winning. \n#FCCUPC17 #PhotographyCompetition #Photography #VoteNow #FCCUSocial #MYFCCU", "created_time": "1495809069", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2290373725", "full_name": "Maryam", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20180633_1962623967314981_2556201600699858944_a.jpg", "username": "mariamh31" }, { "id": "1631884865", "full_name": "Asfand yar Nasir", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/10963845_1529547233965196_1598350844_a.jpg", "username": "asfandyarnasir" }, { "id": "1514327001", "full_name": "Muhammad Ali Tarar", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18646671_447493675600643_6693364531160154112_a.jpg", "username": "ali.tarar.3110" }, { "id": "3019011780", "full_name": "Gohar", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19535511_456021041434603_6544318673383849984_a.jpg", "username": "gohar.abid" }], "count": 417 }, "comments": { "data": [{ "id": "17856639949172438", "text": "Fan tas tic", "created_time": "1495810227", "from": { "id": "1501654648", "full_name": "Talha Butt \u25cb\u00b0\u25cb", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19535427_202429933621917_6145583573299625984_a.jpg", "username": "talhabutt1500" } }, { "id": "17881248031030328", "text": "\ud83d\udd25\ud83d\udd25", "created_time": "1495811360", "from": { "id": "2258530024", "full_name": "Rana Osama", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20225516_1862673484060119_5999268945356390400_a.jpg", "username": "osamarana_ro" } }], "count": 2 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjxn1PFD-L/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1523208295413995311_2158748948", "code": "BUjhd_XFFcv", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/18646215_1872787379713961_6950252757131460608_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/18646215_1872787379713961_6950252757131460608_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/18646215_1872787379713961_6950252757131460608_n.jpg" } }, "created_time": "1495800600", "caption": { "id": "17889389290016720", "text": "Congratulations to the 5 finalists of the #FCCU Instagram Photography Competition. Vote for your favourite picture in the upcoming posts. The more the number of likes, the more the chances of winning. #FCCUPC17", "created_time": "1495800600", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "1943708017", "full_name": "A.K _ Official", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19535250_472548443078399_6826067574518710272_a.jpg", "username": "azizkhan.a.k" }, { "id": "1560129586", "full_name": "\u0645\u062d\u0645\u062f \u0641\u0635\u064a\u062d \u0634\u0627\u0647\u062f \u0642\u0631\u064a\u0634\u064a \ud83d\udd31", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/15258795_596925553844474_1809751643458109440_a.jpg", "username": "faseehs" }, { "id": "1822586270", "full_name": "Sunny Javed", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/11142098_357538417775669_483508625_a.jpg", "username": "sunnyjaved8" }, { "id": "1491728739", "full_name": "Aqsa Ijaz", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18722672_1162438087194690_7214236028557590528_a.jpg", "username": "_aqsa_ijaz_" }], "count": 304 }, "comments": { "data": [{ "id": "17881541224032797", "text": "5th one", "created_time": "1495875257", "from": { "id": "229502319", "full_name": "UmerDurrani", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/14099613_1049772951738185_848695123_a.jpg", "username": "durranimusic" } }, { "id": "17867605186093388", "text": "3rd natural beauty", "created_time": "1495878869", "from": { "id": "1969050058", "full_name": "Ali Nazish", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17076571_1737743376516636_3506981066520920064_a.jpg", "username": "alinazish5" } }, { "id": "17859867862134408", "text": "3", "created_time": "1496043727", "from": { "id": "4005424024", "full_name": "Moiz Akram", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18094985_1342663142436004_2704721685759655936_a.jpg", "username": "akram_moiz" } }, { "id": "17876373895064944", "text": "5", "created_time": "1496430123", "from": { "id": "5427107913", "full_name": "fatimaa", "profile_picture": "https://scontent-mad1-1.cdninstagram.com/t51.2885-19/11906329_960233084022564_1448528159_a.jpg", "username": "fatimaa3800" } }], "count": 33 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BUjhd_XFFcv/", "location": { "name": "Forman Christian College" }, "alt_media_url": null }, { "id": "1523078461664863991_2158748948", "code": "BUjD8qQlSb3", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e15/c236.0.607.607/18646129_115417029041551_7568911034837106688_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e15/c236.0.607.607/18646129_115417029041551_7568911034837106688_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/e15/c236.0.607.607/18646129_115417029041551_7568911034837106688_n.jpg" } }, "created_time": "1495785123", "caption": { "id": "17857625548155853", "text": "Admissions are open for Baccalaureate and Pharm D program\n\nApply Now! https://goo.gl/f02QWq\n\n#MYFCCU #University #FCCUSocial #Admissions", "created_time": "1495785123", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2297052067", "full_name": "\u0639\u0628\u062f\u0627\u0644\u0631\u062d\u0645\u0627\u0646 \u06af\u06cc\u0644\u0627\u0646\u06cc", "profile_picture": "https://ig-s-b-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19050631_459521481049413_1278892908283428864_a.jpg", "username": "im__a.r" }, { "id": "1661803545", "full_name": "Hamza Hafeez", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18013526_425047824522711_8704240018392088576_a.jpg", "username": "hamxa_here" }, { "id": "1722466500", "full_name": "\u0633\u0644\u0637\u0627\u0646 \u062e\u0627\u0646 \u0628\u0627\u0628\u0631", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20346818_309732779487832_75416795334311936_a.jpg", "username": "sultaaanbabar" }, { "id": "1693725129", "full_name": "leena", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/19379807_110462739571171_1198140204494356480_a.jpg", "username": "alinatiwana" }], "count": 150 }, "comments": { "data": [], "count": 0 }, "can_view_comments": true, "can_delete_comments": false, "type": "video", "link": "https://www.instagram.com/p/BUjD8qQlSb3/", "location": { "name": "Forman Christian College" }, "alt_media_url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18784048_211818749329962_2085725681890623488_n.mp4", "videos": { "standard_resolution": { "width": 640, "height": 359, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18785551_258354221306284_3470889292396494848_n.mp4" }, "low_bandwidth": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18719323_226380077862164_3689917471847874560_n.mp4" }, "low_resolution": { "width": 480, "height": 269, "url": "https://scontent-mxp1-1.cdninstagram.com/t50.2886-16/18719323_226380077862164_3689917471847874560_n.mp4" } }, "video_views": 967 }, { "id": "1518034247818239737_2158748948", "code": "BURJBsCFV75", "user": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" }, "images": { "thumbnail": { "width": 150, "height": 150, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s150x150/e35/c38.0.1003.1003/18512510_285637951894141_1507785725670588416_n.jpg" }, "low_resolution": { "width": 320, "height": 320, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s320x320/e35/c38.0.1003.1003/18512510_285637951894141_1507785725670588416_n.jpg" }, "standard_resolution": { "width": 640, "height": 640, "url": "https://scontent-mxp1-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/c38.0.1003.1003/18512510_285637951894141_1507785725670588416_n.jpg" } }, "created_time": "1495183805", "caption": { "id": "17868890323120071", "text": "To all those who think they can pull out unique photos from their cameras, get prepared! Challenge your photography skills \u0026 bag fantastic weekly surprises for your creativity. \n#FCCU Instagram #Photography Competition\u201917, sponsored by @messagepk is creating an opportunity for all the shutterbugs. Avail it!! Terms and Conditions:\n\u25aa\ufe0f Be creative \u0026 unique with your photos, while remaining within the premises of the University\n\u25aa\ufe0f The photos should not contain any watermark or logo\n\u25aa\ufe0f Make sure you submit your entries till every week\u2019s Wednesday \u25aa\ufe0f With the consent of internal jury, 5 best entries will be uploaded on FCCU\u2019s Insta account (contestants\u2019 IDs must clearly be mentioned with #FCCUPC17) \u25aa\ufe0f Voting time begins right after the post gets uploaded and will end sharp on Monday, 12pm. So make sure you don\u2019t miss the chance.\n\u25aa\ufe0f Greater the number of likes, higher the chances of winning \u25aa\ufe0f Treat awaits the winner that will be announced every Monday \nNote: Kindly note that these pictures will not be subject to any copyrights once they have been submitted. FCCU will be using them later on its Instagram. Let your talent be ours!\n\n#photographycontest #photographycompetition #FCC #Instagram #creative #fccollege #campusphotography #surprises #NatureatFCCU #university", "created_time": "1495183805", "from": { "id": "2158748948", "full_name": "Forman Christian College", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/12724763_768177853315583_108625580_a.jpg", "username": "formanchristiancollege" } }, "likes": { "data": [{ "id": "2126962318", "full_name": "Hamza Irshad", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18161327_432091977139372_956154424118476800_a.jpg", "username": "lame._.me" }, { "id": "2925233519", "full_name": "Mohammad Usman", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17493467_234348536971939_6874788888955584512_a.jpg", "username": "m.usman950" }, { "id": "325326303", "full_name": "Fatima Zehra", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/18644759_1952126521689047_3128668200921726976_a.jpg", "username": "fatimaxehra" }, { "id": "1534301160", "full_name": "Abdullah Aslam", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/16788609_206788966463694_8038387987202965504_a.jpg", "username": "abdullah.aslam29" }], "count": 269 }, "comments": { "data": [{ "id": "17881156750002638", "text": "@ismaayill", "created_time": "1495189069", "from": { "id": "970764362", "full_name": "Arbaz Khan (KhanTastic)", "profile_picture": "https://ig-s-c-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/17077113_373365283050842_3632148873226485760_a.jpg", "username": "arbazkhan21" } }, { "id": "17866790815090597", "text": "Awesome.", "created_time": "1495191428", "from": { "id": "29177607", "full_name": "Jules Bruff \ud83d\udcfd\ud83d\udcfa\ud83c\udf0e", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/13395145_1715446045404451_1845716989_a.jpg", "username": "julesbruff" } }, { "id": "17882263714045654", "text": "@abdullahviews you should send them your pictures.", "created_time": "1495207684", "from": { "id": "614273837", "full_name": "Rija Imtiaz", "profile_picture": "https://ig-s-a-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20066597_2035266666759884_6658227455251185664_a.jpg", "username": "rijaaim" } }, { "id": "17869650412102658", "text": "@fastomar read them all", "created_time": "1495341553", "from": { "id": "3013930108", "full_name": "\u0633\u06cc\u062f \u0645\u062d\u0645\u062f \u0639\u0644\u06cc \u0632\u06cc\u0646 \u0631\u0636\u0648\u06cc", "profile_picture": "https://ig-s-d-a.akamaihd.net/h-ak-igx/t51.2885-19/s150x150/20394376_2342830822608219_2239174929117347840_a.jpg", "username": "ali_zainrizvi" } }], "count": 8 }, "can_view_comments": true, "can_delete_comments": false, "type": "image", "link": "https://www.instagram.com/p/BURJBsCFV75/", "location": null, "alt_media_url": null }], "more_available": true, "status": "ok" }
       $scope.instaFeeds = [];

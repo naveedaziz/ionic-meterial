@@ -5,11 +5,10 @@
     
     <md-list>
       <md-list-item class="md-3-line" ng-repeat="(key,item) in app.societies">
-        <div class="md-list-item-text" ng-click="app.openLink(item.link)">
+        <div class="md-list-item-text" ng-click="app.openLink(item.website)">
          <md-subheader class="md-no-sticky">
             <p class="socities_title">{{item.name}}</p>
-          <p ng-click="app.openLink(item.link)"><small>Advisor:</small>{{item.Advisor}}</p>
-         <p ng-click="app.openLink(item.link)"><small>President:</small> {{item.President}}</p>
+         
          </md-subheader>
         </div>
         <md-divider inset></md-divider>

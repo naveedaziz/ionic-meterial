@@ -20,7 +20,7 @@ var materialApp = angular
    var podsharkOrange;
 
    podsharkOrange = $mdThemingProvider.extendPalette('orange', {
-      '600': '#296490',
+      '600': '#253b80',
       'contrastDefaultColor': 'light'
    });
 

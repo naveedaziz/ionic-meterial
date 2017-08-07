@@ -3,10 +3,11 @@
 
   <md-content flex style="background:#fff;">
     
-    <md-list>
+    <md-list class="mat-list">
       <md-list-item class="md-3-line" ng-repeat="(key,item) in app.societies">
+         <img src="img/home/boss.svg" style="width: 45px;margin-top: 23px;">
         <div class="md-list-item-text" ng-click="app.openLink(item.website)">
-         <md-subheader class="md-no-sticky">
+         <md-subheader class="md-no-sticky" style="background:none;">
             <p class="socities_title">{{item.name}}</p>
          
          </md-subheader>

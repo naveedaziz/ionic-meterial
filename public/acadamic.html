@@ -5,7 +5,7 @@
       <!-- ngRepeat: data in accordianData -->
       <div class="md-accordion ng-scope" ng-repeat="course in app.courses">
          <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded" role="button" tabindex="0">
-            <div class="md-toolbar-tools" style="    background: rgb(41, 100, 144);font-size:14px;">
+            <div class="md-toolbar-tools" style="    background: rgb(60, 128, 187);font-size:14px;">
                <h2>
                   <span class="ng-binding">{{course.name}}</span>
                </h2>
@@ -18,9 +18,10 @@
                   <h4 ng-init="dataDepartment.expanded = false">{{course_department.name}}</h4>
                   <span  ng-class="{expandCollapse:true, active:dataDepartment.expanded}" style="color:red;" class="expandCollapse"></span>
                </div>-->
+               
                <div class="md-accordion ng-scope" ng-repeat="course_department in course.departments">
                   <md-toolbar ng-init="dataDepartment.expanded = false" ng-click="dataDepartment.expanded = !dataDepartment.expanded" role="button" tabindex="0">
-                     <div class="md-toolbar-tools" style="    background: rgb(38, 72, 97);font-size:14px;">
+                     <div class="md-toolbar-tools" style="    background: rgb(37, 59, 128);font-size:14px;">
                         <h2>
                            <span class="ng-binding">{{course_department.name}}</span>
                         </h2>
@@ -35,10 +36,12 @@
                      </div>-->
                      <!--<h4 ng-repeat="course_outline in course_department.courses">{{course_outline.name}}</h4>-->
                      <!--<md-list flex>-->
+                        
+                       
                         <div class="md-accordion ng-scope" ng-repeat="course_outline in course_department.courses">
                            <md-toolbar ng-init="dataDepartmentCourses.expanded = false" ng-click="dataDepartmentCourses.expanded = !dataDepartmentCourses.expanded" role="button"
                               tabindex="0">
-                              <div class="md-toolbar-tools" style="    background: rgb(111, 152, 62);font-size:14px;">
+                              <div class="md-toolbar-tools" style="    background: rgb(0, 174, 240);font-size:14px;">
                                  <h2>
                                     <span class="ng-binding">{{course_outline.name}}</span>
                                  </h2>
@@ -52,13 +55,19 @@
                                  <div ng-repeat="degrees in course_outline.degrees">
                                        <h3 ng-if="degrees.name">{{degrees.name}}</h3>
                                        <p>{{degrees.description}}</p>
-                                       <h3 ng-if="degrees.link"><a href="{{degrees.link}}" target="_blank">Roadmap for {{degrees.name}}</a></h3>
+                                       <!--<h3 ng-if="degrees.link"><a href="{{degrees.link}}" target="_blank">Roadmap for {{degrees.name}}</a></h3>-->
                                  </div>                            
                               </p>
                            </div>
                            <div>
                            </div>
                         </div>
+                        <md-button style="float:left;" ng-click="app.openLink(course_department.cataloge)">
+                           <md-icon style="color: #253b80;" md-svg-icon="img/icons/launch.svg"></md-icon> Catalog
+                        </md-button>
+                        <md-button style="float:right;" ng-click="app.openLink(course_department.more)">
+                           <md-icon style="color: #253b80;" md-svg-icon="img/icons/launch.svg"></md-icon> Read More
+                        </md-button>
                         <!--<md-list-item style="background:#0e6eb5; border-bottom:1px solid #fff;color:#fff;"  ng-repeat="course_outline in course_department.courses"ng-click="null">
                            <div class="md-list-item-text" layout="column">
                               <h4 style="margin:0;">{{course_outline.name}}</h4>

@@ -1,11 +1,10 @@
 <md-content> 
   <div class="toolbardemoBasicUsage ng-scope">
    <md-content>
-      <md-subheader class="md-no-sticky">Courses</md-subheader>
       <!-- ngRepeat: data in accordianData -->
       <div class="md-accordion ng-scope" ng-repeat="course in app.courses">
-         <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded" role="button" tabindex="0">
-            <div class="md-toolbar-tools" style="    background: rgb(60, 128, 187);font-size:14px;">
+         <md-toolbar ng-init="data.expanded = false" ng-click="data.expanded = !data.expanded" role="button" tabindex="0" >
+            <div class="md-toolbar-tools" style="    background: rgb(60, 128, 187);font-size:14px;height:70px; max-height:70px;">
                <h2>
                   <span class="ng-binding">{{course.name}}</span>
                </h2>
@@ -83,6 +82,7 @@
       </div>
       <!-- end ngRepeat: data in accordianData -->
       
+     
    </md-content>
 </div>
 </md-content>

@@ -11,13 +11,13 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
             templateUrl: 'default.html',
             
         })
-       .state('home', {
-          url: '/home/:page',
-          templateUrl: 'home.html',
-          params: {
-             title: "Home"
-          }
-       })
+      //  .state('home', {
+      //     url: '/home/:page',
+      //     templateUrl: 'home.html',
+      //     params: {
+      //        title: "Home"
+      //     }
+      //  })
        .state('news', {
           url: '/news',
           templateUrl: 'news.html',
@@ -107,6 +107,13 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           templateUrl: 'jobs.html',
           params: {
              title: "Jobs"
+          }
+       })
+       .state('support', {
+          url: '/support',
+          templateUrl: 'support.html',
+          params: {
+             title: "Support"
           }
        })
        .state('admission', {

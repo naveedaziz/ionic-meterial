@@ -86,7 +86,6 @@
     padding: 10px;
     display: block;
     color: rgba(0, 0, 0, 0.71);
-    box-shadow: inset 1px 1px 20px 3px #688ba5;
     font-size: 13px; }
 .md-accordion md-toolbar{ cursor:pointer; border-bottom:1px solid rgb(255, 255, 255)}
 
@@ -343,10 +342,13 @@ md-tabs {
     background: #ccc !important;
  }
  .mat-list >  md-list-item:nth-child(2n+1){
-  background-color:#edf1fd;
+  background-color:#3c80bb;
+}
+.mat-list >  md-list-item:nth-child(2n+1) p{
+   color:#fff !important;
 }
 .mat-list >  md-list-item:nth-child(2n){
-  background-color:#cce7ff;
+  background-color:#ffffff;
 }
      </style>
 </head>
@@ -443,20 +445,29 @@ md-tabs {
     </md-toolbar>
   
 
-    <div ui-view style="padding-bottom:60px;background:#fff;"></div>
-   <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 1%;background:#253b80;z-index:99999">
+    <div ui-view style="padding-bottom:60px;background:#fff;    min-height: 567px;"></div>
+   <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 0%;background:#253b80;z-index:99999">
      
          <div  align="center">
-         <md-button ui-sref="default" class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
+         <md-button ui-sref="default" class="md-raised md-warn" aria-label="User Menu" style="width:33.33%;
+    float: left;
+    margin: 0%;
+    padding: 4px;">
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">home</md-icon>
              HOME
          </md-button>
-         <md-button  class="md-raised md-warn" aria-label="User Menu" style="width:30.7%; float:left;margin:1%;">
+         <md-button ng-click="app.openLink('http://fccollege.edu.pk')"  class="md-raised md-warn" aria-label="User Menu" style="width: 33.33%;
+    float: left;
+    margin: 0%;
+    padding: 4px;">
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">website</md-icon>
              Site
 
          </md-button>
-         <md-button ui-sref="blog" class="md-raised md-warn"aria-label="User Menu" style="width:30.9%; float:left;margin:1%;">
+         <md-button ui-sref="blog" class="md-raised md-warn"aria-label="User Menu" style="width: 33.33%;
+    float: left;
+    margin: 0%;
+    padding: 4px;">
             <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
                role="img" >chat</md-icon>
              Help Desk

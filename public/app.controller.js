@@ -1104,18 +1104,18 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                      {
                         img: 'Jobs', name: 'Jobs', link: 'jobs',
                         list: [
-                           { name: 'Faculty Positions', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
-                           { name: 'Staff Positions', img: 'Campus-Security.jpg', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
-                           { name: 'Academic Support Staff Positions', img: 'Campus-Security.jpg', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
+                           { name: 'Faculty Positions', img: 'Tuition fee', menu: [], link:'http://www.fccollege.edu.pk/faculty-positions/' },
+                           { name: 'Staff Positions', img: 'Tuition fee', menu: [], link:'http://www.fccollege.edu.pk/staff-positions/' },
+                           { name: 'Academic Support Staff Positions', img: 'Tuition fee', menu: [], link: 'http://www.fccollege.edu.pk/academic-support-staff/' },
                         ]   },
                      {
                         img: 'boss', name: 'Student Societies', link:'societies',
                         },
                      {
-                        img: 'Support FCCU', name: 'Support FCCU', link: 'home', params: { page: 'support-fccu' },
+                        img: 'Support FCCU', name: 'Support FCCU', link: 'support',
                         list: [
-                           { name: 'Learn About Current Campaigns', img: 'id-card', menu: [] },
-                           { name: 'Give to FCCU', img: 'check', menu: [] },
+                           { name: 'Learn About Current Campaigns', img: 'Tuition fee', menu: [] },
+                           { name: 'Give to FCCU', img: 'Tuition fee', menu: [] },
                         ]   },
                      {
                         img: 'Photos', name: 'Photos', link:'insta',
@@ -1127,7 +1127,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         img: 'Contact Us 2', name: 'Contact', link: 'page', params: { page: 'contact' },
                          }, 
                      {
-                        img: 'question', name: 'Help Desk', link: 'page', params: { page: 'contact' },
+                        img: 'question', name: 'Help Desk', link: 'blog', params: { page: 'list' },
                      }, 
                   ]
     

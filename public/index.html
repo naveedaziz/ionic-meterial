@@ -355,7 +355,7 @@ md-tabs {
 
 <body ng-app="materialApp" layout="column" flex ng-controller="appCtrl as app">
 
-    <md-sidenav md-disable-scroll-target class="md-sidenav-left md-whiteframe-4dp ng-cloak" md-component-id="left">
+    <md-sidenav md-disable-scroll-target class="md-sidenav-left md-whiteframe-4dp ng-cloak" md-component-id="left" style="    z-index: 999999;">
 
         <md-toolbar class="md-toolbar-tools" layout="row" layout-align="center-center">
 
@@ -425,8 +425,8 @@ md-tabs {
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
-            <span ui-sref="default" flex layout-align="center center" class="text-center" ng-if="title">{{title}}</span>
-            <span ui-sref="default" flex layout-align="center center" class="text-center" ng-if="!title">
+            <span ui-sref="default" flex layout-align="center center" class="text-left" ng-if="title">{{title}}</span>
+            <span ui-sref="default" flex layout-align="center center" class="text-left" ng-if="!title">
                <img src="img/logo.png" style="    width: 314px;
     margin-top: 10px;">
             </span>

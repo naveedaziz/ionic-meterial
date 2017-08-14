@@ -9,7 +9,7 @@
     <!-- versionCode is optional and Android only -->
 
    <icon src="icon.png" />
-		<!-- <splash src="splash.png" /> -->
+	<splash src="splash.jpg" /> 
 
 	<feature name="Device">
         <param name="android-package" value="org.apache.cordova.device.Device" />

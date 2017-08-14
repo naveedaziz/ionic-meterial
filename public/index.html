@@ -398,11 +398,11 @@ md-tabs {
                <span ng-click="app.openLink(links.link,links.params);app.toggleLeft()" flex="90">{{links.name}}</span>
                <!--<md-icon ng-if="links.list && links.list.length" ng-style="{color: '#000'}" ng-click="$mdMenu.open()" class="material-icons step ng-binding md-24" role="img">menu</md-icon>-->
             </md-list-item>
-            <!--<md-menu-content>
+            <md-menu-content>
                <md-menu-item ng-repeat="inner_links in links.list">
                   <md-button  ng-click="app.openLink(inner_links.link,inner_links.params);app.toggleLeft()">{{inner_links.name}}</md-button>
                </md-menu-item>
-            </md-menu-content>-->
+            </md-menu-content>
          </md-menu>
       </md-menu-item>
       <md-divider></md-divider>
@@ -469,7 +469,7 @@ md-tabs {
     </md-toolbar>
   
 
-    <div ui-view style="padding-bottom:60px;background:#fff;    min-height: 567px;"></div>
+    <div autoscroll="false" ui-view style="padding-bottom:60px;background:#fff;    min-height: 567px;"></div>
    <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 0%;background:#253b80;z-index:99999">
      
          <div  align="center">

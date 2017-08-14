@@ -91,12 +91,16 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
    };
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http, $controller, $scope, $interval) {
-      
+      $scope.pageTitle = '';
       $scope.posts = {};
       $scope.getBlog = function(){
          $http.get('https://s3-us-west-2.amazonaws.com/s.cdpn.io/110131/posts_1.json').then(function (res) {
             $scope.posts = res.data;
          });
+      }
+      $scope.setPageTitle = function(name){
+         if ($scope.pageTitle != name)
+            $scope.pageTitle = name;
       }
       $scope.posts_detail = {};
       $scope.getBlogDetail = function () {
@@ -1034,7 +1038,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
             phone: 'Tel: +92(42) 9923 1581 upto 88',
             email: 'contact@fccollege.edu.pk',
             link: 'http://fccollege.edu.pk',
-            message: 'Please feel free to contact us any time'
+            message: 'Connect with us for any queries or information'
          },
 
       }
@@ -1056,7 +1060,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         
                      },
                      {
-                        img: 'Admissions', name: 'Admission', link: 'admission',
+                        img: 'Admissions', name: 'Admissions', link: 'admission',
                         list: [
                            { name: 'Apply Now', img: 'Apply Now', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
                            { name: 'Financial Aid', img: 'Financial Aid', menu: [], link: 'http://www.fccollege.edu.pk/financial-aid/' },
@@ -1064,20 +1068,20 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Residential Life', img: 'Tuition fee', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
-                        img: 'Events', name: 'Event', link: 'events', params: { page: 'academy' } ,
+                        img: 'Events', name: 'Events', link: 'events', params: { page: 'academy' } ,
                         list: [
                            { name: 'Events Calendar', img: 'id-card', menu: [], link: 'events', params: { page: 'academy' } },
                            { name: 'Academic Calendar', img: 'check', menu: [], link: 'events', params: { page: 'international' } },
                            { name: 'Today’s Events', img: 'books', menu: [], link: 'eventlist'},
                         ]  },
                      {
-                        img: 'Student Services', name: 'Campus Services', link: 'campus',
+                        img: 'Student Services', name: 'Student Services', link: 'campus',
                         list: [
                            { name: 'Academic Office', img: 'academic-office', menu: [], link: 'page', params: { page: 'academic' } },
                            { name: 'Accounts Office', img: 'account-office', menu: [], link: 'page', params: { page: 'account' }  },
                            { name: 'Admissions Office', img: 'admission-office', menu: [], link: 'page', params: { page: 'admission' }  },
                            { name: 'Communications Office', img: 'Communications-Office', menu: [], link: 'page', params: { page: 'communication' }  },
-                           { name: 'Cafeteria', img: 'Cafeteria', menu: [], link: 'page', params: { page: 'cafeteria' }  },
+                           
                            { name: 'Campus Security', img: 'Campus-Security', menu: [], link: 'page', params: { page: 'campus' }  },
                            { name: 'Career Services', img: 'Career-Services', menu: [], link: 'page', params: { page: 'career' }  },
                            { name: 'Financial Aid', img: 'Financial-Aid', menu: [], link: 'page', params: { page: 'financial' }  },
@@ -1090,7 +1094,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Residential Life', img: 'Residential-Life', menu: [], link: 'page', params: { page: 'residential' }  },
                            { name: 'Sports', img: 'Sports', menu: [], link: 'page', params: { page: 'sports' }  },
                            { name: 'Student Affairs', img: 'Student-Affairs', menu: [], link: 'page', params: { page: 'student' }  },
-                           { name: 'University Counseling Center', img: 'University-Counseling-Center', menu: [], link: 'page', params: { page: 'university' }  },
+                           { name: 'Campus Counseling Center', img: 'University-Counseling-Center', menu: [], link: 'page', params: { page: 'university' }  },
                            { name: 'Writing Center', img: 'Writing-Center', menu: [], link: 'page', params: { page: 'writing' }  },
 
                         ]   },
@@ -1112,11 +1116,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         img: 'boss', name: 'Student Societies', link:'societies',
                         },
                      {
-                        img: 'Support FCCU', name: 'Support FCCU', link: 'support',
-                        list: [
-                           { name: 'Learn About Current Campaigns', img: 'Tuition fee', menu: [] },
-                           { name: 'Give to FCCU', img: 'Tuition fee', menu: [] },
-                        ]   },
+                        img: 'Support FCCU', name: 'Support FCCU', link: 'support'},
                      {
                         img: 'Photos', name: 'Photos', link:'insta',
                           }, 
@@ -1124,7 +1124,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         img: 'Socials', name: 'Socials', link: 'social'
                         }, 
                      {
-                        img: 'Contact Us 2', name: 'Contact', link: 'page', params: { page: 'contact' },
+                        img: 'Contact Us 2', name: 'Contact Us', link: 'page', params: { page: 'contact' },
                          }, 
                      {
                         img: 'question', name: 'Help Desk', link: 'blog', params: { page: 'list' },

@@ -50,7 +50,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/acadamic/:page',
           templateUrl: 'acadamic.html',
           params: {
-             title: "Courses"
+             title: "Academics"
           }
        })
        .state('social', {
@@ -78,7 +78,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/page/:page',
           templateUrl: 'page.html',
           params: {
-             title: "Contact Information"
+             title: "page"
           }
        })
        .state('blog', {

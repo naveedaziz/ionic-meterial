@@ -4,7 +4,7 @@
     <!--<div ng-repeat="(key,item) in app.grids[5].list" ng-if="item.img"  ng-click="app.openLink(item.p_link,item.params)">
      <img  src="img/campus/{{item.img}}" width="100%" style="margin-top: 1%;margin-bottom: -1%;" />
     </div>-->
-   <md-grid-list md-cols="2" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
+   <!--<md-grid-list md-cols="2" md-row-height-gt-md="1:1" md-row-height="4:3" md-gutter="8px" md-gutter-gt-sm="4px">
 
       <md-grid-tile style="    margin: 0px; background:#638eae" md-rowspan="2" ng-repeat="(key,item) in app.grids[7].list" ng-click="app.openLink('https://www.facebook.com/fccollege/')"
          md-colspan="1" md-colspan-sm="1" md-colspan-xs="2" ng-class="tile.background">
@@ -14,7 +14,22 @@
          </md-grid-tile-footer>
 
       </md-grid-tile>
-   </md-grid-list>
+   </md-grid-list>-->
+   <p style="    color: #000;
+    padding: 10px;">
+       FCCU believes that the lives of people can be transformed through education. We seek to empower students from humble backgrounds
+      so that they can become leaders of tomorrow. University development and financial sustainability at FCCU is achieved
+      through: 
+      <ul style="color:#000;">
+         <li>Corporate Gifts</li>
+         <li> Foundation Gifts</li>
+         <li> Individual Gifts</li>
+         <li> Public Sector Gifts</li>
+         <li> International Organization Gifts</li>
+      </ul>
+      <button ng-click="app.openLink('http://www.fccollege.edu.pk/10187-2/')"  class="md-raised md-warn md-button md-ink-ripple"> Give Now to Support FCCU</button>
+
+   </p>
 
   </md-content>
 

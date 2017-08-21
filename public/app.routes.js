@@ -41,7 +41,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
        })
        .state('eventlist', {
           url: '/event_list',
-          templateUrl: 'event.html',
+          templateUrl: 'event_list.html',
           params: {
              title: "Events"
           }
@@ -57,7 +57,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/social',
           templateUrl: 'social.html',
           params: {
-             title: "CONNECT WITH US"
+             title: "Connect With Us"
           }
        })
        .state('societies', {
@@ -99,7 +99,7 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
           url: '/campus',
           templateUrl: 'campus.html',
           params: {
-             title: "Campus"
+             title: "Student Services"
           }
        })
        .state('jobs', {

@@ -2,7 +2,7 @@
    <form name="loginForm" ng-submit="dialog.login()">
       <md-toolbar>
          <div class="md-toolbar-tools">
-            <h2>Log In</h2>
+            <h2>Signup</h2>
             <span flex></span>
             <md-button class="md-icon-button" ng-click="dialog.close()">
                <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
@@ -13,23 +13,19 @@
       <md-dialog-content>
          <div class="md-dialog-content">
             <md-input-container class="md-block">
-               <label>User Email</label>
+               <label>Email Address</label>
                <input type="email" name="username" ng-model="dialog.username" md-autofocus required />
-            </md-input-container>
-            <md-input-container class="md-block">
-               <label>Password</label>
-               <input type="password" name="password" ng-model="dialog.password" required />
             </md-input-container>
          </div>
       </md-dialog-content>
 
       <md-dialog-actions layout="row">
-         <p class="alert" style="color: red;
+      <p class="alert" style="color: red;
+    
     padding-top: 0;font-size: 11px;
     padding-bottom: 0;">Only email address with domains<br> @fccollege.edu.pk / @formanites.fccollege.edu.pk</p>
-         <!--<a href="" class="md-primary">Forgot Password?</a>-->
          <span flex></span>
-         <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
+         <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Signup</md-button>
       </md-dialog-actions>
    </form>
 </md-dialog>

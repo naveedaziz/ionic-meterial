@@ -1,22 +1,19 @@
-<div  layout="column" style="height:600px" ng-cloak>
+<div layout="column" ng-cloak>
 
-  
+   <md-content flex style="background:#fff;">
 
-  <md-content flex>
-    <md-list>
-      <md-subheader class="md-no-sticky">Event List</md-subheader>
-      <md-list-item ng-repeat="event in app.events"  class="noright event-details">
-         <img alt="{{event.title }}" ng-src="{{event.image }}" class="md-avatar" />
-         <p flex="100" style="width:300px">{{ event.title }}</p>
-         
-               <md-icon ng-style="{color: '#fff'}" class="md-secondary material-icons step ng-binding md-24" role="img">update</md-icon>
-         
+      <md-grid-list md-cols="2" md-row-height-gt-md="1:1" md-row-height="5:3" md-gutter="8px" md-gutter-gt-sm="4px">
 
-         <md-icon md-svg-icon="communication:email" ng-click="doSecondaryAction($event)" aria-label="Send Email" class="md-secondary md-hue-3"></md-icon>
-         <md-icon class="md-secondary" ng-click="doSecondaryAction($event)" aria-label="Chat" md-svg-icon="communication:message"></md-icon>
-      </md-list-item>
-    </md-list>
-    <div class="clearfix"></div>
-  </md-content>
+         <md-grid-tile style="    margin: 0px; background:#638eae;" md-rowspan="2" ng-repeat="(key,item) in app.grids[2].list" ng-click="app.openLink(item.link,item.params)"
+            md-colspan="1" md-colspan-sm="1" md-colspan-xs="1" ng-class="tile.background">
+            <img src="img/event/{{item.img}}.svg" width="58%" style="position: relative;
+    top: -18px;">
+            <md-grid-tile-footer>
+               <h3>{{item.name}}</h3>
+            </md-grid-tile-footer>
+
+         </md-grid-tile>
+      </md-grid-list>
+   </md-content>
 
 </div>

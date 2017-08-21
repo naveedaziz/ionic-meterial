@@ -189,6 +189,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       }
      $scope.currentpages = $location.$$path;;
       $scope.returnOrderState = function(obj){
+         if (obj)
          return Object.keys(obj).length;
       }
       var self = this, j = 0, counter = 0;
@@ -262,79 +263,46 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
          
       }
      
-      $scope.getEvents = function(){
-         if($state.params.page == 'academy'){
-            $scope.getEventAcademy();
-         }
-         if ($state.params.page == 'international') {
-            $scope.getEventInternational();
-         }
-         $scope.pageName = $state.params.page;
-      }
-      $scope.events = {};
+      
+      $scope.events = [];
       $scope.events.academy = {};
       $scope.events.international = {};
       $scope.EventAcademyPage = 0;
       $scope.monthArray = [0,'Jan','Feb','Mrh','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
       $scope.returnDate = function(itm,type){
-         var dated = itm.split('-');
-        if(type == 'day'){
-           var days = dated[2].split('T');
-           return days[0];
-        }
-        if (type == 'month') {
-           return $scope.monthArray[parseInt(dated[1])];
-        }
-        if (type == 'year') {
-           return dated[0];
-        }    
+         if(itm){
+            return moment(itm).format('MMMM Do YYYY, h:mm a');
+         }
+           
       }
-      $scope.getEventAcademy = function () {
+      $scope.EventPage = 0;
+      $scope.prePage = false;
+      $scope.getEvent= function () {
+         if ($scope.prePage && $scope.prePage != $state.params.page){
+            $scope.events = [];
+         }
+         $scope.prePage = $state.params.page;
+         $scope.pageName = $state.params.page;
          $scope.loadMoreCall = true;
-         $scope.EventAcademyPage = $scope.EventAcademyPage + 1;
-         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?fields=title,link,featured_media,id,meta,date&post_type=u_event&page=' + $scope.EventAcademyPage)
-            .then(function (response) {
-               console.log(response)
-               if (!response.data.length){
-                  $scope.loadMoreCall = -1;
-               }else{
-                  $scope.loadMoreCall = false;
+         $scope.EventPage = $scope.EventPage + 1;
+         $http.post('http://www.xpresscourierlink.net/nido/fcc/ajax/getItem.php', { table: "events", catagory: $scope.pageName, page: $scope.EventPage }, {
+            headers: {
+               'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            }
+         }).then(function (response) {
+            console.log(response)
+            if (!response.data.length) {
+               $scope.loadMoreCall = -1;
+            } else {
+               $scope.loadMoreCall = false;
+               for (var ind in response.data) {
+                  $scope.events.push(response.data[ind]);
                }
-               for (var news_data in response.data) {
-                  if (response.data[news_data].featured_media) {
-                     $scope.events.academy[response.data[news_data].id] = response.data[news_data];
-                    //$scope.processImages(response.data[news_data].featured_media, response.data[news_data].id)
-                  } else {
-                     $scope.events.academy[response.data[news_data].id] = response.data[news_data];
-                  }
-               }
-            })
+            }
+         });
 
       }
-      $scope.EventInternationalPage = 0;
-      $scope.getEventInternational = function () {
-         $scope.loadMoreCall = true;
-         $scope.EventInternationalPage = $scope.EventInternationalPage + 1;
-         $http.get('http://www.fccollege.edu.pk/wp-json/wp/v2/posts?fields=title,link,featured_media,id,meta,date&post_type=u_event&page=' + $scope.EventInternationalPage)
-            .then(function (response) {
-               console.log(response)
-               if (!response.data.length) {
-                  $scope.loadMoreCall = -1;
-               }else{
-                  $scope.loadMoreCall = false;
-               }
-              
-               for (var news_data in response.data) {
-                  if (response.data[news_data].featured_media) {
-                     $scope.events.international[response.data[news_data].id] = response.data[news_data];
-                     //$scope.processImages(response.data[news_data].featured_media, response.data[news_data].id)
-                  } else {
-                     $scope.events.international[response.data[news_data].id] = response.data[news_data];
-                  }
-               }
-            })
-
-      }
+     
       this.courses = [
          { name: 'Faculty of Business and Economics', image: 'img/department/department.jpg',
            departments:[
@@ -1060,6 +1028,9 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         
                      },
                      {
+                        img: 'question', name: 'Alerts', link: 'blog', params: { page: 'list' },
+                     }, 
+                     {
                         img: 'Admissions', name: 'Admissions', link: 'admission',
                         list: [
                            { name: 'Apply Now', img: 'Apply Now', menu: [], link:'http://www.fccollege.edu.pk/apply-now/' },
@@ -1068,11 +1039,11 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                            { name: 'Residential Life', img: 'Tuition fee', menu: [], link:'http://www.fccollege.edu.pk/residential-life/' },
                         ] },
                      {
-                        img: 'Events', name: 'Events', link: 'events', params: { page: 'academy' } ,
+                        img: 'Events', name: 'Events', link: 'eventlist',
                         list: [
-                           { name: 'Events Calendar', img: 'id-card', menu: [], link: 'events', params: { page: 'academy' } },
-                           { name: 'Academic Calendar', img: 'check', menu: [], link: 'events', params: { page: 'international' } },
-                           { name: 'Today’s Events', img: 'books', menu: [], link: 'eventlist'},
+                           { name: 'Events Calendar', img: 'Events', menu: [], link: 'events', params: { page: 'basic' } },
+                           { name: 'Academic Calendar', img: 'Events', menu: [], link: 'events', params: { page: 'Academic' } },
+                           { name: 'Today’s Events', img: 'Events', menu: [], link: 'events', params: { page: 'today' }},
                         ]  },
                      {
                         img: 'Student Services', name: 'Student Services', link: 'campus',
@@ -1126,9 +1097,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                      {
                         img: 'Contact Us 2', name: 'Contact Us', link: 'page', params: { page: 'contact' },
                          }, 
-                     {
-                        img: 'question', name: 'Help Desk', link: 'blog', params: { page: 'list' },
-                     }, 
+                     
                   ]
     
       this.societies = [
@@ -1385,11 +1354,26 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
             clickOutsideToClose: true
          })
             .then(function (answer) {
-               this.status = 'You said the information was "' + answer + '".';
+               //this.status = 'You said the information was "' + answer + '".';
             }, function () {
-               this.status = 'You cancelled the dialog.';
+              // this.status = 'You cancelled the dialog.';
             });
       };
+     this.showAdvancedSignup = function (ev) {
+        console.log(ev);
+        $mdDialog.show({
+           controller: 'DialogController',
+           templateUrl: 'signup.html',
+           parent: angular.element(document.body),
+           targetEvent: ev,
+           clickOutsideToClose: true
+        })
+           .then(function (answer) {
+             // this.status = 'You said the information was "' + answer + '".';
+           }, function () {
+             // this.status = 'You cancelled the dialog.';
+           });
+     };
      
    var originatorEv;
    this.todos = [];

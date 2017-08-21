@@ -158,9 +158,11 @@ position: fixed;
   background: #fff;
       padding: 4px;
     width: 33% !important;
-    height: 137px;
+    height: auto;
     box-shadow: 0px 0px 15px 0px rgba(37, 59, 128, 0.15) }
-
+.md-button{
+   font-size:12px;
+}
 
 .gridListdemoDynamicTiles md-grid-tile {
   transition: all 300ms ease-out 50ms; }
@@ -231,7 +233,7 @@ md-tabs.md-default-theme .md-tab.md-active, md-tabs .md-tab.md-active, md-tabs.m
         background-color: rgb(37, 59, 128);
 }
 .md-button.md-raised:not([disabled]) {
-    box-shadow: 0 2px 2px 0 rgb(255, 255, 255);
+    box-shadow:0 2px 2px 0 rgb(78, 97, 158)
 }
 .grid-cuts{
    padding-top: 30% !important;
@@ -420,17 +422,18 @@ md-tabs {
             </md-button>
 
         </md-toolbar>
-      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
-         <span>Calender</span>
-      </md-list-item>
       <md-divider></md-divider>
       <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
-         <span>Help Desk</span>
+         <span>Login</span>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+      <md-list-item layout="row" ng-click="app.showAdvancedSignup($event);app.toggleRight()">
+         <span>Signup</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <!--<md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
          <span>Logout</span>
-      </md-list-item>
+      </md-list-item>-->
       <md-divider></md-divider>
 
     </md-sidenav>
@@ -506,7 +509,7 @@ md-tabs {
 <script src="scripts/angular-animate/angular-animate.min.js"></script>
 <script src="scripts/angular-aria/angular-aria.min.js"></script>
 <script src="scripts/angular-material/angular-material.min.js"></script>
-
+<script src="moment.min.js"></script>
 <script type="text/javascript" src="scripts/angular-ui-router/release/angular-ui-router.min.js"></script>
 <script src="scripts/event/angular-material-event-calendar.min.js"></script>
 <script src="scripts/angular-material/angular-material.min.js"></script>

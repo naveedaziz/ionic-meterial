@@ -98,6 +98,18 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
             $scope.posts = res.data;
          });
       }
+      $scope.getAlert = function(){
+         $http.post('http://www.xpresscourierlink.net/nido/fcc/ajax/getItem.php', { table: "news"}, {
+            headers: {
+               'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'
+            }
+         }).then(function (response) {
+            console.log(response)
+            if (response.data.length) {
+               $scope.alerts = response.data;
+            } 
+         });
+      }
       $scope.setPageTitle = function(name){
          if ($scope.pageTitle != name)
             $scope.pageTitle = name;
@@ -1028,7 +1040,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                         
                      },
                      {
-                        img: 'question', name: 'Alerts', link: 'blog', params: { page: 'list' },
+                        img: 'question', name: 'Alerts', link: 'alert',
                      }, 
                      {
                         img: 'Admissions', name: 'Admissions', link: 'admission',

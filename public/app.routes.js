@@ -88,6 +88,13 @@ router.config(function($stateProvider, $urlRouterProvider, $locationProvider) {
              title: "Blog"
           }
        })
+       .state('alert', {
+          url: '/alert',
+          templateUrl: 'alert.html',
+          params: {
+             title: "Alerts"
+          }
+       })
        .state('blogdetails', {
           url: '/blogs/:page',
           templateUrl: 'blog_details.html',

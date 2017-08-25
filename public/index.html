@@ -443,7 +443,9 @@ md-tabs {
 
 <div style="width:100%" class="ng-cloak">
    
-    <md-toolbar  class="toolbar">
+    <md-toolbar  class="toolbar" style="    position: fixed;
+    left: 0;
+    top: 0;">
         <div layout="row" layout-align="center center" layout-wrap class="md-toolbar-tools">
 
             <md-button ng-click="app.toggleLeft()" class="md-icon-button" aria-label="Main Menu">
@@ -472,7 +474,7 @@ md-tabs {
     </md-toolbar>
   
 
-    <div autoscroll="false" ui-view style="padding-bottom:60px;background:#fff;    min-height: 567px;"></div>
+    <div autoscroll="false" ui-view style="padding-bottom:60px;background:#fff; margin-top: 55px;   min-height: 567px;"></div>
    <footer  style="position:fixed; left:0; bottom:0; width:100%;padding: 0%;background:#253b80;z-index:99999">
      
          <div  align="center">

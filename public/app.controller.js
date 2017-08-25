@@ -51,7 +51,7 @@
    }
 )(angular);
 angular.module('appCtrl', ['ngOrderObjectBy'])
-   .run(['$rootScope', '$location', function ($rootScope, $location) {
+   .run(['$rootScope', '$location','$window', function ($rootScope, $location, $window) {
       document.addEventListener("deviceready", function () {
          console.log("deviceready");
          document.addEventListener("backbutton", onBackKeyDown, false);
@@ -71,7 +71,18 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                navigator.app.goBack();
             }
          }
-      }, 100)
+      }, 100);
+      $rootScope.$on('$stateChangeStart', function (event, next, current) {
+         console.log('Started');
+      });
+      $rootScope.$on('$stateChangeSuccess', function () {
+         console.log('Success');
+         $window.scrollTo(0, 0)
+
+      });
+      $rootScope.$on('$stateChangeError', function () {
+         console.log('Error');
+      });
    }
    ])
    .controller('DialogController', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
@@ -1443,4 +1454,5 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
     	$mdSidenav('right').toggle();
     }
 
-})
+});
+

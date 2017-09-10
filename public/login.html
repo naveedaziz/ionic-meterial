@@ -1,5 +1,5 @@
 <md-dialog id="login-dialog" aria-label="Login" ng-cloak flex="100" ng-controller="DialogController as dialog">
-   <form name="loginForm" ng-submit="dialog.login()">
+   <form name="loginForm" ng-submit="login()">
       <md-toolbar>
          <div class="md-toolbar-tools">
             <h2>Log In</h2>
@@ -13,23 +13,32 @@
       <md-dialog-content>
          <div class="md-dialog-content">
             <md-input-container class="md-block">
-               <label>User Email</label>
-               <input type="email" name="username" ng-model="dialog.username" md-autofocus required />
+               <md-radio-group ng-model="user.type" required>
+               <md-radio-button value="student" class="md-primary" ng-click="user.emailAddress = '@fccollege.edu.pk'">Student</md-radio-button>
+               <md-radio-button value="faculty" ng-click="user.emailAddress = '@formanites.fccollege.edu.pk'">Faculty </md-radio-button>
+               </md-radio-group>
+            </md-input-container>
+            <md-input-container class="md-block">
+               <label>User Login</label>
+               <input required type="text" MASK='99.99.9999' name="user.username" ng-model="dialog.username" md-autofocus required />{{user.emailAddress}}
             </md-input-container>
             <md-input-container class="md-block">
                <label>Password</label>
-               <input type="password" name="password" ng-model="dialog.password" required />
+               <input required type="password" name="password" ng-model="user.password" required />
+               <p class="alert" ng-if="loginError" style="color: red;
+    padding-top: 0;font-size: 11px; margin-top:40px;
+    padding-bottom: 0;">Invalid Credentails</p>
             </md-input-container>
          </div>
+         
       </md-dialog-content>
 
       <md-dialog-actions layout="row">
-         <p class="alert" style="color: red;
-    padding-top: 0;font-size: 11px;
-    padding-bottom: 0;">Only email address with domains<br> @fccollege.edu.pk / @formanites.fccollege.edu.pk</p>
-         <!--<a href="" class="md-primary">Forgot Password?</a>-->
+        
+         <a href="javascript:void(0)" ng-click="dialog.showAdvancedForget($event);" class="md-primary">Forgot Password?</a>
          <span flex></span>
          <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Login</md-button>
+        
       </md-dialog-actions>
    </form>
 </md-dialog>

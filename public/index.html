@@ -504,13 +504,21 @@ md-tabs {
              Site
 
          </md-button>
-         <md-button ui-sref="blog" class="md-raised md-warn"aria-label="User Menu" style="width: 33.33%;
+         <md-button ng-if="userLoginID" ui-sref="blog" class="md-raised md-warn"aria-label="User Menu" style="width: 33.33%;
     float: left;
     margin: 0%;
     padding: 4px;">
             <md-icon ng-style="{color: '#fff'}"  class="material-icons step ng-binding md-24" 
                role="img" >chat</md-icon>
              Help Desk
+
+         </md-button>
+         <md-button ng-if="!userLoginID" ng-click="app.showAdvanced($event);" class="md-raised md-warn" aria-label="User Menu" style="width: 33.33%;
+    float: left;
+    margin: 0%;
+    padding: 4px;">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">chat</md-icon>
+            Help Desk
 
          </md-button>
          </div>

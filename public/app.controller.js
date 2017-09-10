@@ -85,7 +85,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       });
    }
    ])
-   .controller('DialogController', function ($mdSidenav, $stateParams, $rootScope, $mdDialog) {
+   .controller('DialogController', function ($mdSidenav, $stateParams, $rootScope, $mdDialog,$scope,$http) {
    this.hide = function () {
       $mdDialog.hide();
    };
@@ -100,8 +100,101 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
    this.answer = function (answer) {
       $mdDialog.hide(answer);
    };
+   this.showAdvanced = function (ev) {
+      console.log(ev);
+      $mdDialog.show({
+         controller: 'DialogController',
+         templateUrl: 'login.html',
+         parent: angular.element(document.body),
+         targetEvent: ev,
+         clickOutsideToClose: true
+      })
+         .then(function (answer) {
+            // this.status = 'You said the information was "' + answer + '".';
+         }, function () {
+            // this.status = 'You cancelled the dialog.';
+         });
+   };
+   this.showAdvancedForget = function (ev) {
+      console.log(ev);
+      $mdDialog.show({
+         controller: 'DialogController',
+         templateUrl: 'forget.html',
+         parent: angular.element(document.body),
+         targetEvent: ev,
+         clickOutsideToClose: true
+      })
+         .then(function (answer) {
+            // this.status = 'You said the information was "' + answer + '".';
+         }, function () {
+            // this.status = 'You cancelled the dialog.';
+         });
+   };
+   $scope.loginError = false;
+   $scope.user = {};
+   $scope.login = function () {
+      console.log(111)
+      $scope.loginError = false;
+      $http.post('http://www.xpresscourierlink.net/nido/fcc/ajax/login.php', { email: $scope.user.username + $scope.user.emailAddress, password: $scope.user.password }, {
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+         }
+      })
+         .then(function (respose) {
+            if (respose.data && respose.data.id) {
+               console.log(respose.data.id)
+            } else {
+               $scope.loginError = true;
+            }
+         },function(){
+            $scope.loginError = true;
+         })
+   }
+   $scope.registerSuccess = false;
+   $scope.register = function () {
+      console.log(111)
+      $scope.registerSuccess = false;
+      $http.post('http://www.xpresscourierlink.net/nido/fcc/ajax/register.php', { email: $scope.user.username + $scope.user.emailAddress, password: $scope.user.password }, {
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+         }
+      })
+         .then(function (respose) {
+            if (respose.data && respose.data.id) {
+               console.log(respose.data.id)
+               $scope.registerSuccess = true;
+            } else {
+               $scope.registerSuccess = true;
+            }
+         }, function () {
+            $scope.registerSuccess = true;
+         })
+   }
+   $scope.loginforgetError = false;
+   $scope.loginforgetSuccess = false;
+   $scope.forgetlogin = function () {
+      console.log(111)
+      $scope.loginforgetError = false;
+      $http.post('http://www.xpresscourierlink.net/nido/fcc/ajax/forgetlogin.php', { email: $scope.user.username + $scope.user.emailAddress}, {
+         headers: {
+            'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8',
+         }
+      })
+         .then(function (respose) {
+            if (respose.data && respose.data.id) {
+               console.log(respose.data.id)
+               $scope.loginforgetSuccess = true;
+            } else {
+               $scope.loginforgetError = true;
+            }
+         }, function () {
+            $scope.loginforgetError = true;
+         })
+   }
 })
    .controller('appCtrl', function ($mdSidenav, $stateParams, $rootScope, $mdDialog, $state, $location, $http, $controller, $scope, $interval) {
+      $scope.userLoginID  = false;
+      $scope.userLoginInfo = {};
       $scope.pageTitle = '';
       $scope.posts = {};
       $scope.getBlog = function(){
@@ -828,7 +921,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       this.createClicked = function (date) {
          console.log(date);
       };
-
+     
       function getDate(offsetDays, hour) {
          offsetDays = offsetDays || 0;
          var offset = offsetDays * 24 * 60 * 60 * 1000;
@@ -848,7 +941,8 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
       this.openLink = function(link,params){
          if (link && link.indexOf('http') >= 0 && (link.indexOf('fccollege.edu.pk') >= 0 || link.indexOf('fccsocieties.org') >= 0)){
             cordova.InAppBrowser.open(link, '_blank', 'location=yes');
-         } else if (link && link.indexOf('http') >= 0){
+         } else if (link && (link.indexOf('http') >= 0 || link.indexOf('mailto') >= 0)){
+            console.log(1)
             window.open(link, '_blank');
          }else if(link){
             console.log(link,params)
@@ -1403,6 +1497,22 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
              // this.status = 'You said the information was "' + answer + '".';
            }, function () {
              // this.status = 'You cancelled the dialog.';
+           });
+     };
+     this.showAdvancedForget = function (ev) {
+        console.log(ev);
+        $mdDialog.close()
+        $mdDialog.show({
+           controller: 'DialogController',
+           templateUrl: 'forget.html',
+           parent: angular.element(document.body),
+           targetEvent: ev,
+           clickOutsideToClose: true
+        })
+           .then(function (answer) {
+              // this.status = 'You said the information was "' + answer + '".';
+           }, function () {
+              // this.status = 'You cancelled the dialog.';
            });
      };
      

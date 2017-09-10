@@ -21,6 +21,9 @@
          <p style="padding:10px">
             {{item.description}}
          </p>
+         <a style="font-size: 9px;
+    float: right;" href="https://www.google.com/calendar/render?action=TEMPLATE&text={{item.title}}&dates={{returnDate(item.dated,'google')}}00Z/{{returnDate(item.dated,'google')}}00Z&details={{item.description}}&sf=true&output=xml" class="md-raised md-warn md-button md-ink-ripple pull-right">Add To Calender</a>
+        <div class="clearfix"></div>
         </div>
        
       </md-list-item>

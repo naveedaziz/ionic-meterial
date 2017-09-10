@@ -847,7 +847,7 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
   // }, 1000)
       this.openLink = function(link,params){
          if (link && link.indexOf('http') >= 0 && (link.indexOf('fccollege.edu.pk') >= 0 || link.indexOf('fccsocieties.org') >= 0)){
-            window.open(link, '_blank', 'location=yes');
+            cordova.InAppBrowser.open(link, '_blank', 'location=yes');
          } else if (link && link.indexOf('http') >= 0){
             window.open(link, '_blank');
          }else if(link){

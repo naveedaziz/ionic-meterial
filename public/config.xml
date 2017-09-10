@@ -57,7 +57,7 @@
      <plugin name="cordova-plugin-splashscreen"  /> 
     <plugin name="cordova-plugin-statusbar" />
 	<!--<gap:plugin name="cordova-plugin-whitelist" source="npm" version="~1" />-->
- 	<plugin name="cordova-plugin-whitelist"/>
+ 	<!--<plugin name="cordova-plugin-whitelist"/>-->
 		<!-- <gap:plugin name="nl.x-services.plugins.socialsharing" /> -->
 		<!-- <gap:plugin name="com.adobe.plugins.gaplugin" /> -->
 	<gap:config-file platform="ios" parent="UIViewControllerBasedStatusBarAppearance" overwrite="true">

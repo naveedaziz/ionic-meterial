@@ -1068,9 +1068,9 @@ angular.module('appCtrl', ['ngOrderObjectBy'])
                      {
                         img: 'Events', name: 'Events', link: 'eventlist',
                         list: [
-                           { name: 'Events Calendar', img: 'Events', menu: [], link: 'events', params: { page: 'basic' } },
-                           { name: 'Academic Calendar', img: 'Events', menu: [], link: 'events', params: { page: 'Academic' } },
-                           { name: 'Today’s Events', img: 'Events', menu: [], link: 'events', params: { page: 'today' }},
+                           { name: 'Events Calendar', img: 'Events Calendar', menu: [], link: 'events', params: { page: 'basic' } },
+                           { name: 'Academic Calendar', img: 'Academic Calendar', menu: [], link: 'events', params: { page: 'Academic' } },
+                           { name: 'Today’s Events', img: 'Todays Events', menu: [], link: 'events', params: { page: 'today' }},
                         ]  },
                      {
                         img: 'Student Services', name: 'Student Services', link: 'campus',

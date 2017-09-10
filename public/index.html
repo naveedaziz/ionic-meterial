@@ -379,7 +379,7 @@ md-tabs {
      <script>
         document.addEventListener("deviceready", onDeviceReady, false);
          function onDeviceReady() {
-            alert("window.open works well");
+           delete window.open // Reverts the call back to it's prototype's default
          }
      </script>
 

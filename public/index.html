@@ -376,6 +376,13 @@ md-tabs {
   background-color:#ffffff;
 }
      </style>
+     <script>
+        document.addEventListener("deviceready", onDeviceReady, false);
+         function onDeviceReady() {
+            alert("window.open works well");
+         }
+     </script>
+
 </head>
 
 <body ng-app="materialApp" layout="column" flex ng-controller="appCtrl as app">

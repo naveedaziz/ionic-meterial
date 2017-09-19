@@ -377,6 +377,11 @@ md-tabs {
 .mat-list >  md-list-item:nth-child(2n){
   background-color:#ffffff;
 }
+.alert{
+   color: red;
+    padding-top: 0;font-size: 11px; margin-top:40px;
+    padding-bottom: 0;
+}
      </style>
      <script>
         console.log(window.open);
@@ -399,7 +404,7 @@ md-tabs {
             <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">menu</md-icon>
             </md-button>
 
-            <h3 class="md-toolbar-tools">FCC</h3>
+            <h3 class="md-toolbar-tools">FCCU</h3>
         
         </md-toolbar>
 
@@ -434,12 +439,19 @@ md-tabs {
 
         </md-toolbar>
       <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
+      <md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()" ng-if="!userID">
          <span>Login</span>
       </md-list-item>
       <md-divider></md-divider>
-      <md-list-item layout="row" ng-click="app.showAdvancedSignup($event);app.toggleRight()">
+      <md-list-item layout="row" ng-click="app.showAdvancedSignup($event);app.toggleRight()" ng-if="!userID">
          <span>Signup</span>
+      </md-list-item>
+      <md-list-item layout="row" ng-click="app.showAdvancedHelp($event);app.toggleRight()" ng-if="userID">
+         <span>Add Help Desk</span>
+      </md-list-item>
+      <md-divider></md-divider>
+      <md-list-item layout="row" ng-click="logout();app.toggleRight()" ng-if="userID">
+         <span>Logout</span>
       </md-list-item>
       <md-divider></md-divider>
       <!--<md-list-item layout="row" ng-click="app.showAdvanced($event);app.toggleRight()">
@@ -466,6 +478,7 @@ md-tabs {
 
             <span ui-sref="default" flex layout-align="center center" class="text-left" ng-if="title && title != 'page'">{{title}}</span>
             <span ui-sref="default" flex layout-align="center center" class="text-left" ng-if="title && title == 'page'">{{pageTitle}}</span>
+            <span></span>
             <span ui-sref="default" flex layout-align="center center" class="text-left" ng-if="!title">
                <img src="img/logo.png" style="    width: 314px;
     margin-top: 10px;">
@@ -513,7 +526,15 @@ md-tabs {
              Help Desk
 
          </md-button>
-         <md-button ng-if="!userLoginID" ng-click="app.showAdvanced($event);" class="md-raised md-warn" aria-label="User Menu" style="width: 33.33%;
+         <md-button ng-if="!userID" ng-click="app.showAdvanced($event);" class="md-raised md-warn" aria-label="User Menu" style="width: 33.33%;
+    float: left;
+    margin: 0%;
+    padding: 4px;">
+            <md-icon ng-style="{color: '#fff'}" class="material-icons step ng-binding md-24" role="img">chat</md-icon>
+            Help Desk
+
+         </md-button>
+         <md-button ng-if="userID" ui-sref="blog" class="md-raised md-warn" aria-label="User Menu" style="width: 33.33%;
     float: left;
     margin: 0%;
     padding: 4px;">

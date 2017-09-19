@@ -15,26 +15,27 @@
             <md-input-container class="md-block">
                <md-radio-group ng-model="user.type" required>
                <md-radio-button value="student" class="md-primary" ng-click="user.emailAddress = '@formanites.fccollege.edu.pk'">Student</md-radio-button>
-               <md-radio-button value="faculty" ng-click="user.emailAddress = '@fccollege.edu.pk'">Faculty </md-radio-button>
+               <!--<md-radio-button value="student" class="md-primary" ng-click="user.emailAddress = '@bramerz.pk'">Student</md-radio-button>-->
+               <md-radio-button value="faculty" ng-click="user.emailAddress = '@fccollege.edu.pk'">Faculty/Staff </md-radio-button>
                </md-radio-group>
             </md-input-container>
             <md-input-container class="md-block">
                <label>User Login</label>
-               <input required type="text" MASK='99.99.9999' name="user.username" ng-model="dialog.username" md-autofocus required />{{user.emailAddress}}
+               <input required type="text" ng-model="user.username"  md-autofocus required />{{user.emailAddress}}
             </md-input-container>
             <md-input-container class="md-block">
                <label>Password</label>
                <input required type="password" name="password" ng-model="user.password" required />
-               <p class="alert" ng-if="registerSuccess" style="color: red;
-    padding-top: 0;font-size: 11px; margin-top:40px;
-    padding-bottom: 0;">A confirmation email has been send to your email address. Kindly confirm your email to continue.</p>
+               <p class="alert" ng-if="registerSuccess === 1">A confirmation email has been send to your email address. Kindly confirm your email to continue.</p>
+    <p ng-if="registerSuccess === -1" class="alert">EMail address already registered</p>
+    <p ng-if="registerSuccess === true" class="alert">Loading...</p>
             </md-input-container>
          </div>
 
       </md-dialog-content>
 
       <md-dialog-actions layout="row">
-
+        
          <a href="" ng-click="dialog.showAdvanced($event);" class="md-primary">Login</a>
          <span flex></span>
          <md-button type="submit" ng-disabled="loginForm.$invalid" class="md-raised md-primary">Signup</md-button>

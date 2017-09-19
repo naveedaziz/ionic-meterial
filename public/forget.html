@@ -15,20 +15,20 @@
             <md-input-container class="md-block">
                <md-radio-group ng-model="user.type" required>
                <md-radio-button value="student" class="md-primary" ng-click="user.emailAddress = '@fccollege.edu.pk'">Student</md-radio-button>
-               <md-radio-button value="faculty" ng-click="user.emailAddress = '@formanites.fccollege.edu.pk'">Faculty </md-radio-button>
+
+               <!--<md-radio-button value="student" class="md-primary" ng-click="user.emailAddress = '@bramerz.pk'">Student</md-radio-button>-->
+               <md-radio-button value="faculty" ng-click="user.emailAddress = '@formanites.fccollege.edu.pk'">Faculty/Staff </md-radio-button>
                </md-radio-group>
             </md-input-container>
             <md-input-container class="md-block">
                <label>User Login</label>
-               <input required type="text" MASK='99.99.9999' name="user.username" ng-model="dialog.username" md-autofocus required />{{user.emailAddress}}
+               <input required type="text"  ng-model="user.username" md-autofocus required />{{user.emailAddress}}
             </md-input-container>
             <md-input-container class="md-block">
-               <p class="alert" ng-if="loginforgetError" style="color: red;
-    padding-top: 0;font-size: 11px; margin-top:40px;
-    padding-bottom: 0;">Invalid Credentails</p>
-   <p class="alert" ng-if="loginforgetSuccess" style="color: red;
-    padding-top: 0;font-size: 11px; margin-top:40px;
-    padding-bottom: 0;">Password sent to you email address. Kindly check your email for password recovery.</p>
+
+   <p class="alert" ng-if="forgetSuccess === 1">Password sent to you email address. Kindly check your email for password recovery.</p>
+   <p ng-if="forgetSuccess === -1" class="alert">Invalid Credential</p>
+   <p ng-if="forgetSuccess === true" class="alert">Loading...</p>
             </md-input-container>
          </div>
          

@@ -10,7 +10,7 @@
                  
                   <h3 class="socities_title" style="    margin: 12px;
     margin-left: 0px;">{{posts_detail.title}}</h3>
-                  <p ng-click="app.openLink(item.link)">{{posts_detail.body}}</p>
+                  <p ng-click="app.openLink(item.link)">{{posts_detail.description}}</p>
                   <span style="float: right;
     color: #000;
     font-size: 16px;
@@ -19,7 +19,7 @@
     padding-right: 0px;">
                    {{posts_detail.likes.length}}
                   </span>
-                  <span ng-class="{'disabled':liked()}" ng-click="likeEvent()" style="padding: 5px;
+                  <span ng-class="{'disabled':liked()}"  ng-click="likeEvent()" style="padding: 5px;
     color: #fff;
     float: right;
     margin-bottom: 11px;
@@ -29,7 +29,9 @@
                   <div class="clearfix"></div>
                   <p style="background: #296490;
     color: white;
-    padding: 9px;" ng-repeat="comment in posts_detail.comments">{{comment.body}} <span style="color:#40f937">({{comment.author}})</span></p>
+    padding: 9px;" ng-repeat="comment in posts_detail.comments">{{comment.body}} 
+    <!--<span style="color:#40f937">({{getUser(comment.user_id)}})</span>-->
+    </p>
                   <md-input-container class=" md-block">
                      <!-- Use floating label instead of placeholder -->
                      <label>Comment</label>
